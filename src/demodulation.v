@@ -30,7 +30,7 @@ module demodulation(
     
     reg [7:0]I_last=0;
     reg [7:0]Q_last=0;
-    reg [15:0]m1,m2;
+    wire [15:0]m1,m2;
     
      Mul u1(I,Q_last,m1);
      Mul u2(Q,I_last,m2);
