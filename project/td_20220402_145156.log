@@ -1,0 +1,105 @@
+============================================================
+   Tang Dynasty, V5.0.43066
+   Copyright:   Shanghai Anlogic Infotech Co., Ltd.
+                2011 - 2021
+   Executable = D:/Anlogic/TD5.0.43066/bin/td.exe
+   Built at =   20:38:48 Nov 30 2021
+   Run by =     JefferyLi
+   Run Date =   Sat Apr  2 14:51:56 2022
+
+   Run on =     LAPTOP-3NKS5JFR
+============================================================
+RUN-001 : GUI based run...
+RUN-1002 : start command "import_device eagle_s20.db -package BG256 -basic"
+ARC-1001 : Device Initialization.
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :            OPTION            |          IO          |   SETTING   
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :   cso_b/cclk/mosi/miso/dout  |  T3/R11/T10/P10/S11  |    gpio    
+ARC-1001 :             done             |         P13          |    gpio    
+ARC-1001 :           program_b          |          T2          |  dedicate  
+ARC-1001 :        tdi/tms/tck/tdo       |   C12/A15/C14/E14    |  dedicate  
+ARC-1001 : ------------------------------------------------------------------
+ARC-1004 : Device setting, marked 5 dedicate IOs in total.
+RUN-1002 : start command "read_verilog -file clkdivider.v"
+HDL-1007 : analyze verilog file clkdivider.v
+HDL-1007 : elaborate module clkdivider in clkdivider.v(23)
+HDL-1007 : elaborate module EG_LOGIC_BUFG in D:/Anlogic/TD5.0.43066/arch/eagle_macro.v(8)
+HDL-1007 : elaborate module EG_PHY_PLL(FIN="50.000",FBCLK_DIV=4,CLKC0_DIV=4,CLKC1_DIV=50,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",CLKC0_CPHASE=3,CLKC1_CPHASE=49,GMC_GAIN=4,ICP_CURRENT=13,KVCO=4,LPF_CAPACITOR=1,LPF_RESISTOR=4,SYNC_ENABLE="DISABLE") in D:/Anlogic/TD5.0.43066/arch/eagle_macro.v(929)
+HDL-1200 : Current top model is clkdivider
+HDL-1100 : Inferred 0 RAMs.
+RUN-1002 : start command "optimize_rtl"
+RUN-1001 : Open license file D:/Anlogic/TD5.0.43066/license/Anlogic.lic
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+SYN-1012 : SanityCheck: Model "clkdivider"
+SYN-1011 : Flatten model clkdivider
+SYN-1014 : Optimize round 1
+SYN-1032 : 8/1 useful/useless nets, 3/0 useful/useless insts
+SYN-1015 : Optimize round 1, 1 better
+SYN-1014 : Optimize round 2
+SYN-1032 : 8/1 useful/useless nets, 3/1 useful/useless insts
+SYN-1015 : Optimize round 2, 0 better
+SYN-1032 : 8/1 useful/useless nets, 3/1 useful/useless insts
+RUN-1002 : start command "map_macro -nopad"
+RUN-1001 : Print Gate Property
+RUN-1001 : ----------------------------------------------------------
+RUN-1001 :          Parameters         |  Settings  |  Default Values  
+RUN-1001 : ----------------------------------------------------------
+RUN-1001 :        auto_partition       |    fine    |       fine       
+RUN-1001 :         cascade_dsp         |    off     |       off        
+RUN-1001 :         cascade_eram        |     on     |        on        
+RUN-1001 :        gate_sim_model       |    off     |       off        
+RUN-1001 :        map_sim_model        |    off     |       off        
+RUN-1001 :           opt_area          |   medium   |      medium      
+RUN-1001 :          opt_timing         |    auto    |       auto       
+RUN-1001 :         pack_effort         |   medium   |      medium      
+RUN-1001 :      pack_lslice_ripple     |     on     |        on        
+RUN-1001 :   pack_lslice_ripple_ratio  |    0.5     |       0.5        
+RUN-1001 :        pack_seq_in_io       |    auto    |       auto       
+RUN-1001 :        ph1_mux_ratio        |    1.0     |       1.0        
+RUN-1001 :            report           |  standard  |     standard     
+RUN-1001 : ----------------------------------------------------------
+SYN-2501 : Processed 0 LOGIC_BUF instances.
+SYN-2501 : 1 BUFG to GCLK
+SYN-2571 : Optimize after map_dsp, round 1
+SYN-1032 : 8/1 useful/useless nets, 4/1 useful/useless insts
+SYN-2571 : Optimize after map_dsp, round 1, 0 better
+SYN-2501 : Optimize round 1
+SYN-1032 : 8/1 useful/useless nets, 4/1 useful/useless insts
+SYN-2501 : Optimize round 1, 0 better
+SYN-1032 : 8/1 useful/useless nets, 4/1 useful/useless insts
+RUN-1002 : start command "write_verilog clkdivider_sim.v"
+HDL-1201 : write out verilog file clkdivider_sim.v
+GUI-2000 : Create ip file(s) successfully :{EG4S20BG256(D:/Documents/MMC/project/al_ip/clkdivider.v)}

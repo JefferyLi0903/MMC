@@ -1,0 +1,2493 @@
+============================================================
+   Tang Dynasty, V5.0.43066
+   Copyright:   Shanghai Anlogic Infotech Co., Ltd.
+                2011 - 2021
+   Executable = D:/Anlogic/TD5.0.43066/bin/td.exe
+   Built at =   20:38:48 Nov 30 2021
+   Run by =     JefferyLi
+   Run Date =   Sat Apr  2 14:34:36 2022
+
+   Run on =     LAPTOP-3NKS5JFR
+============================================================
+RUN-1002 : start command "import_device eagle_s20.db -package BG256"
+ARC-1001 : Device Initialization.
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :            OPTION            |          IO          |   SETTING   
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :   cso_b/cclk/mosi/miso/dout  |  T3/R11/T10/P10/S11  |    gpio    
+ARC-1001 :             done             |         P13          |    gpio    
+ARC-1001 :           program_b          |          T2          |  dedicate  
+ARC-1001 :        tdi/tms/tck/tdo       |   C12/A15/C14/E14    |  dedicate  
+ARC-1001 : ------------------------------------------------------------------
+ARC-1004 : Device setting, marked 5 dedicate IOs in total.
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_IQfetcher.v
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Block_RAM.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Decoder.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Interconnect.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_SlaveMUX.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_UART.v
+HDL-1007 : analyze verilog file ../src/demodulation/Mul.v
+HDL-1007 : analyze verilog file ../src/demodulation/demodulation.v
+HDL-1007 : analyze verilog file ../src/peripherals/Block_RAM.v
+HDL-1007 : analyze verilog file ../src/peripherals/FIFO.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_RX.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_TX.v
+HDL-1007 : analyze verilog file ../src/peripherals/WaterLight.v
+HDL-1007 : analyze verilog file ../src/peripherals/clkuart_pwm.v
+HDL-1007 : analyze verilog file ../src/topmodule/CortexM0_SoC.v
+HDL-1007 : analyze verilog file ../src/topmodule/cortexm0ds_logic.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_IQfetcher.v
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Block_RAM.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Decoder.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Interconnect.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_SlaveMUX.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_UART.v
+HDL-1007 : analyze verilog file ../src/demodulation/Mul.v
+HDL-1007 : analyze verilog file ../src/demodulation/demodulation.v
+HDL-1007 : analyze verilog file ../src/peripherals/Block_RAM.v
+HDL-1007 : analyze verilog file ../src/peripherals/FIFO.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_RX.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_TX.v
+HDL-1007 : analyze verilog file ../src/peripherals/clkuart_pwm.v
+HDL-1007 : analyze verilog file ../src/topmodule/CortexM0_SoC.v
+HDL-1007 : analyze verilog file ../src/topmodule/cortexm0ds_logic.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_IQfetcher.v
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+HDL-1007 : analyze verilog file al_ip/IQ_fetcher.v
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+HDL-1007 : analyze verilog file al_ip/clkdivider.v
+HDL-1007 : analyze verilog file ../src/topmodule/CortexM0_SoC.v
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Block_RAM.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Decoder.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Interconnect.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_SlaveMUX.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_UART.v
+HDL-1007 : analyze verilog file ../src/demodulation/Mul.v
+HDL-1007 : analyze verilog file ../src/demodulation/demodulation.v
+HDL-1007 : analyze verilog file ../src/peripherals/Block_RAM.v
+HDL-1007 : analyze verilog file ../src/peripherals/FIFO.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_RX.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_TX.v
+HDL-1007 : analyze verilog file ../src/peripherals/clkuart_pwm.v
+HDL-1007 : analyze verilog file ../src/topmodule/CortexM0_SoC.v
+HDL-1007 : analyze verilog file ../src/topmodule/cortexm0ds_logic.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_IQfetcher.v
+HDL-1007 : analyze verilog file al_ip/clkdivider.v
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+HDL-1007 : analyze verilog file al_ip/IQ_ADC.v
+HDL-1007 : analyze verilog file ../src/topmodule/CortexM0_SoC.v
+RUN-1002 : start command "write_bitstream -help"
+USR-1002 : write_bitstream -help
+RUN-1002 : start command "write_bitstream"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_WaterLight.v
+HDL-1007 : analyze verilog file ../src/peripherals/IQfetcher.v
+HDL-1007 : analyze verilog file ../src/peripherals/WaterLight.v
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Block_RAM.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Decoder.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Interconnect.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_SlaveMUX.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_UART.v
+HDL-1007 : analyze verilog file ../src/demodulation/Mul.v
+HDL-1007 : analyze verilog file ../src/demodulation/demodulation.v
+HDL-1007 : analyze verilog file ../src/peripherals/Block_RAM.v
+HDL-1007 : analyze verilog file ../src/peripherals/FIFO.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_RX.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_TX.v
+HDL-1007 : analyze verilog file ../src/peripherals/clkuart_pwm.v
+HDL-1007 : analyze verilog file ../src/topmodule/CortexM0_SoC.v
+HDL-1007 : analyze verilog file ../src/topmodule/cortexm0ds_logic.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_IQfetcher.v
+HDL-1007 : analyze verilog file al_ip/clkdivider.v
+HDL-1007 : analyze verilog file al_ip/IQ_ADC.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_WaterLight.v
+HDL-1007 : analyze verilog file ../src/peripherals/IQfetcher.v
+HDL-1007 : analyze verilog file ../src/peripherals/WaterLight.v
+RUN-1002 : start command "elaborate -top CortexM0_SoC"
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+HDL-5007 WARNING: port 'CODENSEQ' remains unconnected for this instance in ../src/topmodule/CortexM0_SoC.v(83)
+HDL-1007 : elaborate module CortexM0_SoC in ../src/topmodule/CortexM0_SoC.v(2)
+HDL-1007 : elaborate module cortexm0ds_logic in ../src/topmodule/cortexm0ds_logic.v(27)
+HDL-1007 : elaborate module AHBlite_Interconnect in ../src/AHBmanager/AHBlite_Interconnect.v(1)
+HDL-1007 : elaborate module AHBlite_Decoder in ../src/AHBmanager/AHBlite_Decoder.v(1)
+HDL-1007 : elaborate module AHBlite_SlaveMUX in ../src/AHBmanager/AHBlite_SlaveMUX.v(1)
+HDL-1007 : elaborate module AHBlite_Block_RAM(ADDR_WIDTH=13) in ../src/AHBmanager/AHBlite_Block_RAM.v(1)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'HRESP' in ../src/topmodule/CortexM0_SoC.v(307)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'BRAM_WRADDR' in ../src/topmodule/CortexM0_SoC.v(308)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'BRAM_RDADDR' in ../src/topmodule/CortexM0_SoC.v(309)
+HDL-1007 : elaborate module AHBlite_IQfetcher in ../src/AHBmanager/AHBlite_IQfetcher.v(1)
+HDL-1007 : elaborate module AHBlite_Block_RAM in ../src/AHBmanager/AHBlite_Block_RAM.v(1)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'HRESP' in ../src/topmodule/CortexM0_SoC.v(392)
+HDL-1007 : elaborate module AHBlite_UART in ../src/AHBmanager/AHBlite_UART.v(1)
+HDL-1007 : elaborate module Block_RAM(ADDR_WIDTH=13) in ../src/peripherals/Block_RAM.v(1)
+HDL-8007 ERROR: cannot open file '../../keil/code.hex' in ../src/peripherals/Block_RAM.v(15)
+HDL-1007 : module 'Block_RAM' remains a black box due to errors in its contents in ../src/peripherals/Block_RAM.v(1)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'addra' in ../src/topmodule/CortexM0_SoC.v(436)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'addrb' in ../src/topmodule/CortexM0_SoC.v(437)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'addra' in ../src/topmodule/CortexM0_SoC.v(445)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'addrb' in ../src/topmodule/CortexM0_SoC.v(446)
+HDL-1007 : elaborate module IQfetcher in ../src/peripherals/IQfetcher.v(1)
+HDL-1007 : elaborate module clkdivider in al_ip/clkdivider.v(23)
+HDL-1007 : elaborate module EG_LOGIC_BUFG in D:/Anlogic/TD5.0.43066/arch/eagle_macro.v(8)
+HDL-1007 : elaborate module EG_PHY_PLL(FIN="50.000",FBCLK_DIV=4,CLKC0_DIV=4,CLKC1_DIV=50,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",CLKC0_CPHASE=3,CLKC1_CPHASE=49,GMC_GAIN=4,ICP_CURRENT=13,KVCO=4,LPF_CAPACITOR=1,LPF_RESISTOR=4,SYNC_ENABLE="DISABLE") in D:/Anlogic/TD5.0.43066/arch/eagle_macro.v(929)
+HDL-1007 : elaborate module IQ_ADC in al_ip/IQ_ADC.v(14)
+HDL-8007 ERROR: module 'EG_PHY_ADC' does not have a parameter named TEMPERATURE in al_ip/IQ_ADC.v(24)
+HDL-1007 : elaborate module EG_PHY_ADC(CH4="ENABLE",CH6="ENABLE") in D:/Anlogic/TD5.0.43066/arch/eagle_macro.v(1073)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 12 for port 'dout' in ../src/topmodule/CortexM0_SoC.v(460)
+HDL-1007 : elaborate module clkuart_pwm in ../src/peripherals/clkuart_pwm.v(2)
+HDL-1007 : elaborate module UART_RX in ../src/peripherals/UART_RX.v(1)
+HDL-1007 : elaborate module UART_TX in ../src/peripherals/UART_TX.v(1)
+HDL-1007 : elaborate module FIFO in ../src/peripherals/FIFO.v(4)
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Block_RAM.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Decoder.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Interconnect.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_SlaveMUX.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_UART.v
+HDL-1007 : analyze verilog file ../src/demodulation/Mul.v
+HDL-1007 : analyze verilog file ../src/demodulation/demodulation.v
+HDL-1007 : analyze verilog file ../src/peripherals/Block_RAM.v
+HDL-1007 : analyze verilog file ../src/peripherals/FIFO.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_RX.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_TX.v
+HDL-1007 : analyze verilog file ../src/peripherals/clkuart_pwm.v
+HDL-1007 : analyze verilog file ../src/topmodule/CortexM0_SoC.v
+HDL-1007 : analyze verilog file ../src/topmodule/cortexm0ds_logic.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_IQfetcher.v
+HDL-1007 : analyze verilog file al_ip/clkdivider.v
+HDL-1007 : analyze verilog file al_ip/IQ_ADC.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_WaterLight.v
+HDL-1007 : analyze verilog file ../src/peripherals/IQfetcher.v
+HDL-1007 : analyze verilog file ../src/peripherals/WaterLight.v
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Block_RAM.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Decoder.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Interconnect.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_SlaveMUX.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_UART.v
+HDL-1007 : analyze verilog file ../src/demodulation/Mul.v
+HDL-1007 : analyze verilog file ../src/demodulation/demodulation.v
+HDL-1007 : analyze verilog file ../src/peripherals/Block_RAM.v
+HDL-1007 : analyze verilog file ../src/peripherals/FIFO.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_RX.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_TX.v
+HDL-1007 : analyze verilog file ../src/peripherals/clkuart_pwm.v
+HDL-1007 : analyze verilog file ../src/topmodule/CortexM0_SoC.v
+HDL-1007 : analyze verilog file ../src/topmodule/cortexm0ds_logic.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_IQfetcher.v
+HDL-1007 : analyze verilog file al_ip/clkdivider.v
+HDL-1007 : analyze verilog file al_ip/IQ_ADC.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_WaterLight.v
+HDL-1007 : analyze verilog file ../src/peripherals/IQfetcher.v
+HDL-1007 : analyze verilog file ../src/peripherals/WaterLight.v
+RUN-1002 : start command "elaborate -top CortexM0_SoC"
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+HDL-5007 WARNING: port 'CODENSEQ' remains unconnected for this instance in ../src/topmodule/CortexM0_SoC.v(83)
+HDL-1007 : elaborate module CortexM0_SoC in ../src/topmodule/CortexM0_SoC.v(2)
+HDL-1007 : elaborate module cortexm0ds_logic in ../src/topmodule/cortexm0ds_logic.v(27)
+HDL-1007 : elaborate module AHBlite_Interconnect in ../src/AHBmanager/AHBlite_Interconnect.v(1)
+HDL-1007 : elaborate module AHBlite_Decoder in ../src/AHBmanager/AHBlite_Decoder.v(1)
+HDL-1007 : elaborate module AHBlite_SlaveMUX in ../src/AHBmanager/AHBlite_SlaveMUX.v(1)
+HDL-1007 : elaborate module AHBlite_Block_RAM(ADDR_WIDTH=13) in ../src/AHBmanager/AHBlite_Block_RAM.v(1)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'HRESP' in ../src/topmodule/CortexM0_SoC.v(307)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'BRAM_WRADDR' in ../src/topmodule/CortexM0_SoC.v(308)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'BRAM_RDADDR' in ../src/topmodule/CortexM0_SoC.v(309)
+HDL-1007 : elaborate module AHBlite_IQfetcher in ../src/AHBmanager/AHBlite_IQfetcher.v(1)
+HDL-1007 : elaborate module AHBlite_Block_RAM in ../src/AHBmanager/AHBlite_Block_RAM.v(1)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'HRESP' in ../src/topmodule/CortexM0_SoC.v(392)
+HDL-1007 : elaborate module AHBlite_UART in ../src/AHBmanager/AHBlite_UART.v(1)
+HDL-1007 : elaborate module Block_RAM(ADDR_WIDTH=13) in ../src/peripherals/Block_RAM.v(1)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'addra' in ../src/topmodule/CortexM0_SoC.v(436)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'addrb' in ../src/topmodule/CortexM0_SoC.v(437)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'addra' in ../src/topmodule/CortexM0_SoC.v(445)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'addrb' in ../src/topmodule/CortexM0_SoC.v(446)
+HDL-1007 : elaborate module IQfetcher in ../src/peripherals/IQfetcher.v(1)
+HDL-1007 : elaborate module clkdivider in al_ip/clkdivider.v(23)
+HDL-1007 : elaborate module EG_LOGIC_BUFG in D:/Anlogic/TD5.0.43066/arch/eagle_macro.v(8)
+HDL-1007 : elaborate module EG_PHY_PLL(FIN="50.000",FBCLK_DIV=4,CLKC0_DIV=4,CLKC1_DIV=50,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",CLKC0_CPHASE=3,CLKC1_CPHASE=49,GMC_GAIN=4,ICP_CURRENT=13,KVCO=4,LPF_CAPACITOR=1,LPF_RESISTOR=4,SYNC_ENABLE="DISABLE") in D:/Anlogic/TD5.0.43066/arch/eagle_macro.v(929)
+HDL-1007 : elaborate module IQ_ADC in al_ip/IQ_ADC.v(14)
+HDL-8007 ERROR: module 'EG_PHY_ADC' does not have a parameter named TEMPERATURE in al_ip/IQ_ADC.v(24)
+HDL-1007 : elaborate module EG_PHY_ADC(CH4="ENABLE",CH6="ENABLE") in D:/Anlogic/TD5.0.43066/arch/eagle_macro.v(1073)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 12 for port 'dout' in ../src/topmodule/CortexM0_SoC.v(460)
+HDL-1007 : elaborate module clkuart_pwm in ../src/peripherals/clkuart_pwm.v(2)
+HDL-1007 : elaborate module UART_RX in ../src/peripherals/UART_RX.v(1)
+HDL-1007 : elaborate module UART_TX in ../src/peripherals/UART_TX.v(1)
+HDL-1007 : elaborate module FIFO in ../src/peripherals/FIFO.v(4)
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Block_RAM.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Decoder.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Interconnect.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_SlaveMUX.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_UART.v
+HDL-1007 : analyze verilog file ../src/demodulation/Mul.v
+HDL-1007 : analyze verilog file ../src/demodulation/demodulation.v
+HDL-1007 : analyze verilog file ../src/peripherals/Block_RAM.v
+HDL-1007 : analyze verilog file ../src/peripherals/FIFO.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_RX.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_TX.v
+HDL-1007 : analyze verilog file ../src/peripherals/clkuart_pwm.v
+HDL-1007 : analyze verilog file ../src/topmodule/CortexM0_SoC.v
+HDL-1007 : analyze verilog file ../src/topmodule/cortexm0ds_logic.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_IQfetcher.v
+HDL-1007 : analyze verilog file al_ip/clkdivider.v
+HDL-1007 : analyze verilog file al_ip/IQ_ADC.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_WaterLight.v
+HDL-1007 : analyze verilog file ../src/peripherals/IQfetcher.v
+HDL-1007 : analyze verilog file ../src/peripherals/WaterLight.v
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Block_RAM.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Decoder.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_Interconnect.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_SlaveMUX.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_UART.v
+HDL-1007 : analyze verilog file ../src/demodulation/Mul.v
+HDL-1007 : analyze verilog file ../src/demodulation/demodulation.v
+HDL-1007 : analyze verilog file ../src/peripherals/Block_RAM.v
+HDL-1007 : analyze verilog file ../src/peripherals/FIFO.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_RX.v
+HDL-1007 : analyze verilog file ../src/peripherals/UART_TX.v
+HDL-1007 : analyze verilog file ../src/peripherals/clkuart_pwm.v
+HDL-1007 : analyze verilog file ../src/topmodule/CortexM0_SoC.v
+HDL-1007 : analyze verilog file ../src/topmodule/cortexm0ds_logic.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_IQfetcher.v
+HDL-1007 : analyze verilog file al_ip/clkdivider.v
+HDL-1007 : analyze verilog file al_ip/IQ_ADC.v
+HDL-1007 : analyze verilog file ../src/AHBmanager/AHBlite_WaterLight.v
+HDL-1007 : analyze verilog file ../src/peripherals/IQfetcher.v
+HDL-1007 : analyze verilog file ../src/peripherals/WaterLight.v
+RUN-1002 : start command "elaborate -top CortexM0_SoC"
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        
+RUN-1001 :        syn_ip_flow       |    off     |       off        
+RUN-1001 :          thread          |    auto    |       auto       
+RUN-1001 : -------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       
+RUN-1001 :        infer_add        |     on     |        on        
+RUN-1001 :        infer_fsm        |    off     |       off        
+RUN-1001 :        infer_mult       |     on     |        on        
+RUN-1001 :        infer_ram        |     on     |        on        
+RUN-1001 :        infer_reg        |     on     |        on        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        
+RUN-1001 :        infer_rom        |     on     |        on        
+RUN-1001 :      infer_shifter      |    off     |       off        
+RUN-1001 :         map_dram        |    auto    |       auto       
+RUN-1001 : ------------------------------------------------------
+HDL-5007 WARNING: port 'CODENSEQ' remains unconnected for this instance in ../src/topmodule/CortexM0_SoC.v(83)
+HDL-1007 : elaborate module CortexM0_SoC in ../src/topmodule/CortexM0_SoC.v(2)
+HDL-1007 : elaborate module cortexm0ds_logic in ../src/topmodule/cortexm0ds_logic.v(27)
+HDL-1007 : elaborate module AHBlite_Interconnect in ../src/AHBmanager/AHBlite_Interconnect.v(1)
+HDL-1007 : elaborate module AHBlite_Decoder in ../src/AHBmanager/AHBlite_Decoder.v(1)
+HDL-1007 : elaborate module AHBlite_SlaveMUX in ../src/AHBmanager/AHBlite_SlaveMUX.v(1)
+HDL-1007 : elaborate module AHBlite_Block_RAM(ADDR_WIDTH=13) in ../src/AHBmanager/AHBlite_Block_RAM.v(1)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'HRESP' in ../src/topmodule/CortexM0_SoC.v(307)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'BRAM_WRADDR' in ../src/topmodule/CortexM0_SoC.v(308)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'BRAM_RDADDR' in ../src/topmodule/CortexM0_SoC.v(309)
+HDL-1007 : elaborate module AHBlite_IQfetcher in ../src/AHBmanager/AHBlite_IQfetcher.v(1)
+HDL-1007 : elaborate module AHBlite_Block_RAM in ../src/AHBmanager/AHBlite_Block_RAM.v(1)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'HRESP' in ../src/topmodule/CortexM0_SoC.v(392)
+HDL-1007 : elaborate module AHBlite_UART in ../src/AHBmanager/AHBlite_UART.v(1)
+HDL-1007 : elaborate module Block_RAM(ADDR_WIDTH=13) in ../src/peripherals/Block_RAM.v(1)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'addra' in ../src/topmodule/CortexM0_SoC.v(436)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'addrb' in ../src/topmodule/CortexM0_SoC.v(437)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'addra' in ../src/topmodule/CortexM0_SoC.v(445)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 13 for port 'addrb' in ../src/topmodule/CortexM0_SoC.v(446)
+HDL-1007 : elaborate module IQfetcher in ../src/peripherals/IQfetcher.v(1)
+HDL-1007 : elaborate module clkdivider in al_ip/clkdivider.v(23)
+HDL-1007 : elaborate module EG_LOGIC_BUFG in D:/Anlogic/TD5.0.43066/arch/eagle_macro.v(8)
+HDL-1007 : elaborate module EG_PHY_PLL(FIN="50.000",FBCLK_DIV=4,CLKC0_DIV=4,CLKC1_DIV=50,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",CLKC0_CPHASE=3,CLKC1_CPHASE=49,GMC_GAIN=4,ICP_CURRENT=13,KVCO=4,LPF_CAPACITOR=1,LPF_RESISTOR=4,SYNC_ENABLE="DISABLE") in D:/Anlogic/TD5.0.43066/arch/eagle_macro.v(929)
+HDL-1007 : elaborate module IQ_ADC in al_ip/IQ_ADC.v(14)
+HDL-1007 : elaborate module EG_PHY_ADC(CH4="ENABLE",CH6="ENABLE") in D:/Anlogic/TD5.0.43066/arch/eagle_macro.v(1073)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 12 for port 'dout' in ../src/topmodule/CortexM0_SoC.v(460)
+HDL-1007 : elaborate module clkuart_pwm in ../src/peripherals/clkuart_pwm.v(2)
+HDL-1007 : elaborate module UART_RX in ../src/peripherals/UART_RX.v(1)
+HDL-1007 : elaborate module UART_TX in ../src/peripherals/UART_TX.v(1)
+HDL-1007 : elaborate module FIFO in ../src/peripherals/FIFO.v(4)
+HDL-1200 : Current top model is CortexM0_SoC
+HDL-1100 : Inferred 2 RAMs.
+ARC-1002 : Mark IO location M12 as dedicate.
+ARC-1002 : Mark IO location P12 as dedicate.
+RUN-1003 : finish command "elaborate -top CortexM0_SoC" in  3.486623s wall, 3.343750s user + 0.187500s system = 3.531250s CPU (101.3%)
+
+RUN-1004 : used memory is 357 MB, reserved memory is 297 MB, peak memory is 713 MB
+GUI-5001 WARNING: Found no ADC files
+RUN-1002 : start command "optimize_rtl"
+RUN-1001 : Open license file D:/Anlogic/TD5.0.43066/license/Anlogic.lic
+RUN-1001 : Print Rtl Property
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      
+RUN-1001 :        elf_sload        |    off     |       off        
+RUN-1001 :       fix_undriven      |     0      |        0         
+RUN-1001 :         flatten         |    off     |       off        
+RUN-1001 :       gate_sharing      |     on     |        on        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        
+RUN-1001 :      impl_set_reset     |     on     |        on        
+RUN-1001 :        infer_gsr        |    off     |       off        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       
+RUN-1001 :        max_fanout       |    9999    |       9999       
+RUN-1001 :      max_oh2bin_len     |     10     |        10        
+RUN-1001 :       merge_equal       |     on     |        on        
+RUN-1001 :       merge_equiv       |     on     |        on        
+RUN-1001 :        merge_mux        |    off     |       off        
+RUN-1001 :      min_ce_fanout      |     16     |        16        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       
+RUN-1001 :     opt_adder_fanout    |     on     |        on        
+RUN-1001 :        opt_arith        |     on     |        on        
+RUN-1001 :       opt_big_gate      |    off     |       off        
+RUN-1001 :        opt_const        |     on     |        on        
+RUN-1001 :      opt_const_mult     |     on     |        on        
+RUN-1001 :       opt_lessthan      |     on     |        on        
+RUN-1001 :         opt_mux         |    off     |       off        
+RUN-1001 :         opt_ram         |    high    |       high       
+RUN-1001 :      rtl_sim_model      |    off     |       off        
+RUN-1001 :         seq_syn         |     on     |        on        
+RUN-1001 : ------------------------------------------------------
+SYN-1012 : SanityCheck: Model "CortexM0_SoC"
+SYN-1012 : SanityCheck: Model "AHBlite_IQfetcher"
+SYN-1012 : SanityCheck: Model "IQfetcher"
+SYN-1012 : SanityCheck: Model "IQ_ADC"
+SYN-1012 : SanityCheck: Model "clkdivider"
+SYN-1012 : SanityCheck: Model "AHBlite_Interconnect"
+SYN-1012 : SanityCheck: Model "AHBlite_Decoder"
+SYN-1012 : SanityCheck: Model "AHBlite_SlaveMUX"
+SYN-1012 : SanityCheck: Model "AHBlite_Block_RAM(ADDR_WIDTH=13)"
+SYN-1012 : SanityCheck: Model "AHBlite_Block_RAM"
+SYN-1012 : SanityCheck: Model "Block_RAM(ADDR_WIDTH=13)"
+SYN-1012 : SanityCheck: Model "AHBlite_UART"
+SYN-1012 : SanityCheck: Model "UART_RX"
+SYN-1012 : SanityCheck: Model "UART_TX"
+SYN-1012 : SanityCheck: Model "FIFO"
+SYN-1012 : SanityCheck: Model "clkuart_pwm"
+SYN-1012 : SanityCheck: Model "cortexm0ds_logic"
+SYN-1043 : Mark clkdivider as IO macro for instance bufg_feedback
+SYN-1043 : Mark IQfetcher as IO macro for instance adcclk
+SYN-1026 : Infer Logic BRAM(ram_mem_unify_al_u00)
+	 port mode: single dual port
+	 port a size: 8192 x 32	 write mode: NORMAL
+	 port b size: 8192 x 32	 write mode: READBEFOREWRITE
+SYN-1026 : Infer Logic BRAM(ram_mem_unify_al_u10)
+	 port mode: single dual port
+	 port a size: 8192 x 32	 write mode: NORMAL
+	 port b size: 8192 x 32	 write mode: READBEFOREWRITE
+SYN-1026 : Infer Logic BRAM(ram_mem_unify_al_u20)
+	 port mode: single dual port
+	 port a size: 8192 x 32	 write mode: NORMAL
+	 port b size: 8192 x 32	 write mode: READBEFOREWRITE
+SYN-1026 : Infer Logic BRAM(ram_mem_unify_al_u30)
+	 port mode: single dual port
+	 port a size: 8192 x 32	 write mode: NORMAL
+	 port b size: 8192 x 32	 write mode: READBEFOREWRITE
+SYN-1023 : Infer 0 Logic DRAMs, 1 Logic BRAMs.
+SYN-1016 : Merged 31 instances.
+SYN-1027 : Infer Logic DRAM(al_ram_mem) read 16x8, write 16x8
+SYN-1023 : Infer 1 Logic DRAMs, 0 Logic BRAMs.
+SYN-1011 : Flatten model CortexM0_SoC
+SYN-1011 : Flatten model AHBlite_IQfetcher
+SYN-1011 : Flatten model IQfetcher
+SYN-1011 : Flatten model IQ_ADC
+SYN-1011 : Flatten model clkdivider
+SYN-1016 : Merged 1 instances.
+SYN-1011 : Flatten model AHBlite_Interconnect
+SYN-1011 : Flatten model AHBlite_Decoder
+SYN-1011 : Flatten model AHBlite_SlaveMUX
+SYN-1016 : Merged 2 instances.
+SYN-1011 : Flatten model AHBlite_Block_RAM(ADDR_WIDTH=13)
+SYN-1011 : Flatten model AHBlite_Block_RAM
+SYN-1011 : Flatten model Block_RAM(ADDR_WIDTH=13)
+SYN-1011 : Flatten model AHBlite_UART
+SYN-1011 : Flatten model UART_RX
+SYN-1011 : Flatten model UART_TX
+SYN-1011 : Flatten model FIFO
+SYN-1016 : Merged 5 instances.
+SYN-1011 : Flatten model clkuart_pwm
+SYN-1011 : Flatten model cortexm0ds_logic
+SYN-1016 : Merged 51 instances.
+SYN-5034 WARNING: Undriven pin: model "CortexM0_SoC" / pin "LED[7]" net"LED[7]"
+SYN-5034 WARNING: Undriven pin: model "CortexM0_SoC" / pin "LED[6]" net"LED[6]"
+SYN-5034 WARNING: Undriven pin: model "CortexM0_SoC" / pin "LED[5]" net"LED[5]"
+SYN-5034 WARNING: Undriven pin: model "CortexM0_SoC" / pin "LED[4]" net"LED[4]"
+SYN-5034 WARNING: Undriven pin: model "CortexM0_SoC" / pin "LED[3]" net"LED[3]"
+SYN-5034 WARNING: Undriven pin: model "CortexM0_SoC" / pin "LED[2]" net"LED[2]"
+SYN-5034 WARNING: Undriven pin: model "CortexM0_SoC" / pin "LED[1]" net"LED[1]"
+SYN-5034 WARNING: Undriven pin: model "CortexM0_SoC" / pin "LED[0]" net"LED[0]"
+SYN-5034 WARNING: Undriven pin: model "CortexM0_SoC" / pin "LEDclk" net"LEDclk"
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[0]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[10]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[11]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[12]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[13]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[14]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[15]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[16]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[17]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[18]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[19]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[1]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[20]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[21]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[22]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[23]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[24]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[25]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[26]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[27]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[28]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[29]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[2]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[30]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[31]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[3]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[4]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[5]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[6]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[7]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[8]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5013 WARNING: Undriven net: model "CortexM0_SoC" / net "HRDATA_P2[9]" in ../src/topmodule/CortexM0_SoC.v(189)
+SYN-5014 WARNING: the net's pin: pin "i3" in ../src/AHBmanager/AHBlite_SlaveMUX.v(79)
+SYN-5025 WARNING: Using 0 for all undriven pins and nets
+SYN-1014 : Optimize round 1
+SYN-1032 : 22603/268 useful/useless nets, 22091/120 useful/useless insts
+SYN-1017 : Remove 2 const input seq instances
+SYN-1002 :     IQfetcher/reg0_b0
+SYN-1002 :     IQfetcher/reg0_b2
+SYN-1021 : Optimized 38 onehot mux instances.
+SYN-1020 : Optimized 25 distributor mux.
+SYN-1016 : Merged 6 instances.
+SYN-1015 : Optimize round 1, 570 better
+SYN-1014 : Optimize round 2
+SYN-1032 : 22481/15 useful/useless nets, 21970/52 useful/useless insts
+SYN-1019 : Optimized 2 mux instances.
+SYN-1015 : Optimize round 2, 75 better
+SYN-1014 : Optimize round 3
+SYN-1032 : 22479/2 useful/useless nets, 21968/0 useful/useless insts
+SYN-1015 : Optimize round 3, 0 better
+SYN-1014 : Optimize round 1
+SYN-1044 : Optimized 146 inv instances.
+SYN-1032 : 20898/400 useful/useless nets, 20663/344 useful/useless insts
+SYN-1017 : Remove 2 const input seq instances
+SYN-1002 :     K7vpw6_reg
+SYN-1002 :     Xbopw6_reg
+SYN-1019 : Optimized 17 mux instances.
+SYN-1016 : Merged 4 instances.
+SYN-1015 : Optimize round 1, 4042 better
+SYN-1014 : Optimize round 2
+SYN-1044 : Optimized 5 inv instances.
+SYN-1032 : 19887/22 useful/useless nets, 19652/14 useful/useless insts
+SYN-1016 : Merged 1 instances.
+SYN-1015 : Optimize round 2, 27 better
+SYN-1014 : Optimize round 3
+SYN-1032 : 19881/0 useful/useless nets, 19646/1 useful/useless insts
+SYN-1015 : Optimize round 3, 4 better
+SYN-1014 : Optimize round 4
+SYN-1015 : Optimize round 4, 0 better
+RUN-1003 : finish command "optimize_rtl" in  3.123832s wall, 3.093750s user + 0.140625s system = 3.234375s CPU (103.5%)
+
+RUN-1004 : used memory is 442 MB, reserved memory is 387 MB, peak memory is 713 MB
+RUN-1002 : start command "td_mkdir simulation"
+RUN-1002 : start command "report_area -file MMC_rtl.area"
+RUN-1001 : standard
+***Report Model: CortexM0_SoC***
+
+IO Statistics
+#IO                        17
+  #input                    4
+  #output                  12
+  #inout                    1
+
+Gate Statistics
+#Basic gates            19794
+  #and                   9456
+  #nand                     0
+  #or                    1945
+  #nor                      0
+  #xor                     73
+  #xnor                     0
+  #buf                      0
+  #not                   6412
+  #bufif1                  10
+  #MX21                   497
+  #FADD                     0
+  #DFF                   1401
+  #LATCH                    0
+#MACRO_ADD                 16
+#MACRO_EQ                  27
+#MACRO_MULT                 1
+#MACRO_MUX                118
+#MACRO_OTHERS              10
+
+Report Hierarchy Area:
++----------------------------------------------------+
+|Instance  |Module           |gates  |seq    |macros |
++----------------------------------------------------+
+|top       |CortexM0_SoC     |18393  |1401   |54     |
+|  u_logic |cortexm0ds_logic |18291  |1298   |14     |
++----------------------------------------------------+
+
+RUN-1002 : start command "export_db MMC_rtl.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported flow parameters
+RUN-1003 : finish command "export_db MMC_rtl.db" in  1.402953s wall, 1.343750s user + 0.062500s system = 1.406250s CPU (100.2%)
+
+RUN-1004 : used memory is 573 MB, reserved memory is 524 MB, peak memory is 713 MB
+RUN-1002 : start command "optimize_gate -maparea MMC_gate.area"
+RUN-1001 : Open license file D:/Anlogic/TD5.0.43066/license/Anlogic.lic
+RUN-1001 : Print Gate Property
+RUN-1001 : ----------------------------------------------------------
+RUN-1001 :          Parameters         |  Settings  |  Default Values  
+RUN-1001 : ----------------------------------------------------------
+RUN-1001 :        auto_partition       |    fine    |       fine       
+RUN-1001 :         cascade_dsp         |    off     |       off        
+RUN-1001 :         cascade_eram        |     on     |        on        
+RUN-1001 :        gate_sim_model       |    off     |       off        
+RUN-1001 :        map_sim_model        |    off     |       off        
+RUN-1001 :           opt_area          |   medium   |      medium      
+RUN-1001 :          opt_timing         |    auto    |       auto       
+RUN-1001 :         pack_effort         |   medium   |      medium      
+RUN-1001 :      pack_lslice_ripple     |     on     |        on        
+RUN-1001 :   pack_lslice_ripple_ratio  |    0.5     |       0.5        
+RUN-1001 :        pack_seq_in_io       |    auto    |       auto       
+RUN-1001 :        ph1_mux_ratio        |    1.0     |       1.0        
+RUN-1001 :            report           |  standard  |     standard     
+RUN-1001 : ----------------------------------------------------------
+SYN-2001 : Map 17 IOs to PADs
+SYN-2501 : Processed 0 LOGIC_BUF instances.
+SYN-2501 : 1 BUFG to GCLK
+SYN-2593 : bram inst: RAM_CODE/ram_mem_unify_al_u00 will be optimized to a new one with A-width 8 due to unused data out
+SYN-2593 : bram inst: RAM_CODE/ram_mem_unify_al_u10 will be optimized to a new one with A-width 8 due to unused data out
+SYN-2593 : bram inst: RAM_CODE/ram_mem_unify_al_u20 will be optimized to a new one with A-width 8 due to unused data out
+SYN-2593 : bram inst: RAM_CODE/ram_mem_unify_al_u30 will be optimized to a new one with A-width 8 due to unused data out
+SYN-2593 : bram inst: RAM_DATA/ram_mem_unify_al_u00 will be optimized to a new one with A-width 8 due to unused data out
+SYN-2593 : bram inst: RAM_DATA/ram_mem_unify_al_u10 will be optimized to a new one with A-width 8 due to unused data out
+SYN-2593 : bram inst: RAM_DATA/ram_mem_unify_al_u20 will be optimized to a new one with A-width 8 due to unused data out
+SYN-2593 : bram inst: RAM_DATA/ram_mem_unify_al_u30 will be optimized to a new one with A-width 8 due to unused data out
+SYN-2595 : bram inst: RAM_CODE/ram_mem_unify_al_u00 is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: RAM_CODE/ram_mem_unify_al_u10 is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: RAM_CODE/ram_mem_unify_al_u20 is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: RAM_CODE/ram_mem_unify_al_u30 is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: RAM_DATA/ram_mem_unify_al_u00 is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: RAM_DATA/ram_mem_unify_al_u10 is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: RAM_DATA/ram_mem_unify_al_u20 is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: RAM_DATA/ram_mem_unify_al_u30 is set to PDPW/SP from DP for resource saving
+SYN-2512 : LOGIC BRAM "RAM_CODE/ram_mem_unify_al_u00"
+SYN-2512 : LOGIC BRAM "RAM_CODE/ram_mem_unify_al_u10"
+SYN-2512 : LOGIC BRAM "RAM_CODE/ram_mem_unify_al_u20"
+SYN-2512 : LOGIC BRAM "RAM_CODE/ram_mem_unify_al_u30"
+SYN-2512 : LOGIC BRAM "RAM_DATA/ram_mem_unify_al_u00"
+SYN-2512 : LOGIC BRAM "RAM_DATA/ram_mem_unify_al_u10"
+SYN-2512 : LOGIC BRAM "RAM_DATA/ram_mem_unify_al_u20"
+SYN-2512 : LOGIC BRAM "RAM_DATA/ram_mem_unify_al_u30"
+SYN-2531 : Dram(UART_TX/FIFO/al_ram_mem) write 16x8, read 16x8
+SYN-2531 : DRAM UART_TX/FIFO/al_ram_mem has no init file
+SYN-2571 : Optimize after map_dsp, round 1
+SYN-2571 : Optimize after map_dsp, round 1, 0 better
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 50 instances.
+SYN-2501 : Optimize round 1, 212 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-2501 : Map 9 macro adder
+SYN-1019 : Optimized 245 mux instances.
+SYN-1016 : Merged 17 instances.
+SYN-1032 : 20817/257 useful/useless nets, 20472/1 useful/useless insts
+SYN-2501 : Processed 0 LOGIC_BUF instances.
+SYN-2571 : Map 1 macro multiplier
+SYN-2571 : Optimize after map_dsp, round 1
+SYN-1032 : 19973/68 useful/useless nets, 19650/1 useful/useless insts
+SYN-2571 : Optimize after map_dsp, round 1, 69 better
+SYN-2571 : Optimize after map_dsp, round 2
+SYN-2571 : Optimize after map_dsp, round 2, 0 better
+SYN-2501 : Optimize round 1
+SYN-2501 : Optimize round 1, 0 better
+SYN-2501 : Map 8 macro adder
+SYN-1016 : Merged 8 instances.
+SYN-1032 : 20399/2 useful/useless nets, 20144/0 useful/useless insts
+SYN-3001 : X or Z is treated as constant in optimizing instance UART_TX/_al_const_x.
+SYN-3001 : X or Z is treated as constant in optimizing instance UART_TX/_al_const_x.
+SYN-3001 : X or Z is treated as constant in optimizing instance UART_TX/_al_const_x.
+SYN-3001 : X or Z is treated as constant in optimizing instance UART_TX/_al_const_x.
+SYN-3004 : Optimized 1 const0 DFF(s)
+SYN-1032 : 20395/4 useful/useless nets, 20140/3 useful/useless insts
+SYN-1032 : 21272/58 useful/useless nets, 20913/52 useful/useless insts
+SYN-3001 : X or Z is treated as constant in optimizing instance UART_TX/_al_const_x.
+SYN-3001 : Running gate level optimization.
+SYN-2581 : Mapping with K=5, #lut = 173 (3.70), #lev = 4 (1.91)
+SYN-2551 : Post LUT mapping optimization.
+SYN-2581 : Mapping with K=5, #lut = 162 (3.59), #lev = 4 (2.00)
+SYN-3001 : Logic optimization runtime opt =   0.02 sec, map =   0.00 sec
+SYN-3001 : Mapper mapped 571 instances into 168 LUTs, name keeping = 70%.
+SYN-3001 : Running gate level optimization.
+SYN-2581 : Mapping with K=5, #lut = 4743 (3.72), #lev = 19 (9.65)
+SYN-2551 : Post LUT mapping optimization.
+SYN-2581 : Mapping with K=5, #lut = 4715 (3.73), #lev = 16 (8.78)
+SYN-3001 : Logic optimization runtime opt =   0.78 sec, map = 14284.68 sec
+SYN-3001 : Mapper mapped 18641 instances into 4715 LUTs, name keeping = 34%.
+RUN-1002 : start command "report_area -file MMC_gate.area"
+RUN-1001 : standard
+***Report Model: CortexM0_SoC***
+
+IO Statistics
+#IO                        17
+  #input                    4
+  #output                  12
+  #inout                    1
+
+LUT Statistics
+#Total_luts              5085
+  #lut4                  3967
+  #lut5                   916
+  #lut6                     0
+  #lut5_mx41                0
+  #lut4_alu1b             202
+
+Utilization Statistics
+#lut                     5085   out of  19600   25.94%
+#reg                     1400   out of  19600    7.14%
+#le                         0
+#dsp                        3   out of     29   10.34%
+#bram                      64   out of     64  100.00%
+  #bram9k                  64
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#dram                       2
+#adc                        1   out of      1  100.00%
+#pad                       17   out of    186    9.14%
+  #ireg                     0
+  #oreg                     0
+  #treg                     0
+#pll                        1   out of      4   25.00%
+
+Report Hierarchy Area:
++--------------------------------------------------------------------+
+|Instance  |Module           |lut    |ripple |seq    |bram   |dsp    |
++--------------------------------------------------------------------+
+|top       |CortexM0_SoC     |4883   |202    |1400   |64     |3      |
+|  u_logic |cortexm0ds_logic |4715   |173    |1297   |0      |3      |
++--------------------------------------------------------------------+
+
+SYN-1001 : Packing model "CortexM0_SoC" ...
+SYN-4010 : Pack lib has 44 rtl pack models with 17 top pack blocks
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+SYN-4002 : Packing 103 DFF/LATCH to SEQ ...
+SYN-4009 : Pack 1 carry chain into lslice
+SYN-4007 : Packing 15 adder to BLE ...
+SYN-4008 : Packed 15 adder and 0 SEQ to BLE.
+SYN-4007 : Packing 0 gate4 to BLE ...
+SYN-4008 : Packed 0 gate4 and 0 SEQ to BLE.
+SYN-4012 : Packed 0 FxMUX
+SYN-4013 : Packed 2 DRAM and 0 SEQ.
+SYN-1001 : Packing model "cortexm0ds_logic" ...
+SYN-4010 : Pack lib has 44 rtl pack models with 17 top pack blocks
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+SYN-4002 : Packing 1297 DFF/LATCH to SEQ ...
+SYN-4009 : Pack 3 carry chain into lslice
+SYN-4007 : Packing 76 adder to BLE ...
+SYN-4008 : Packed 76 adder and 0 SEQ to BLE.
+SYN-4007 : Packing 0 gate4 to BLE ...
+SYN-4008 : Packed 0 gate4 and 0 SEQ to BLE.
+SYN-4012 : Packed 0 FxMUX
+RUN-1003 : finish command "optimize_gate -maparea MMC_gate.area" in  9.609877s wall, 9.625000s user + 0.140625s system = 9.765625s CPU (101.6%)
+
+RUN-1004 : used memory is 602 MB, reserved memory is 548 MB, peak memory is 713 MB
+RUN-1002 : start command "legalize_phy_inst"
+SYN-1011 : Flatten model CortexM0_SoC
+SYN-1011 : Flatten model cortexm0ds_logic
+SYN-1016 : Merged 2 instances.
+RUN-1002 : start command "export_db MMC_gate.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported flow parameters
+RUN-1003 : finish command "export_db MMC_gate.db" in  1.857786s wall, 1.859375s user + 0.015625s system = 1.875000s CPU (100.9%)
+
+RUN-1004 : used memory is 646 MB, reserved memory is 594 MB, peak memory is 713 MB
+RUN-1002 : start command "place"
+RUN-1001 : Open license file D:/Anlogic/TD5.0.43066/license/Anlogic.lic
+RUN-1001 : Print Place Property
+RUN-1001 : ------------------------------------------------
+RUN-1001 :     Parameters    |  Settings  |  Default Values  
+RUN-1001 : ------------------------------------------------
+RUN-1001 :   detailed_place  |     on     |        on        
+RUN-1001 :       effort      |   medium   |      medium      
+RUN-1001 :     opt_timing    |   medium   |      medium      
+RUN-1001 :    pr_strategy    |     1      |        1         
+RUN-1001 :     relaxation    |    1.00    |       1.00       
+RUN-1001 :      retiming     |    off     |       off        
+RUN-1001 : ------------------------------------------------
+PHY-3001 : Placer runs in 16 thread(s).
+SYN-4016 : Net IQfetcher/CW_CLK driven by BUFG (0 clock/control pins, 1 other pins).
+SYN-4027 : Net IQfetcher/ADC_CLK is clkc1 of pll IQfetcher/adcclk/pll_inst.
+SYN-4019 : Net clk_pad is refclk of pll IQfetcher/adcclk/pll_inst.
+SYN-4020 : Net clk_pad is fbclk of pll IQfetcher/adcclk/pll_inst.
+SYN-4024 : Net "u_logic/SWCLKTCK_pad" drive clk pins.
+SYN-4025 : Tag rtl::Net IQfetcher/ADC_CLK as clock net
+SYN-4025 : Tag rtl::Net IQfetcher/CW_CLK as clock net
+SYN-4025 : Tag rtl::Net clk_pad as clock net
+SYN-4025 : Tag rtl::Net u_logic/SWCLKTCK_pad as clock net
+SYN-4026 : Tagged 4 rtl::Net as clock net
+PHY-1001 : Populate physical database on model CortexM0_SoC.
+RUN-1001 : There are total 6456 instances
+RUN-1001 : 4883 luts, 1400 seqs, 52 mslices, 31 lslices, 17 pads, 64 brams, 3 dsps
+RUN-1001 : There are total 6710 nets
+RUN-1001 : 3549 nets have 2 pins
+RUN-1001 : 2229 nets have [3 - 5] pins
+RUN-1001 : 504 nets have [6 - 10] pins
+RUN-1001 : 217 nets have [11 - 20] pins
+RUN-1001 : 207 nets have [21 - 99] pins
+RUN-1001 : 4 nets have 100+ pins
+PHY-3001 : Initial placement ...
+PHY-3001 : design contains 6454 instances, 4883 luts, 1400 seqs, 83 slices, 12 macros(83 instances: 52 mslices 31 lslices)
+PHY-3001 : Cell area utilization is 25%
+PHY-3001 : Global placement ...
+PHY-3001 : Initial: Len = 1.57813e+06
+PHY-3001 : Clustering ...
+PHY-3001 : Level 0 #clusters 6454.
+PHY-3001 : End clustering;  0.000019s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%)
+
+PHY-3001 : Run with size of 4
+PHY-3001 : Cell area utilization is 25%
+PHY-3001 : :::0::: Try harder cell spreading with beta_ = 0
+PHY-3002 : Step(1): len = 1.24155e+06, overlap = 150.75
+PHY-3002 : Step(2): len = 946534, overlap = 155.625
+PHY-3002 : Step(3): len = 635156, overlap = 212.281
+PHY-3002 : Step(4): len = 500110, overlap = 262.5
+PHY-3002 : Step(5): len = 387915, overlap = 308.75
+PHY-3002 : Step(6): len = 347719, overlap = 339
+PHY-3002 : Step(7): len = 279099, overlap = 353.25
+PHY-3002 : Step(8): len = 266723, overlap = 361.25
+PHY-3002 : Step(9): len = 247716, overlap = 383.313
+PHY-3002 : Step(10): len = 225088, overlap = 405.969
+PHY-3002 : Step(11): len = 215528, overlap = 416.688
+PHY-3002 : Step(12): len = 188875, overlap = 441.969
+PHY-3002 : Step(13): len = 180063, overlap = 457.625
+PHY-3002 : Step(14): len = 169037, overlap = 465.313
+PHY-3002 : Step(15): len = 163290, overlap = 472.219
+PHY-3002 : Step(16): len = 154142, overlap = 485.969
+PHY-3001 : :::1::: Try harder cell spreading with beta_ = 1.71407e-06
+PHY-3002 : Step(17): len = 155894, overlap = 481.313
+PHY-3002 : Step(18): len = 160401, overlap = 483.594
+PHY-3002 : Step(19): len = 169325, overlap = 468.281
+PHY-3002 : Step(20): len = 168275, overlap = 464.406
+PHY-3002 : Step(21): len = 163606, overlap = 466.719
+PHY-3002 : Step(22): len = 163752, overlap = 466.688
+PHY-3002 : Step(23): len = 158804, overlap = 466.563
+PHY-3002 : Step(24): len = 159041, overlap = 466.469
+PHY-3002 : Step(25): len = 154789, overlap = 473.25
+PHY-3002 : Step(26): len = 155591, overlap = 474.688
+PHY-3002 : Step(27): len = 150724, overlap = 473.531
+PHY-3002 : Step(28): len = 150710, overlap = 470.031
+PHY-3002 : Step(29): len = 149723, overlap = 468.281
+PHY-3002 : Step(30): len = 149725, overlap = 455.375
+PHY-3002 : Step(31): len = 147402, overlap = 445.594
+PHY-3002 : Step(32): len = 148863, overlap = 436.594
+PHY-3002 : Step(33): len = 150601, overlap = 428.406
+PHY-3002 : Step(34): len = 147866, overlap = 431.938
+PHY-3002 : Step(35): len = 148128, overlap = 434.188
+PHY-3002 : Step(36): len = 148143, overlap = 433.563
+PHY-3001 : :::2::: Try harder cell spreading with beta_ = 3.42815e-06
+PHY-3002 : Step(37): len = 147361, overlap = 425.969
+PHY-3002 : Step(38): len = 148216, overlap = 425.406
+PHY-3002 : Step(39): len = 152529, overlap = 429.719
+PHY-3002 : Step(40): len = 157132, overlap = 427.594
+PHY-3002 : Step(41): len = 156396, overlap = 422.313
+PHY-3002 : Step(42): len = 157248, overlap = 418.813
+PHY-3002 : Step(43): len = 155453, overlap = 412.75
+PHY-3002 : Step(44): len = 156205, overlap = 413.219
+PHY-3002 : Step(45): len = 158521, overlap = 405.563
+PHY-3002 : Step(46): len = 161302, overlap = 394.313
+PHY-3002 : Step(47): len = 164270, overlap = 392.594
+PHY-3002 : Step(48): len = 163427, overlap = 388.313
+PHY-3002 : Step(49): len = 164074, overlap = 384.375
+PHY-3002 : Step(50): len = 164331, overlap = 377.375
+PHY-3002 : Step(51): len = 163833, overlap = 368.781
+PHY-3002 : Step(52): len = 164131, overlap = 352.313
+PHY-3002 : Step(53): len = 164073, overlap = 352.688
+PHY-3002 : Step(54): len = 164233, overlap = 353.469
+PHY-3002 : Step(55): len = 165429, overlap = 350.719
+PHY-3002 : Step(56): len = 164214, overlap = 356.781
+PHY-3002 : Step(57): len = 164063, overlap = 353.156
+PHY-3002 : Step(58): len = 164074, overlap = 356.969
+PHY-3001 : :::3::: Try harder cell spreading with beta_ = 6.85629e-06
+PHY-3002 : Step(59): len = 166942, overlap = 339.344
+PHY-3002 : Step(60): len = 167795, overlap = 332.344
+PHY-3002 : Step(61): len = 170491, overlap = 327.125
+PHY-3002 : Step(62): len = 172678, overlap = 328.25
+PHY-3002 : Step(63): len = 183705, overlap = 302.813
+PHY-3002 : Step(64): len = 199892, overlap = 292.469
+PHY-3002 : Step(65): len = 200410, overlap = 288.75
+PHY-3002 : Step(66): len = 202460, overlap = 299.063
+PHY-3002 : Step(67): len = 202515, overlap = 305.781
+PHY-3002 : Step(68): len = 201149, overlap = 300.031
+PHY-3002 : Step(69): len = 202110, overlap = 283.406
+PHY-3002 : Step(70): len = 202542, overlap = 270.563
+PHY-3002 : Step(71): len = 202479, overlap = 259.625
+PHY-3002 : Step(72): len = 202352, overlap = 248.406
+PHY-3002 : Step(73): len = 201912, overlap = 238.531
+PHY-3001 : :::4::: Try harder cell spreading with beta_ = 1.37126e-05
+PHY-3002 : Step(74): len = 203779, overlap = 240.75
+PHY-3002 : Step(75): len = 205197, overlap = 236.156
+PHY-3002 : Step(76): len = 207642, overlap = 236.438
+PHY-3001 : :::5::: Try harder cell spreading with beta_ = 2.2187e-05
+PHY-3002 : Step(77): len = 207925, overlap = 222.344
+PHY-3002 : Step(78): len = 209727, overlap = 208.969
+PHY-3002 : Step(79): len = 229744, overlap = 193.813
+PHY-3002 : Step(80): len = 245421, overlap = 179.844
+PHY-3002 : Step(81): len = 247638, overlap = 157.25
+PHY-3002 : Step(82): len = 248932, overlap = 156.25
+PHY-3002 : Step(83): len = 251004, overlap = 158.563
+PHY-3002 : Step(84): len = 252738, overlap = 136.625
+PHY-3002 : Step(85): len = 254470, overlap = 134.813
+PHY-3002 : Step(86): len = 255859, overlap = 118.625
+PHY-3002 : Step(87): len = 257396, overlap = 105.625
+PHY-3002 : Step(88): len = 258733, overlap = 98.6875
+PHY-3002 : Step(89): len = 261523, overlap = 100.125
+PHY-3002 : Step(90): len = 262062, overlap = 104.5
+PHY-3002 : Step(91): len = 262858, overlap = 109.344
+PHY-3002 : Step(92): len = 262591, overlap = 102.125
+PHY-3002 : Step(93): len = 262617, overlap = 98.9063
+PHY-3002 : Step(94): len = 263005, overlap = 105.156
+PHY-3001 : :::6::: Try harder cell spreading with beta_ = 4.06345e-05
+PHY-3002 : Step(95): len = 263850, overlap = 104.656
+PHY-3002 : Step(96): len = 264068, overlap = 104.813
+PHY-3002 : Step(97): len = 264934, overlap = 102.281
+PHY-3001 : Legalization ...
+PHY-3001 : End legalization;  0.025440s wall, 0.015625s user + 0.015625s system = 0.031250s CPU (122.8%)
+
+PHY-3001 : Run with size of 4
+PHY-3001 : Cell area utilization is 31%
+PHY-3001 : Analyzing congestion ...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Global iterations in 16 thread ...
+PHY-1002 : len = 767416, over cnt = 1609(4%), over = 2816, worst = 9
+PHY-1002 : len = 785744, over cnt = 1406(3%), over = 2082, worst = 6
+PHY-1002 : len = 809664, over cnt = 991(2%), over = 1403, worst = 6
+PHY-1002 : len = 844272, over cnt = 624(1%), over = 851, worst = 5
+PHY-1002 : len = 864536, over cnt = 226(0%), over = 341, worst = 5
+PHY-1001 : End global iterations;  0.454141s wall, 0.890625s user + 0.000000s system = 0.890625s CPU (196.1%)
+
+PHY-1001 : Congestion index: top1 = 79.38, top5 = 67.50, top10 = 59.38, top15 = 53.75.
+PHY-3001 : End congestion estimation;  0.566800s wall, 0.984375s user + 0.015625s system = 1.000000s CPU (176.4%)
+
+PHY-3001 : Update density targets...
+PHY-3001 : Update congestion history...
+PHY-3001 : :::0::: Try harder cell spreading with beta_ = 2.33471e-06
+PHY-3002 : Step(98): len = 258951, overlap = 127.406
+PHY-3002 : Step(99): len = 255284, overlap = 159.656
+PHY-3002 : Step(100): len = 240647, overlap = 202.875
+PHY-3002 : Step(101): len = 224604, overlap = 236.719
+PHY-3002 : Step(102): len = 206385, overlap = 253.969
+PHY-3002 : Step(103): len = 202089, overlap = 266.063
+PHY-3002 : Step(104): len = 197020, overlap = 288.906
+PHY-3002 : Step(105): len = 195280, overlap = 295.5
+PHY-3002 : Step(106): len = 188026, overlap = 316.938
+PHY-3002 : Step(107): len = 184040, overlap = 326.375
+PHY-3002 : Step(108): len = 181235, overlap = 329.031
+PHY-3002 : Step(109): len = 178242, overlap = 330.063
+PHY-3002 : Step(110): len = 178357, overlap = 327.625
+PHY-3002 : Step(111): len = 178356, overlap = 328.125
+PHY-3001 : :::1::: Try harder cell spreading with beta_ = 4.66941e-06
+PHY-3002 : Step(112): len = 182489, overlap = 320.188
+PHY-3002 : Step(113): len = 189232, overlap = 315.25
+PHY-3002 : Step(114): len = 199707, overlap = 299.688
+PHY-3001 : :::2::: Try harder cell spreading with beta_ = 9.33883e-06
+PHY-3002 : Step(115): len = 207532, overlap = 282.656
+PHY-3002 : Step(116): len = 222668, overlap = 270.688
+PHY-3002 : Step(117): len = 242140, overlap = 202.469
+PHY-3002 : Step(118): len = 236451, overlap = 191.219
+PHY-3002 : Step(119): len = 236007, overlap = 181.5
+PHY-3002 : Step(120): len = 236631, overlap = 179.438
+PHY-3002 : Step(121): len = 236520, overlap = 168.313
+PHY-3002 : Step(122): len = 237841, overlap = 162.969
+PHY-3002 : Step(123): len = 240067, overlap = 157.25
+PHY-3001 : :::3::: Try harder cell spreading with beta_ = 1.86777e-05
+PHY-3002 : Step(124): len = 258987, overlap = 126.219
+PHY-3002 : Step(125): len = 277080, overlap = 103.344
+PHY-3002 : Step(126): len = 287815, overlap = 77.2813
+PHY-3002 : Step(127): len = 282835, overlap = 67.3438
+PHY-3002 : Step(128): len = 282101, overlap = 63.9063
+PHY-3002 : Step(129): len = 281435, overlap = 59.5625
+PHY-3002 : Step(130): len = 278420, overlap = 58.3438
+PHY-3002 : Step(131): len = 278839, overlap = 57.5625
+PHY-3002 : Step(132): len = 280406, overlap = 57.4063
+PHY-3002 : Step(133): len = 282867, overlap = 57.75
+PHY-3001 : :::4::: Try harder cell spreading with beta_ = 3.73553e-05
+PHY-3002 : Step(134): len = 301777, overlap = 28.4688
+PHY-3002 : Step(135): len = 315915, overlap = 19.1563
+PHY-3002 : Step(136): len = 322050, overlap = 16.2188
+PHY-3002 : Step(137): len = 319542, overlap = 15.4375
+PHY-3002 : Step(138): len = 318325, overlap = 13.8125
+PHY-3002 : Step(139): len = 316196, overlap = 15
+PHY-3002 : Step(140): len = 314818, overlap = 14.3125
+PHY-3002 : Step(141): len = 315325, overlap = 13.9063
+PHY-3002 : Step(142): len = 317314, overlap = 12.0313
+PHY-3002 : Step(143): len = 318955, overlap = 10.0313
+PHY-3001 : :::5::: Try harder cell spreading with beta_ = 7.47106e-05
+PHY-3002 : Step(144): len = 334078, overlap = 6.3125
+PHY-3002 : Step(145): len = 345321, overlap = 3.0625
+PHY-3002 : Step(146): len = 352315, overlap = 3.3125
+PHY-3002 : Step(147): len = 351406, overlap = 2.0625
+PHY-3002 : Step(148): len = 349257, overlap = 1.8125
+PHY-3002 : Step(149): len = 348937, overlap = 2.65625
+PHY-3002 : Step(150): len = 348206, overlap = 4.1875
+PHY-3002 : Step(151): len = 349295, overlap = 4.4375
+PHY-3002 : Step(152): len = 350384, overlap = 7.3125
+PHY-3001 : :::6::: Try harder cell spreading with beta_ = 0.000149421
+PHY-3002 : Step(153): len = 364063, overlap = 4.5
+PHY-3002 : Step(154): len = 369076, overlap = 4.59375
+PHY-3002 : Step(155): len = 375320, overlap = 4.875
+PHY-3002 : Step(156): len = 377222, overlap = 6.4375
+PHY-3002 : Step(157): len = 378656, overlap = 5.25
+PHY-3002 : Step(158): len = 379241, overlap = 4.75
+PHY-3002 : Step(159): len = 379067, overlap = 2.5625
+PHY-3002 : Step(160): len = 378726, overlap = 3.15625
+PHY-3002 : Step(161): len = 377409, overlap = 2.09375
+PHY-3001 : :::7::: Try harder cell spreading with beta_ = 0.000298842
+PHY-3002 : Step(162): len = 384398, overlap = 2
+PHY-3002 : Step(163): len = 387948, overlap = 2.375
+PHY-3002 : Step(164): len = 393575, overlap = 1.5625
+PHY-3002 : Step(165): len = 391399, overlap = 1.625
+PHY-3002 : Step(166): len = 390999, overlap = 2.59375
+PHY-3002 : Step(167): len = 390331, overlap = 2.3125
+PHY-3001 : Run with size of 2
+PHY-3001 : Cell area utilization is 31%
+PHY-3001 : Analyzing congestion ...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Global iterations in 16 thread ...
+PHY-1002 : len = 1.16098e+06, over cnt = 469(1%), over = 721, worst = 7
+PHY-1002 : len = 1.16648e+06, over cnt = 299(0%), over = 429, worst = 4
+PHY-1002 : len = 1.17058e+06, over cnt = 180(0%), over = 259, worst = 4
+PHY-1002 : len = 1.17061e+06, over cnt = 135(0%), over = 204, worst = 4
+PHY-1002 : len = 1.1562e+06, over cnt = 78(0%), over = 120, worst = 4
+PHY-1001 : End global iterations;  0.275278s wall, 0.671875s user + 0.000000s system = 0.671875s CPU (244.1%)
+
+PHY-1001 : Congestion index: top1 = 55.00, top5 = 47.50, top10 = 42.50, top15 = 38.75.
+PHY-3001 : End congestion estimation;  0.410004s wall, 0.796875s user + 0.000000s system = 0.796875s CPU (194.4%)
+
+PHY-3001 : Update density targets...
+PHY-3001 : Update congestion history...
+PHY-3001 : :::0::: Try harder cell spreading with beta_ = 0.000107083
+PHY-3002 : Step(168): len = 387856, overlap = 13.8438
+PHY-3002 : Step(169): len = 386124, overlap = 9.71875
+PHY-3002 : Step(170): len = 375098, overlap = 12.4688
+PHY-3002 : Step(171): len = 363546, overlap = 13.875
+PHY-3002 : Step(172): len = 355141, overlap = 18.4375
+PHY-3002 : Step(173): len = 346101, overlap = 18.375
+PHY-3002 : Step(174): len = 341102, overlap = 21.25
+PHY-3002 : Step(175): len = 334922, overlap = 20
+PHY-3002 : Step(176): len = 332864, overlap = 19.0625
+PHY-3002 : Step(177): len = 331057, overlap = 18.8125
+PHY-3002 : Step(178): len = 328341, overlap = 15.7188
+PHY-3002 : Step(179): len = 327969, overlap = 15.4688
+PHY-3002 : Step(180): len = 327548, overlap = 19.5
+PHY-3001 : :::1::: Try harder cell spreading with beta_ = 0.000214167
+PHY-3002 : Step(181): len = 333976, overlap = 17.7813
+PHY-3002 : Step(182): len = 338556, overlap = 15.5938
+PHY-3002 : Step(183): len = 345295, overlap = 10.2188
+PHY-3002 : Step(184): len = 346283, overlap = 8.59375
+PHY-3002 : Step(185): len = 346982, overlap = 6.96875
+PHY-3002 : Step(186): len = 347487, overlap = 8.03125
+PHY-3001 : :::2::: Try harder cell spreading with beta_ = 0.000428333
+PHY-3002 : Step(187): len = 352329, overlap = 6.5625
+PHY-3002 : Step(188): len = 357189, overlap = 6.84375
+PHY-3002 : Step(189): len = 363984, overlap = 5.5625
+PHY-3002 : Step(190): len = 365417, overlap = 6.15625
+PHY-3002 : Step(191): len = 366113, overlap = 5.75
+PHY-3002 : Step(192): len = 367031, overlap = 5.78125
+PHY-3002 : Step(193): len = 368052, overlap = 4.6875
+PHY-3002 : Step(194): len = 368959, overlap = 6.625
+PHY-3002 : Step(195): len = 368905, overlap = 5.375
+PHY-3002 : Step(196): len = 368935, overlap = 5.125
+PHY-3002 : Step(197): len = 369188, overlap = 4.9375
+PHY-3001 : :::3::: Try harder cell spreading with beta_ = 0.000804681
+PHY-3002 : Step(198): len = 371652, overlap = 4.03125
+PHY-3002 : Step(199): len = 375434, overlap = 3.96875
+PHY-3002 : Step(200): len = 379162, overlap = 3.78125
+PHY-3002 : Step(201): len = 383343, overlap = 3.21875
+PHY-3002 : Step(202): len = 385439, overlap = 3
+PHY-3002 : Step(203): len = 387497, overlap = 2.28125
+PHY-3002 : Step(204): len = 389731, overlap = 1.53125
+PHY-3002 : Step(205): len = 390244, overlap = 1.65625
+PHY-3002 : Step(206): len = 390149, overlap = 1.53125
+PHY-3002 : Step(207): len = 389968, overlap = 1.78125
+PHY-3001 : :::4::: Try harder cell spreading with beta_ = 0.00154342
+PHY-3002 : Step(208): len = 391097, overlap = 1.75
+PHY-3002 : Step(209): len = 393548, overlap = 1.5
+PHY-3002 : Step(210): len = 395550, overlap = 1.34375
+PHY-3002 : Step(211): len = 397212, overlap = 2.15625
+PHY-3002 : Step(212): len = 398758, overlap = 1.59375
+PHY-3002 : Step(213): len = 401271, overlap = 1.40625
+PHY-3002 : Step(214): len = 404099, overlap = 2.125
+PHY-3002 : Step(215): len = 404903, overlap = 1.65625
+PHY-3002 : Step(216): len = 405787, overlap = 1.4375
+PHY-3002 : Step(217): len = 406659, overlap = 1.03125
+PHY-3002 : Step(218): len = 407659, overlap = 1.40625
+PHY-3002 : Step(219): len = 408004, overlap = 1.125
+PHY-3002 : Step(220): len = 407794, overlap = 1.0625
+PHY-3002 : Step(221): len = 407769, overlap = 1.3125
+PHY-3001 : :::5::: Try harder cell spreading with beta_ = 0.00252087
+PHY-3002 : Step(222): len = 408984, overlap = 1.25
+PHY-3002 : Step(223): len = 409955, overlap = 0.8125
+PHY-3002 : Step(224): len = 410974, overlap = 0.6875
+OPT-1001 : Start physical optimization ...
+OPT-1001 : Total overflow 62.59 peak overflow 1.00
+OPT-1001 : Start high-fanout net optimization ...
+OPT-1001 : Update timing in global mode
+PHY-1001 : Start incremental global routing ...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Global iterations in 16 thread ...
+PHY-1002 : len = 1.27749e+06, over cnt = 338(0%), over = 469, worst = 4
+PHY-1002 : len = 1.279e+06, over cnt = 226(0%), over = 307, worst = 4
+PHY-1002 : len = 1.28006e+06, over cnt = 166(0%), over = 225, worst = 4
+PHY-1002 : len = 1.27975e+06, over cnt = 138(0%), over = 190, worst = 4
+PHY-1002 : len = 1.27914e+06, over cnt = 133(0%), over = 182, worst = 4
+PHY-1001 : End global iterations;  0.259104s wall, 0.656250s user + 0.078125s system = 0.734375s CPU (283.4%)
+
+PHY-1001 : Congestion index: top1 = 55.63, top5 = 46.25, top10 = 41.88, top15 = 38.13.
+PHY-1001 : End incremental global routing;  0.385873s wall, 0.781250s user + 0.093750s system = 0.875000s CPU (226.8%)
+
+RUN-1002 : start command "start_timer"
+TMR-5001 WARNING: No sdc constraints found while initiating timer.
+TMR-2505 : Start building timing graph for model CortexM0_SoC.
+TMR-2506 : Build timing graph completely. Port num: 10, tpin num: 31493, tnet num: 6686, tinst num: 6454, tnode num: 36098, tedge num: 51353.
+TMR-2508 : Levelizing timing graph completed, there are 57 levels in total.
+TMR-2501 : Timing graph initialized successfully.
+OPT-1001 : End timing update;  0.293023s wall, 0.281250s user + 0.000000s system = 0.281250s CPU (96.0%)
+
+OPT-1001 : 0 high-fanout net processed.
+OPT-1001 : End high-fanout net optimization;  1.079613s wall, 1.484375s user + 0.093750s system = 1.578125s CPU (146.2%)
+
+OPT-1001 : End physical optimization;  1.136315s wall, 1.531250s user + 0.093750s system = 1.625000s CPU (143.0%)
+
+PHY-3001 : Start packing ...
+SYN-4007 : Packing 0 MUX to BLE ...
+SYN-4008 : Packed 0 MUX and 0 SEQ to BLE.
+SYN-4007 : Packing 4883 LUT to BLE ...
+SYN-4008 : Packed 4883 LUT and 556 SEQ to BLE.
+SYN-4003 : Packing 844 remaining SEQ's ...
+SYN-4005 : Packed 835 SEQ with LUT/SLICE
+SYN-4006 : 3494 single LUT's are left
+SYN-4006 : 9 single SEQ's are left
+SYN-4011 : Packing model "CortexM0_SoC" (AL_USER_NORMAL) with 4892/5065 primitive instances ...
+PHY-3001 : End packing;  0.659883s wall, 0.703125s user + 0.000000s system = 0.703125s CPU (106.6%)
+
+PHY-1001 : Populate physical database on model CortexM0_SoC.
+RUN-1001 : There are total 2918 instances
+RUN-1001 : 1414 mslices, 1414 lslices, 17 pads, 64 brams, 3 dsps
+RUN-1001 : There are total 6311 nets
+RUN-1001 : 2853 nets have 2 pins
+RUN-1001 : 2424 nets have [3 - 5] pins
+RUN-1001 : 580 nets have [6 - 10] pins
+RUN-1001 : 235 nets have [11 - 20] pins
+RUN-1001 : 216 nets have [21 - 99] pins
+RUN-1001 : 3 nets have 100+ pins
+PHY-3001 : design contains 2916 instances, 2828 slices, 12 macros(83 instances: 52 mslices 31 lslices)
+PHY-3001 : Cell area utilization is 35%
+PHY-3001 : After packing: Len = 426684, Over = 15.5
+PHY-3001 : Run with size of 2
+PHY-3001 : Cell area utilization is 35%
+PHY-3001 : Analyzing congestion ...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Global iterations in 16 thread ...
+PHY-1002 : len = 1.29497e+06, over cnt = 284(0%), over = 360, worst = 4
+PHY-1002 : len = 1.29634e+06, over cnt = 184(0%), over = 219, worst = 3
+PHY-1002 : len = 1.29652e+06, over cnt = 137(0%), over = 165, worst = 3
+PHY-1002 : len = 1.2963e+06, over cnt = 112(0%), over = 139, worst = 3
+PHY-1002 : len = 1.29132e+06, over cnt = 93(0%), over = 116, worst = 3
+PHY-1001 : End global iterations;  0.271388s wall, 0.656250s user + 0.031250s system = 0.687500s CPU (253.3%)
+
+PHY-1001 : Congestion index: top1 = 56.25, top5 = 46.25, top10 = 41.25, top15 = 38.13.
+PHY-3001 : End congestion estimation;  0.430665s wall, 0.828125s user + 0.031250s system = 0.859375s CPU (199.5%)
+
+PHY-3001 : Update density targets...
+PHY-3001 : Update congestion history...
+PHY-3001 : :::0::: Try harder cell spreading with beta_ = 4.23053e-05
+PHY-3002 : Step(225): len = 409332, overlap = 17
+PHY-3002 : Step(226): len = 391168, overlap = 31.75
+PHY-3002 : Step(227): len = 375307, overlap = 35
+PHY-3002 : Step(228): len = 366535, overlap = 45
+PHY-3002 : Step(229): len = 358771, overlap = 43
+PHY-3002 : Step(230): len = 351770, overlap = 53
+PHY-3002 : Step(231): len = 347052, overlap = 57.5
+PHY-3002 : Step(232): len = 342642, overlap = 63.5
+PHY-3002 : Step(233): len = 338909, overlap = 63
+PHY-3002 : Step(234): len = 335836, overlap = 59
+PHY-3002 : Step(235): len = 333609, overlap = 62
+PHY-3002 : Step(236): len = 331896, overlap = 68.5
+PHY-3001 : :::1::: Try harder cell spreading with beta_ = 8.46106e-05
+PHY-3002 : Step(237): len = 348086, overlap = 50.5
+PHY-3002 : Step(238): len = 361890, overlap = 40
+PHY-3002 : Step(239): len = 361548, overlap = 35.25
+PHY-3002 : Step(240): len = 362913, overlap = 36.25
+PHY-3002 : Step(241): len = 366796, overlap = 35
+PHY-3002 : Step(242): len = 368814, overlap = 32.5
+PHY-3002 : Step(243): len = 368963, overlap = 29.5
+PHY-3002 : Step(244): len = 369372, overlap = 31.5
+PHY-3002 : Step(245): len = 370950, overlap = 30.5
+PHY-3001 : :::2::: Try harder cell spreading with beta_ = 0.000165016
+PHY-3002 : Step(246): len = 381864, overlap = 23.5
+PHY-3002 : Step(247): len = 397446, overlap = 21.75
+PHY-3002 : Step(248): len = 403223, overlap = 15.25
+PHY-3002 : Step(249): len = 405755, overlap = 13.25
+PHY-3002 : Step(250): len = 409553, overlap = 10
+PHY-3002 : Step(251): len = 413026, overlap = 9.5
+PHY-3002 : Step(252): len = 415810, overlap = 13.25
+PHY-3002 : Step(253): len = 417693, overlap = 9
+PHY-3002 : Step(254): len = 417782, overlap = 8.25
+PHY-3002 : Step(255): len = 417409, overlap = 7.5
+PHY-3002 : Step(256): len = 417461, overlap = 10
+PHY-3001 : :::3::: Try harder cell spreading with beta_ = 0.000320122
+PHY-3002 : Step(257): len = 424818, overlap = 9.75
+PHY-3002 : Step(258): len = 432969, overlap = 9
+PHY-3002 : Step(259): len = 436781, overlap = 6
+PHY-3002 : Step(260): len = 438404, overlap = 5.5
+PHY-3002 : Step(261): len = 440165, overlap = 4
+PHY-3002 : Step(262): len = 441419, overlap = 3.5
+PHY-3002 : Step(263): len = 441132, overlap = 4.5
+PHY-3002 : Step(264): len = 441492, overlap = 4.75
+PHY-3002 : Step(265): len = 442749, overlap = 6
+PHY-3002 : Step(266): len = 443646, overlap = 6.5
+PHY-3002 : Step(267): len = 443946, overlap = 6
+PHY-3001 : :::4::: Try harder cell spreading with beta_ = 0.000640244
+PHY-3002 : Step(268): len = 447449, overlap = 5
+PHY-3002 : Step(269): len = 452723, overlap = 4.75
+PHY-3002 : Step(270): len = 455876, overlap = 5
+PHY-3002 : Step(271): len = 456973, overlap = 4.25
+PHY-3002 : Step(272): len = 457798, overlap = 1.75
+PHY-3002 : Step(273): len = 459125, overlap = 1.75
+PHY-3002 : Step(274): len = 460509, overlap = 2
+PHY-3002 : Step(275): len = 460738, overlap = 2.5
+PHY-3001 : :::5::: Try harder cell spreading with beta_ = 0.00122238
+PHY-3002 : Step(276): len = 462657, overlap = 2.5
+PHY-3002 : Step(277): len = 464800, overlap = 1.5
+PHY-3002 : Step(278): len = 465905, overlap = 2
+PHY-3001 : :::6::: Try harder cell spreading with beta_ = 0.0021887
+PHY-3002 : Step(279): len = 467160, overlap = 2
+PHY-3002 : Step(280): len = 471338, overlap = 2.75
+PHY-3002 : Step(281): len = 473561, overlap = 3.5
+PHY-3002 : Step(282): len = 473716, overlap = 3
+PHY-3002 : Step(283): len = 473559, overlap = 3.75
+PHY-3002 : Step(284): len = 473306, overlap = 3.5
+PHY-3001 : Legalization ...
+PHY-3001 : End legalization;  6.561119s wall, 4.562500s user + 4.812500s system = 9.375000s CPU (142.9%)
+
+PHY-3001 : Trial Legalized: Len = 482291
+PHY-3001 : Run with size of 2
+PHY-3001 : Cell area utilization is 35%
+PHY-3001 : Analyzing congestion ...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Global iterations in 16 thread ...
+PHY-1002 : len = 1.45792e+06, over cnt = 188(0%), over = 210, worst = 2
+PHY-1002 : len = 1.45848e+06, over cnt = 127(0%), over = 139, worst = 2
+PHY-1002 : len = 1.45889e+06, over cnt = 71(0%), over = 76, worst = 2
+PHY-1002 : len = 1.45625e+06, over cnt = 59(0%), over = 64, worst = 2
+PHY-1002 : len = 1.45428e+06, over cnt = 46(0%), over = 51, worst = 2
+PHY-1001 : End global iterations;  0.280183s wall, 0.671875s user + 0.015625s system = 0.687500s CPU (245.4%)
+
+PHY-1001 : Congestion index: top1 = 58.13, top5 = 49.38, top10 = 43.13, top15 = 40.63.
+PHY-3001 : End congestion estimation;  0.442562s wall, 0.828125s user + 0.015625s system = 0.843750s CPU (190.7%)
+
+PHY-3001 : Update density targets...
+PHY-3001 : Update congestion history...
+PHY-3001 : :::0::: Try harder cell spreading with beta_ = 0.000123663
+PHY-3002 : Step(285): len = 456528, overlap = 2.25
+PHY-3002 : Step(286): len = 445327, overlap = 7.75
+PHY-3002 : Step(287): len = 439319, overlap = 9.5
+PHY-3002 : Step(288): len = 434021, overlap = 9.5
+PHY-3002 : Step(289): len = 433601, overlap = 9
+PHY-3002 : Step(290): len = 431033, overlap = 10.25
+PHY-3002 : Step(291): len = 429170, overlap = 9.75
+PHY-3002 : Step(292): len = 425764, overlap = 8.75
+PHY-3002 : Step(293): len = 423956, overlap = 8.75
+PHY-3002 : Step(294): len = 423205, overlap = 11.5
+PHY-3001 : Legalization ...
+PHY-3001 : End legalization;  0.023453s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (66.6%)
+
+PHY-3001 : Legalized: Len = 428629, Over = 0
+PHY-3001 : Spreading special nets. 3 overflows in 2952 tiles.
+PHY-3001 : End spreading;  0.012903s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%)
+
+PHY-3001 : 3 instances has been re-located, deltaX = 0, deltaY = 3, maxDist = 1.
+PHY-3001 : Final: Len = 428657, Over = 0
+OPT-1001 : Start physical optimization ...
+OPT-1001 : Total overflow 0.00 peak overflow 0.00
+OPT-1001 : Start high-fanout net optimization ...
+OPT-1001 : Update timing in global mode
+PHY-1001 : Start incremental global routing ...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Global iterations in 16 thread ...
+PHY-1002 : len = 1.31265e+06, over cnt = 247(0%), over = 287, worst = 3
+PHY-1002 : len = 1.3133e+06, over cnt = 191(0%), over = 224, worst = 3
+PHY-1002 : len = 1.31337e+06, over cnt = 125(0%), over = 153, worst = 3
+PHY-1002 : len = 1.31232e+06, over cnt = 114(0%), over = 139, worst = 3
+PHY-1002 : len = 1.30588e+06, over cnt = 102(0%), over = 123, worst = 3
+PHY-1001 : End global iterations;  0.278558s wall, 0.718750s user + 0.078125s system = 0.796875s CPU (286.1%)
+
+PHY-1001 : Congestion index: top1 = 56.25, top5 = 48.13, top10 = 43.13, top15 = 40.00.
+PHY-1001 : End incremental global routing;  0.422694s wall, 0.875000s user + 0.078125s system = 0.953125s CPU (225.5%)
+
+RUN-1002 : start command "start_timer"
+TMR-5001 WARNING: No sdc constraints found while initiating timer.
+TMR-2505 : Start building timing graph for model CortexM0_SoC.
+TMR-2506 : Build timing graph completely. Port num: 10, tpin num: 31384, tnet num: 6287, tinst num: 2916, tnode num: 35335, tedge num: 52818.
+TMR-2508 : Levelizing timing graph completed, there are 57 levels in total.
+TMR-2501 : Timing graph initialized successfully.
+OPT-1001 : End timing update;  0.544091s wall, 0.546875s user + 0.015625s system = 0.562500s CPU (103.4%)
+
+OPT-1001 : 0 high-fanout net processed.
+OPT-1001 : End high-fanout net optimization;  1.603774s wall, 2.062500s user + 0.093750s system = 2.156250s CPU (134.4%)
+
+OPT-1001 : End physical optimization;  1.660742s wall, 2.109375s user + 0.093750s system = 2.203125s CPU (132.7%)
+
+RUN-1003 : finish command "place" in  34.372656s wall, 45.703125s user + 18.296875s system = 64.000000s CPU (186.2%)
+
+RUN-1004 : used memory is 785 MB, reserved memory is 737 MB, peak memory is 786 MB
+RUN-1002 : start command "report_area -io_info -file MMC_place.area"
+RUN-1001 : standard
+***Report Model: CortexM0_SoC***
+
+IO Statistics
+#IO                        17
+  #input                    4
+  #output                  12
+  #inout                    1
+
+Utilization Statistics
+#lut                     5424   out of  19600   27.67%
+#reg                     1400   out of  19600    7.14%
+#le                      5433
+  #lut only              4033   out of   5433   74.23%
+  #reg only                 9   out of   5433    0.17%
+  #lut&reg               1391   out of   5433   25.60%
+#dsp                        3   out of     29   10.34%
+#bram                      64   out of     64  100.00%
+  #bram9k                  64
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#adc                        1   out of      1  100.00%
+#pad                       17   out of    186    9.14%
+  #ireg                     0
+  #oreg                     0
+  #treg                     0
+#pll                        1   out of      4   25.00%
+
+
+Detailed IO Report
+
+   Name      Direction    Location    IOStandard    DriveStrength    PullType    PackReg  
+   RSTn        INPUT        G14        LVCMOS25          N/A           N/A        NONE    
+    RXD        INPUT         H3        LVCMOS25          N/A           N/A        NONE    
+   SWCLK       INPUT         D9        LVCMOS25          N/A           N/A        NONE    
+    clk        INPUT         F9        LVCMOS25          N/A           N/A        NONE    
+  IQ_dout     OUTPUT        H16        LVCMOS25           8            N/A        NONE    
+  IQ_flag     OUTPUT        P10        LVCMOS25           8            N/A        NONE    
+  LED[7]      OUTPUT        J11        LVCMOS25           8            N/A        NONE    
+  LED[6]      OUTPUT         M1        LVCMOS25           8            N/A        NONE    
+  LED[5]      OUTPUT         M4        LVCMOS25           8            N/A        NONE    
+  LED[4]      OUTPUT        F10        LVCMOS25           8            N/A        NONE    
+  LED[3]      OUTPUT         A3        LVCMOS25           8            N/A        NONE    
+  LED[2]      OUTPUT        N11        LVCMOS25           8            N/A        NONE    
+  LED[1]      OUTPUT         J3        LVCMOS25           8            N/A        NONE    
+  LED[0]      OUTPUT         F4        LVCMOS25           8            N/A        NONE    
+  LEDclk      OUTPUT         G6        LVCMOS25           8            N/A        NONE    
+    TXD       OUTPUT        R11        LVCMOS25           8            N/A        NONE    
+   SWDIO       INOUT         R2        LVCMOS25           8            N/A        NONE    
+
+Report Hierarchy Area:
++----------------------------------------------------------------------+
+|Instance |Module       |le    |lut    |ripple |seq    |bram   |dsp    |
++----------------------------------------------------------------------+
+|top      |CortexM0_SoC |5433  |5347   |77     |1400   |64     |3      |
++----------------------------------------------------------------------+
+
+RUN-1002 : start command "route"
+RUN-1001 : Open license file D:/Anlogic/TD5.0.43066/license/Anlogic.lic
+RUN-1001 : Print Route Property
+RUN-1001 : -----------------------------------------------
+RUN-1001 :    Parameters    |  Settings  |  Default Values  
+RUN-1001 : -----------------------------------------------
+RUN-1001 :      effort      |   medium   |      medium      
+RUN-1001 :     fix_hold     |    off     |       off        
+RUN-1001 :       lcnp       |     5      |        5         
+RUN-1001 :       mcnp       |     10     |        10        
+RUN-1001 :    opt_timing    |   medium   |      medium      
+RUN-1001 :   phy_sim_model  |    off     |       off        
+RUN-1001 :     priority     |   timing   |      timing      
+RUN-1001 :     swap_pin     |     on     |        on        
+RUN-1001 : -----------------------------------------------
+PHY-1001 : Route runs in 16 thread(s)
+RUN-1001 : There are total 2918 instances
+RUN-1001 : 1414 mslices, 1414 lslices, 17 pads, 64 brams, 3 dsps
+RUN-1001 : There are total 6311 nets
+RUN-1001 : 2853 nets have 2 pins
+RUN-1001 : 2424 nets have [3 - 5] pins
+RUN-1001 : 580 nets have [6 - 10] pins
+RUN-1001 : 235 nets have [11 - 20] pins
+RUN-1001 : 216 nets have [21 - 99] pins
+RUN-1001 : 3 nets have 100+ pins
+PHY-1001 : Start global routing ...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Global iterations in 16 thread ...
+PHY-1002 : len = 1.31265e+06, over cnt = 247(0%), over = 287, worst = 3
+PHY-1002 : len = 1.3133e+06, over cnt = 191(0%), over = 224, worst = 3
+PHY-1002 : len = 1.31241e+06, over cnt = 149(0%), over = 177, worst = 3
+PHY-1002 : len = 1.27362e+06, over cnt = 71(0%), over = 83, worst = 3
+PHY-1002 : len = 1.21619e+06, over cnt = 0(0%), over = 0, worst = 0
+PHY-1001 : End global iterations;  0.344149s wall, 0.781250s user + 0.015625s system = 0.796875s CPU (231.5%)
+
+PHY-1001 : Congestion index: top1 = 53.75, top5 = 46.88, top10 = 41.25, top15 = 38.75.
+PHY-1001 : End global routing;  0.761285s wall, 1.203125s user + 0.015625s system = 1.218750s CPU (160.1%)
+
+PHY-1001 : Start detail routing ...
+PHY-1001 : Generate detailed routing grids ...
+PHY-1001 : Generate nets ...
+PHY-1001 : net IQfetcher/ADC_CLK will be routed on clock mesh
+PHY-1001 : clock net IQfetcher/CW_CLK will be merged with clock IQfetcher/adcclk/clk0_buf
+PHY-1001 : net clk_pad will be routed on clock mesh
+PHY-1001 : net u_logic/SWCLKTCK_pad will be routed on clock mesh
+PHY-1001 : Detail Route ...
+PHY-1001 : ===== Detail Route Phase 1 =====
+PHY-1001 : Routed 0% nets.
+PHY-1002 : len = 74552, over cnt = 0(0%), over = 0, worst = 0
+PHY-1001 : End Routed; 0.049119s wall, 0.046875s user + 0.000000s system = 0.046875s CPU (95.4%)
+
+PHY-1001 : ===== Detail Route Phase 2 =====
+PHY-1001 : Routed 40% nets.
+PHY-1001 : Routed 48% nets.
+PHY-1001 : Routed 57% nets.
+PHY-1001 : Routed 72% nets.
+PHY-1001 : Routed 98% nets.
+PHY-1002 : len = 1.81272e+06, over cnt = 406(0%), over = 408, worst = 2
+PHY-1001 : End routed; 17.750294s wall, 30.031250s user + 0.953125s system = 30.984375s CPU (174.6%)
+
+PHY-1001 : ===== DR Iter 1 =====
+PHY-1002 : len = 1.78683e+06, over cnt = 110(0%), over = 110, worst = 1
+PHY-1001 : End DR Iter 1; 1.807719s wall, 2.187500s user + 0.015625s system = 2.203125s CPU (121.9%)
+
+PHY-1001 : ===== DR Iter 2 =====
+PHY-1002 : len = 1.78061e+06, over cnt = 15(0%), over = 15, worst = 1
+PHY-1001 : End DR Iter 2; 0.464918s wall, 0.484375s user + 0.000000s system = 0.484375s CPU (104.2%)
+
+PHY-1001 : ===== DR Iter 3 =====
+PHY-1002 : len = 1.78014e+06, over cnt = 7(0%), over = 7, worst = 1
+PHY-1001 : End DR Iter 3; 0.067541s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (138.8%)
+
+PHY-1001 : ===== DR Iter 4 =====
+PHY-1002 : len = 1.77953e+06, over cnt = 0(0%), over = 0, worst = 0
+PHY-1003 : Routed, final wirelength = 1.77953e+06
+PHY-1001 : End DR Iter 4; 0.120957s wall, 0.140625s user + 0.015625s system = 0.156250s CPU (129.2%)
+
+PHY-1003 : Routed, final wirelength = 1.77953e+06
+PHY-1001 : 147 feed throughs used by 78 nets
+PHY-1001 : Generate detailed routing grids ...
+PHY-1001 : Generate nets ...
+PHY-1001 : net IQfetcher/ADC_CLK will be routed on clock mesh
+PHY-1001 : clock net IQfetcher/CW_CLK will be merged with clock IQfetcher/adcclk/clk0_buf
+PHY-1001 : net clk_pad will be routed on clock mesh
+PHY-1001 : net u_logic/SWCLKTCK_pad will be routed on clock mesh
+PHY-1001 : eco open net = 0
+PHY-1001 : End detail routing;  26.797289s wall, 39.281250s user + 1.296875s system = 40.578125s CPU (151.4%)
+
+PHY-1001 : Routing violations:
+PHY-1001 : End of Routing Violations.
+RUN-1003 : finish command "route" in  27.859140s wall, 40.796875s user + 1.312500s system = 42.109375s CPU (151.2%)
+
+RUN-1004 : used memory is 892 MB, reserved memory is 857 MB, peak memory is 1549 MB
+RUN-1002 : start command "report_area -io_info -file MMC_phy.area"
+RUN-1001 : standard
+***Report Model: CortexM0_SoC***
+
+IO Statistics
+#IO                        17
+  #input                    4
+  #output                  12
+  #inout                    1
+
+Utilization Statistics
+#lut                     5521   out of  19600   28.17%
+#reg                     1400   out of  19600    7.14%
+#le                      5530
+  #lut only              4130   out of   5530   74.68%
+  #reg only                 9   out of   5530    0.16%
+  #lut&reg               1391   out of   5530   25.15%
+#dsp                        3   out of     29   10.34%
+#bram                      64   out of     64  100.00%
+  #bram9k                  64
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#adc                        1   out of      1  100.00%
+#pad                       17   out of    186    9.14%
+  #ireg                     0
+  #oreg                     0
+  #treg                     0
+#pll                        1   out of      4   25.00%
+#gclk                       4   out of     16   25.00%
+
+
+Detailed IO Report
+
+   Name      Direction    Location    IOStandard    DriveStrength    PullType    PackReg  
+   RSTn        INPUT        G14        LVCMOS25          N/A           N/A        NONE    
+    RXD        INPUT         H3        LVCMOS25          N/A           N/A        NONE    
+   SWCLK       INPUT         D9        LVCMOS25          N/A           N/A        NONE    
+    clk        INPUT         F9        LVCMOS25          N/A           N/A        NONE    
+  IQ_dout     OUTPUT        H16        LVCMOS25           8            N/A        NONE    
+  IQ_flag     OUTPUT        P10        LVCMOS25           8            N/A        NONE    
+  LED[7]      OUTPUT        J11        LVCMOS25           8            N/A        NONE    
+  LED[6]      OUTPUT         M1        LVCMOS25           8            N/A        NONE    
+  LED[5]      OUTPUT         M4        LVCMOS25           8            N/A        NONE    
+  LED[4]      OUTPUT        F10        LVCMOS25           8            N/A        NONE    
+  LED[3]      OUTPUT         A3        LVCMOS25           8            N/A        NONE    
+  LED[2]      OUTPUT        N11        LVCMOS25           8            N/A        NONE    
+  LED[1]      OUTPUT         J3        LVCMOS25           8            N/A        NONE    
+  LED[0]      OUTPUT         F4        LVCMOS25           8            N/A        NONE    
+  LEDclk      OUTPUT         G6        LVCMOS25           8            N/A        NONE    
+    TXD       OUTPUT        R11        LVCMOS25           8            N/A        NONE    
+   SWDIO       INOUT         R2        LVCMOS25           8            N/A        NONE    
+
+Report Hierarchy Area:
++----------------------------------------------------------------------+
+|Instance |Module       |le    |lut    |ripple |seq    |bram   |dsp    |
++----------------------------------------------------------------------+
+|top      |CortexM0_SoC |5530  |5444   |77     |1400   |64     |3      |
++----------------------------------------------------------------------+
+
+
+DataNet Average Fanout:
+
+   Index     Fanout     Nets  
+    #1          1       2834  
+    #2          2       1521  
+    #3          3       507   
+    #4          4       395   
+    #5        5-10      609   
+    #6        11-50     390   
+    #7       51-100      30   
+    #8       101-500     1    
+  Average     3.80            
+
+RUN-1002 : start command "export_db MMC_pr.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported flow parameters
+RUN-1003 : finish command "export_db MMC_pr.db" in  2.104958s wall, 2.062500s user + 0.078125s system = 2.140625s CPU (101.7%)
+
+RUN-1004 : used memory is 873 MB, reserved memory is 826 MB, peak memory is 1549 MB
+RUN-1002 : start command "bitgen -bit MMC.bit -version 0X00 -g ucode:110000000000000000000000"
+BIT-1003 : Start to generate bitstream. 
+BIT-1002 : Init instances with 16 threads.
+BIT-1002 : Init instances completely, inst num: 3051
+BIT-1002 : Init pips with 16 threads.
+BIT-1002 : Init pips completely, net num: 6311, pip num: 96185
+BIT-1003 : Multithreading accelaration with 16 threads.
+BIT-1003 : Generate bitstream completely, there are 2854 valid insts, and 247147 bits set as '1'.
+BIT-1004 : PLL setting string = 0001
+BIT-1004 : Generate bits file MMC.bit.
+RUN-1003 : finish command "bitgen -bit MMC.bit -version 0X00 -g ucode:110000000000000000000000" in  8.373246s wall, 111.906250s user + 0.265625s system = 112.171875s CPU (1339.6%)
+
+RUN-1004 : used memory is 969 MB, reserved memory is 925 MB, peak memory is 1549 MB

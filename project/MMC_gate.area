@@ -1,0 +1,41 @@
+standard
+***Report Model: CortexM0_SoC***
+
+IO Statistics
+#IO                        17
+  #input                    4
+  #output                  12
+  #inout                    1
+
+LUT Statistics
+#Total_luts              5085
+  #lut4                  3967
+  #lut5                   916
+  #lut6                     0
+  #lut5_mx41                0
+  #lut4_alu1b             202
+
+Utilization Statistics
+#lut                     5085   out of  19600   25.94%
+#reg                     1400   out of  19600    7.14%
+#le                         0
+#dsp                        3   out of     29   10.34%
+#bram                      64   out of     64  100.00%
+  #bram9k                  64
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#dram                       2
+#adc                        1   out of      1  100.00%
+#pad                       17   out of    186    9.14%
+  #ireg                     0
+  #oreg                     0
+  #treg                     0
+#pll                        1   out of      4   25.00%
+
+Report Hierarchy Area:
++--------------------------------------------------------------------+
+|Instance  |Module           |lut    |ripple |seq    |bram   |dsp    |
++--------------------------------------------------------------------+
+|top       |CortexM0_SoC     |4883   |202    |1400   |64     |3      |
+|  u_logic |cortexm0ds_logic |4715   |173    |1297   |0      |3      |
++--------------------------------------------------------------------+

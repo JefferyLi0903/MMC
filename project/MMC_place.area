@@ -1,0 +1,56 @@
+standard
+***Report Model: CortexM0_SoC***
+
+IO Statistics
+#IO                        17
+  #input                    4
+  #output                  12
+  #inout                    1
+
+Utilization Statistics
+#lut                     5424   out of  19600   27.67%
+#reg                     1400   out of  19600    7.14%
+#le                      5433
+  #lut only              4033   out of   5433   74.23%
+  #reg only                 9   out of   5433    0.17%
+  #lut&reg               1391   out of   5433   25.60%
+#dsp                        3   out of     29   10.34%
+#bram                      64   out of     64  100.00%
+  #bram9k                  64
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#adc                        1   out of      1  100.00%
+#pad                       17   out of    186    9.14%
+  #ireg                     0
+  #oreg                     0
+  #treg                     0
+#pll                        1   out of      4   25.00%
+
+
+Detailed IO Report
+
+   Name      Direction    Location    IOStandard    DriveStrength    PullType    PackReg  
+   RSTn        INPUT        G14        LVCMOS25          N/A           N/A        NONE    
+    RXD        INPUT         H3        LVCMOS25          N/A           N/A        NONE    
+   SWCLK       INPUT         D9        LVCMOS25          N/A           N/A        NONE    
+    clk        INPUT         F9        LVCMOS25          N/A           N/A        NONE    
+  IQ_dout     OUTPUT        H16        LVCMOS25           8            N/A        NONE    
+  IQ_flag     OUTPUT        P10        LVCMOS25           8            N/A        NONE    
+  LED[7]      OUTPUT        J11        LVCMOS25           8            N/A        NONE    
+  LED[6]      OUTPUT         M1        LVCMOS25           8            N/A        NONE    
+  LED[5]      OUTPUT         M4        LVCMOS25           8            N/A        NONE    
+  LED[4]      OUTPUT        F10        LVCMOS25           8            N/A        NONE    
+  LED[3]      OUTPUT         A3        LVCMOS25           8            N/A        NONE    
+  LED[2]      OUTPUT        N11        LVCMOS25           8            N/A        NONE    
+  LED[1]      OUTPUT         J3        LVCMOS25           8            N/A        NONE    
+  LED[0]      OUTPUT         F4        LVCMOS25           8            N/A        NONE    
+  LEDclk      OUTPUT         G6        LVCMOS25           8            N/A        NONE    
+    TXD       OUTPUT        R11        LVCMOS25           8            N/A        NONE    
+   SWDIO       INOUT         R2        LVCMOS25           8            N/A        NONE    
+
+Report Hierarchy Area:
++----------------------------------------------------------------------+
+|Instance |Module       |le    |lut    |ripple |seq    |bram   |dsp    |
++----------------------------------------------------------------------+
+|top      |CortexM0_SoC |5433  |5347   |77     |1400   |64     |3      |
++----------------------------------------------------------------------+
