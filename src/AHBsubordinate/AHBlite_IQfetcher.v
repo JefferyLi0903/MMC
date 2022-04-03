@@ -16,10 +16,14 @@ module AHBlite_IQfetcher(
 );
 
 assign HRESP = 1'b0;
+//HREADY should be customed to the completion time of the fetch.
 assign HREADYOUT = 1'b1;
 
 wire write_en;
 assign write_en = HSEL & HTRANS[1] & HWRITE & HREADY;
+
+wire read_en;
+assign read_en = HSEL & HTRANS[1] & (~HWRITE) & HREADY;
 
 reg addr_reg;
 always@(posedge HCLK or negedge HRESETn) begin
@@ -32,6 +36,13 @@ always@(posedge HCLK or negedge HRESETn) begin
   if(~HRESETn) wr_en_reg <= 1'b0;
   else if(write_en) wr_en_reg <= 1'b1;
   else wr_en_reg <= 1'b0;
+end
+
+reg rd_en_reg;
+always@(posedge HCLK or negedge HRESETn) begin
+  if(~HRESETn) rd_en_reg <= 1'b0;
+  else if(read_en) rd_en_reg <= 1'b1;
+  else rd_en_reg <= 1'b0;
 end
 
 always@(posedge HCLK) begin

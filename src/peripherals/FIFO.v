@@ -1,19 +1,22 @@
 
 
 //it is just a normal FIFO
-module FIFO(
+module FIFO #(
+    parameter data_width = 8
+)
+    (
     input clock,
     input sclr,
 
     input rdreq, wrreq,
     output reg full, empty,
 
-    input [7 : 0] data,
-    output [7 : 0] q
+    input [data_width-1 : 0] data,
+    output [data_width-1 : 0] q
 
 );
 
-reg [7 : 0] mem [15 : 0];
+reg [data_width-1 : 0] mem [15 : 0];
 reg [3 : 0] wp, rp;
 reg w_flag, r_flag;
 
