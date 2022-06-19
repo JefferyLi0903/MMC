@@ -2,40 +2,43 @@ standard
 ***Report Model: CortexM0_SoC***
 
 IO Statistics
-#IO                        17
+#IO                        31
   #input                    4
-  #output                  12
+  #output                  26
   #inout                    1
 
 LUT Statistics
-#Total_luts              5085
-  #lut4                  3967
-  #lut5                   916
+#Total_luts              9465
+  #lut4                  7001
+  #lut5                  1664
   #lut6                     0
   #lut5_mx41                0
-  #lut4_alu1b             202
+  #lut4_alu1b             800
 
 Utilization Statistics
-#lut                     5085   out of  19600   25.94%
-#reg                     1400   out of  19600    7.14%
+#lut                     9465   out of  19600   48.29%
+#reg                     1843   out of  19600    9.40%
 #le                         0
-#dsp                        3   out of     29   10.34%
-#bram                      64   out of     64  100.00%
-  #bram9k                  64
+#dsp                       25   out of     29   86.21%
+#bram                      32   out of     64   50.00%
+  #bram9k                  32
   #fifo9k                   0
 #bram32k                    0   out of     16    0.00%
-#dram                       2
+#dram                    1040
 #adc                        1   out of      1  100.00%
-#pad                       17   out of    186    9.14%
+#pad                       31   out of    186   16.67%
   #ireg                     0
   #oreg                     0
   #treg                     0
-#pll                        1   out of      4   25.00%
+#pll                        2   out of      4   50.00%
 
 Report Hierarchy Area:
-+--------------------------------------------------------------------+
-|Instance  |Module           |lut    |ripple |seq    |bram   |dsp    |
-+--------------------------------------------------------------------+
-|top       |CortexM0_SoC     |4883   |202    |1400   |64     |3      |
-|  u_logic |cortexm0ds_logic |4715   |173    |1297   |0      |3      |
-+--------------------------------------------------------------------+
++------------------------------------------------------------------------------+
+|Instance            |Module           |lut    |ripple |seq    |bram   |dsp    |
++------------------------------------------------------------------------------+
+|top                 |CortexM0_SoC     |8665   |800    |1843   |32     |25     |
+|  FM_Display        |FM_Display       |182    |90     |81     |0      |0      |
+|  FM_HW             |FM_HW            |3402   |493    |314    |0      |22     |
+|    FM_Demodulation |FM_Demodulation  |12     |422    |268    |0      |22     |
+|  u_logic           |cortexm0ds_logic |4764   |173    |1300   |0      |3      |
++------------------------------------------------------------------------------+

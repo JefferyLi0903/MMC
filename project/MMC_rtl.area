@@ -2,36 +2,39 @@ standard
 ***Report Model: CortexM0_SoC***
 
 IO Statistics
-#IO                        17
+#IO                        31
   #input                    4
-  #output                  12
+  #output                  26
   #inout                    1
 
 Gate Statistics
-#Basic gates            19794
-  #and                   9456
+#Basic gates            20655
+  #and                   9604
   #nand                     0
-  #or                    1945
+  #or                    2075
   #nor                      0
-  #xor                     73
+  #xor                     74
   #xnor                     0
   #buf                      0
-  #not                   6412
-  #bufif1                  10
-  #MX21                   497
+  #not                   6501
+  #bufif1                   1
+  #MX21                   544
   #FADD                     0
-  #DFF                   1401
+  #DFF                   1856
   #LATCH                    0
-#MACRO_ADD                 16
-#MACRO_EQ                  27
-#MACRO_MULT                 1
-#MACRO_MUX                118
-#MACRO_OTHERS              10
+#MACRO_ADD                 56
+#MACRO_EQ                 104
+#MACRO_MULT                24
+#MACRO_MUX                443
+#MACRO_OTHERS              13
 
 Report Hierarchy Area:
-+----------------------------------------------------+
-|Instance  |Module           |gates  |seq    |macros |
-+----------------------------------------------------+
-|top       |CortexM0_SoC     |18393  |1401   |54     |
-|  u_logic |cortexm0ds_logic |18291  |1298   |14     |
-+----------------------------------------------------+
++--------------------------------------------------------------+
+|Instance            |Module           |gates  |seq    |macros |
++--------------------------------------------------------------+
+|top                 |CortexM0_SoC     |18799  |1856   |197    |
+|  FM_Display        |FM_Display       |45     |81     |38     |
+|  FM_HW             |FM_HW            |41     |326    |69     |
+|    FM_Demodulation |FM_Demodulation  |7      |280    |49     |
+|  u_logic           |cortexm0ds_logic |18477  |1301   |14     |
++--------------------------------------------------------------+

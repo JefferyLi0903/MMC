@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <All_Bram_Infos>
-    <Ucode>11000000</Ucode>
+    <Ucode>11100000</Ucode>
     <AL_PHY_BRAM>
         <INST_1>
             <rid>0X0004</rid>
             <wid>0X0004</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u00_8192x8_sub_000000_000</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
+            <name>RAM_CODE/ram_mem_unify_al_u00_4096x8_sub_000000_000</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
             <logic_name>RAM_CODE/ram_mem_unify_al_u00</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
                 <data_offset>0</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -37,28 +37,28 @@
             <rid>0X0005</rid>
             <wid>0X0005</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u00_8192x8_sub_000000_001</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
+            <name>RAM_CODE/ram_mem_unify_al_u00_4096x8_sub_000000_002</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
             <logic_name>RAM_CODE/ram_mem_unify_al_u00</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>1</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>2</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -68,28 +68,28 @@
             <rid>0X0006</rid>
             <wid>0X0006</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u00_8192x8_sub_000000_002</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
+            <name>RAM_CODE/ram_mem_unify_al_u00_4096x8_sub_000000_004</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
             <logic_name>RAM_CODE/ram_mem_unify_al_u00</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>2</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>4</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -99,28 +99,28 @@
             <rid>0X0007</rid>
             <wid>0X0007</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u00_8192x8_sub_000000_003</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
+            <name>RAM_CODE/ram_mem_unify_al_u00_4096x8_sub_000000_006</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
             <logic_name>RAM_CODE/ram_mem_unify_al_u00</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>3</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>6</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -130,28 +130,28 @@
             <rid>0X0008</rid>
             <wid>0X0008</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u00_8192x8_sub_000000_004</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u00</logic_name>
+            <name>RAM_CODE/ram_mem_unify_al_u10_4096x8_sub_000000_000</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_CODE/ram_mem_unify_al_u10</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>4</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>0</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -161,28 +161,28 @@
             <rid>0X0009</rid>
             <wid>0X0009</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u00_8192x8_sub_000000_005</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u00</logic_name>
+            <name>RAM_CODE/ram_mem_unify_al_u10_4096x8_sub_000000_002</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_CODE/ram_mem_unify_al_u10</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>5</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>2</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -192,28 +192,28 @@
             <rid>0X000A</rid>
             <wid>0X000A</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u00_8192x8_sub_000000_006</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u00</logic_name>
+            <name>RAM_CODE/ram_mem_unify_al_u10_4096x8_sub_000000_004</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_CODE/ram_mem_unify_al_u10</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>6</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>4</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -223,28 +223,28 @@
             <rid>0X000B</rid>
             <wid>0X000B</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u00_8192x8_sub_000000_007</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u00</logic_name>
+            <name>RAM_CODE/ram_mem_unify_al_u10_4096x8_sub_000000_006</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_CODE/ram_mem_unify_al_u10</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>7</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>6</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -254,28 +254,28 @@
             <rid>0X000C</rid>
             <wid>0X000C</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u10_8192x8_sub_000000_000</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u10</logic_name>
+            <name>RAM_CODE/ram_mem_unify_al_u20_4096x8_sub_000000_000</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_CODE/ram_mem_unify_al_u20</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
                 <data_offset>0</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -285,28 +285,28 @@
             <rid>0X000D</rid>
             <wid>0X000D</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u10_8192x8_sub_000000_001</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u10</logic_name>
+            <name>RAM_CODE/ram_mem_unify_al_u20_4096x8_sub_000000_002</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_CODE/ram_mem_unify_al_u20</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>1</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>2</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -316,28 +316,28 @@
             <rid>0X000E</rid>
             <wid>0X000E</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u10_8192x8_sub_000000_002</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u10</logic_name>
+            <name>RAM_CODE/ram_mem_unify_al_u20_4096x8_sub_000000_004</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_CODE/ram_mem_unify_al_u20</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>2</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>4</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -347,28 +347,28 @@
             <rid>0X000F</rid>
             <wid>0X000F</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u10_8192x8_sub_000000_003</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u10</logic_name>
+            <name>RAM_CODE/ram_mem_unify_al_u20_4096x8_sub_000000_006</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_CODE/ram_mem_unify_al_u20</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>3</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>6</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -378,28 +378,28 @@
             <rid>0X0010</rid>
             <wid>0X0010</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u10_8192x8_sub_000000_004</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u10</logic_name>
+            <name>RAM_CODE/ram_mem_unify_al_u30_4096x8_sub_000000_000</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_CODE/ram_mem_unify_al_u30</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>4</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>0</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -409,28 +409,28 @@
             <rid>0X0011</rid>
             <wid>0X0011</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u10_8192x8_sub_000000_005</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u10</logic_name>
+            <name>RAM_CODE/ram_mem_unify_al_u30_4096x8_sub_000000_002</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_CODE/ram_mem_unify_al_u30</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>5</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>2</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -440,28 +440,28 @@
             <rid>0X0012</rid>
             <wid>0X0012</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u10_8192x8_sub_000000_006</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u10</logic_name>
+            <name>RAM_CODE/ram_mem_unify_al_u30_4096x8_sub_000000_004</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_CODE/ram_mem_unify_al_u30</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>6</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>4</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -471,28 +471,28 @@
             <rid>0X0013</rid>
             <wid>0X0013</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u10_8192x8_sub_000000_007</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u10</logic_name>
+            <name>RAM_CODE/ram_mem_unify_al_u30_4096x8_sub_000000_006</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_CODE/ram_mem_unify_al_u30</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>7</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>6</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -502,28 +502,28 @@
             <rid>0X0014</rid>
             <wid>0X0014</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u20_8192x8_sub_000000_000</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u20</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u00_4096x8_sub_000000_000</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u00</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
                 <data_offset>0</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -533,28 +533,28 @@
             <rid>0X0015</rid>
             <wid>0X0015</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u20_8192x8_sub_000000_001</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u20</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u00_4096x8_sub_000000_002</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u00</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>1</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>2</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -564,28 +564,28 @@
             <rid>0X0016</rid>
             <wid>0X0016</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u20_8192x8_sub_000000_002</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u20</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u00_4096x8_sub_000000_004</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u00</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>2</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>4</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -595,28 +595,28 @@
             <rid>0X0017</rid>
             <wid>0X0017</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u20_8192x8_sub_000000_003</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u20</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u00_4096x8_sub_000000_006</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u00</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>3</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>6</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -626,28 +626,28 @@
             <rid>0X0018</rid>
             <wid>0X0018</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u20_8192x8_sub_000000_004</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u20</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u10_4096x8_sub_000000_000</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u10</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>4</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>0</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -657,28 +657,28 @@
             <rid>0X0019</rid>
             <wid>0X0019</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u20_8192x8_sub_000000_005</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u20</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u10_4096x8_sub_000000_002</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u10</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>5</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>2</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -688,28 +688,28 @@
             <rid>0X001A</rid>
             <wid>0X001A</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u20_8192x8_sub_000000_006</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u20</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u10_4096x8_sub_000000_004</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u10</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>6</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>4</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -719,28 +719,28 @@
             <rid>0X001B</rid>
             <wid>0X001B</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u20_8192x8_sub_000000_007</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u20</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u10_4096x8_sub_000000_006</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u10</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>7</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>6</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -750,28 +750,28 @@
             <rid>0X001C</rid>
             <wid>0X001C</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u30_8192x8_sub_000000_000</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u30</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u20_4096x8_sub_000000_000</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u20</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
                 <data_offset>0</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -781,28 +781,28 @@
             <rid>0X001D</rid>
             <wid>0X001D</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u30_8192x8_sub_000000_001</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u30</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u20_4096x8_sub_000000_002</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u20</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>1</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>2</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -812,28 +812,28 @@
             <rid>0X001E</rid>
             <wid>0X001E</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u30_8192x8_sub_000000_002</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u30</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u20_4096x8_sub_000000_004</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u20</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>2</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>4</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -843,28 +843,28 @@
             <rid>0X001F</rid>
             <wid>0X001F</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u30_8192x8_sub_000000_003</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u30</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u20_4096x8_sub_000000_006</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u20</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>3</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>6</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -874,28 +874,28 @@
             <rid>0X0020</rid>
             <wid>0X0020</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u30_8192x8_sub_000000_004</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u30</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u30_4096x8_sub_000000_000</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u30</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>4</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>0</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -905,28 +905,28 @@
             <rid>0X0021</rid>
             <wid>0X0021</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u30_8192x8_sub_000000_005</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u30</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u30_4096x8_sub_000000_002</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u30</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>5</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>2</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -936,28 +936,28 @@
             <rid>0X0022</rid>
             <wid>0X0022</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u30_8192x8_sub_000000_006</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u30</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u30_4096x8_sub_000000_004</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u30</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>6</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>4</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
@@ -967,1024 +967,32 @@
             <rid>0X0023</rid>
             <wid>0X0023</wid>
             <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
+            <is_initialize>y</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_CODE/ram_mem_unify_al_u30_8192x8_sub_000000_007</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_CODE/ram_mem_unify_al_u30</logic_name>
+            <name>RAM_DATA/ram_mem_unify_al_u30_4096x8_sub_000000_006</name>
+            <width_a>2</width_a>
+            <width_b>2</width_b>
+            <logic_name>RAM_DATA/ram_mem_unify_al_u30</logic_name>
             <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
+            <logic_depth>4096</logic_depth>
             <sub_bid_info>
                 <address_offset>0</address_offset>
-                <data_offset>7</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
+                <data_offset>6</data_offset>
+                <depth>4096</depth>
+                <width>2</width>
                 <num_section>1</num_section>
                 <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
+                <width_per_section>2</width_per_section>
                 <bytes_in_per_section>1</bytes_in_per_section>
                 <working_mode>
                     <address_step>1</address_step>
-                    <depth>8192</depth>
+                    <depth>4096</depth>
                     <mode_type>110</mode_type>
-                    <width>1</width>
+                    <width>2</width>
                     <num_byte>1</num_byte>
                     <ecc>0</ecc>
                 </working_mode>
             </sub_bid_info>
         </INST_32>
-        <INST_33>
-            <rid>0X0024</rid>
-            <wid>0X0024</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u00_8192x8_sub_000000_000</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u00</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>0</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_33>
-        <INST_34>
-            <rid>0X0025</rid>
-            <wid>0X0025</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u00_8192x8_sub_000000_001</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u00</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>1</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_34>
-        <INST_35>
-            <rid>0X0026</rid>
-            <wid>0X0026</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u00_8192x8_sub_000000_002</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u00</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>2</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_35>
-        <INST_36>
-            <rid>0X0027</rid>
-            <wid>0X0027</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u00_8192x8_sub_000000_003</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u00</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>3</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_36>
-        <INST_37>
-            <rid>0X0028</rid>
-            <wid>0X0028</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u00_8192x8_sub_000000_004</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u00</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>4</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_37>
-        <INST_38>
-            <rid>0X0029</rid>
-            <wid>0X0029</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u00_8192x8_sub_000000_005</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u00</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>5</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_38>
-        <INST_39>
-            <rid>0X002A</rid>
-            <wid>0X002A</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u00_8192x8_sub_000000_006</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u00</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>6</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_39>
-        <INST_40>
-            <rid>0X002B</rid>
-            <wid>0X002B</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u00_8192x8_sub_000000_007</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u00</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>7</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_40>
-        <INST_41>
-            <rid>0X002C</rid>
-            <wid>0X002C</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u10_8192x8_sub_000000_000</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u10</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>0</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_41>
-        <INST_42>
-            <rid>0X002D</rid>
-            <wid>0X002D</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u10_8192x8_sub_000000_001</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u10</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>1</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_42>
-        <INST_43>
-            <rid>0X002E</rid>
-            <wid>0X002E</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u10_8192x8_sub_000000_002</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u10</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>2</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_43>
-        <INST_44>
-            <rid>0X002F</rid>
-            <wid>0X002F</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u10_8192x8_sub_000000_003</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u10</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>3</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_44>
-        <INST_45>
-            <rid>0X0030</rid>
-            <wid>0X0030</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u10_8192x8_sub_000000_004</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u10</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>4</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_45>
-        <INST_46>
-            <rid>0X0031</rid>
-            <wid>0X0031</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u10_8192x8_sub_000000_005</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u10</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>5</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_46>
-        <INST_47>
-            <rid>0X0032</rid>
-            <wid>0X0032</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u10_8192x8_sub_000000_006</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u10</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>6</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_47>
-        <INST_48>
-            <rid>0X0033</rid>
-            <wid>0X0033</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u10_8192x8_sub_000000_007</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u10</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>7</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_48>
-        <INST_49>
-            <rid>0X0034</rid>
-            <wid>0X0034</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u20_8192x8_sub_000000_000</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u20</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>0</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_49>
-        <INST_50>
-            <rid>0X0035</rid>
-            <wid>0X0035</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u20_8192x8_sub_000000_001</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u20</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>1</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_50>
-        <INST_51>
-            <rid>0X0036</rid>
-            <wid>0X0036</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u20_8192x8_sub_000000_002</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u20</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>2</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_51>
-        <INST_52>
-            <rid>0X0037</rid>
-            <wid>0X0037</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u20_8192x8_sub_000000_003</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u20</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>3</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_52>
-        <INST_53>
-            <rid>0X0038</rid>
-            <wid>0X0038</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u20_8192x8_sub_000000_004</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u20</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>4</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_53>
-        <INST_54>
-            <rid>0X0039</rid>
-            <wid>0X0039</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u20_8192x8_sub_000000_005</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u20</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>5</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_54>
-        <INST_55>
-            <rid>0X003A</rid>
-            <wid>0X003A</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u20_8192x8_sub_000000_006</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u20</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>6</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_55>
-        <INST_56>
-            <rid>0X003B</rid>
-            <wid>0X003B</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u20_8192x8_sub_000000_007</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u20</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>7</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_56>
-        <INST_57>
-            <rid>0X003C</rid>
-            <wid>0X003C</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u30_8192x8_sub_000000_000</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u30</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>0</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_57>
-        <INST_58>
-            <rid>0X003D</rid>
-            <wid>0X003D</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u30_8192x8_sub_000000_001</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u30</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>1</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_58>
-        <INST_59>
-            <rid>0X003E</rid>
-            <wid>0X003E</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u30_8192x8_sub_000000_002</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u30</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>2</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_59>
-        <INST_60>
-            <rid>0X003F</rid>
-            <wid>0X003F</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u30_8192x8_sub_000000_003</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u30</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>3</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_60>
-        <INST_61>
-            <rid>0X0040</rid>
-            <wid>0X0040</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u30_8192x8_sub_000000_004</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u30</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>4</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_61>
-        <INST_62>
-            <rid>0X0041</rid>
-            <wid>0X0041</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u30_8192x8_sub_000000_005</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u30</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>5</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_62>
-        <INST_63>
-            <rid>0X0042</rid>
-            <wid>0X0042</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u30_8192x8_sub_000000_006</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u30</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>6</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_63>
-        <INST_64>
-            <rid>0X0043</rid>
-            <wid>0X0043</wid>
-            <is_debuggable>n</is_debuggable>
-            <is_initialize>n</is_initialize>
-            <model_type>AL_PHY_BRAM</model_type>
-            <name>RAM_DATA/ram_mem_unify_al_u30_8192x8_sub_000000_007</name>
-            <width_a>1</width_a>
-            <width_b>1</width_b>
-            <logic_name>RAM_DATA/ram_mem_unify_al_u30</logic_name>
-            <logic_width>8</logic_width>
-            <logic_depth>8192</logic_depth>
-            <sub_bid_info>
-                <address_offset>0</address_offset>
-                <data_offset>7</data_offset>
-                <depth>8192</depth>
-                <width>1</width>
-                <num_section>1</num_section>
-                <section_size>8</section_size>
-                <width_per_section>1</width_per_section>
-                <bytes_in_per_section>1</bytes_in_per_section>
-                <working_mode>
-                    <address_step>1</address_step>
-                    <depth>8192</depth>
-                    <mode_type>110</mode_type>
-                    <width>1</width>
-                    <num_byte>1</num_byte>
-                    <ecc>0</ecc>
-                </working_mode>
-            </sub_bid_info>
-        </INST_64>
     </AL_PHY_BRAM>
 </All_Bram_Infos>
