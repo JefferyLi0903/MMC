@@ -1,9 +1,9 @@
 --cpu Cortex-M0
 ".\auxiliary.o"
-".\channelselection_control.o"
 ".\code_def.o"
 ".\main.o"
 ".\startup_cmsdk_cm0.o"
+".\channelselection_control.o"
 --strict --scatter ".\MMC.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

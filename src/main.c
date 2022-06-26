@@ -7,15 +7,14 @@
 
 int main()
 { 
-	int beatheart = 0;
+
 	char string[32] = {0};
 
 	unsigned int MSI_SPI_Data= 0;
 	ChannelControlType ChannelControlDisplay;
 	
-	NVIC_CTRL_ADDR = 7;  //enable lowest 2 interrupts
+	NVIC_CTRL_ADDR = 15;  //enable lowest 2 interrupts
 /*
-	
 	MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
 	SPI_RFD(MSI_SPI_Data);
 	MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
@@ -53,8 +52,6 @@ int main()
 
 	
 	//IQ_Dump_command(); 
-	
-	
 while(1)
 {
 	    

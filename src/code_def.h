@@ -6,9 +6,7 @@
 #define INT_MAX 2147483647
 #define INT_MIN (-2147483647-1)
 
-
-
-
+//#define SIM_PROFILE
 
 //UART DEF
 typedef struct{
@@ -39,6 +37,17 @@ typedef struct{
 }SPIType;
 #define SPITX ((SPIType*)SPI_BASE)
 
+typedef struct{
+		int index;
+		int RSSI;
+}RSSIType;
+
+
+typedef struct{
+		int No;
+	  int freq;
+}Sel_Channel;
+
 
 void Delay(int interval);
 char ReadUARTState(void);
@@ -47,7 +56,7 @@ void WriteUART(char data);
 void UARTString(char *stri);
 void UARTHandle(void);
 void SPI_RFD(volatile uint32_t MSI_SPI_Data);
-void UARTFM_IQ_Dump_Done_Handler(void);
+void UARTFM_IQ_Dump_Done_Handle(void);
 void IQ_Dump_command(void); 
 void Demodulated_Data_Dump_command(void); 
 void UARTFM_Demodulated_Data_Dump_Done_Handler(void);
@@ -56,3 +65,13 @@ void Start_FM_command(void);
 void Stop_FM_command(void);
 void ChannelSelection_control(unsigned int data);
 void Channel_control(ChannelControlType ChanelControlData);
+void singleFrequencyRSSI(void);
+void SPIwrite(int INT, int FRAC, int AFC, int Gain);
+int  RSSI_Read(void);
+void RSSIScanHandler(void);
+void RSSI_scan_cmd(void);
+/*
+//Insert your Function declaration here
+
+
+*/

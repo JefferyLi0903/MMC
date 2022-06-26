@@ -1,0 +1,477 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;/******************************************************
+                       ********************//**
+    2 00000000         ; * @file     startup_CMSDK_CM0.s
+    3 00000000         ; * @brief    CMSIS Cortex-M0 Core Device Startup File f
+                       or
+    4 00000000         ; *           Device CMSDK_CM0
+    5 00000000         ; * @version  V3.01
+    6 00000000         ; * @date     06. March 2012
+    7 00000000         ; *
+    8 00000000         ; * @note
+    9 00000000         ; * Copyright (C) 2012 ARM Limited. All rights reserved.
+                       
+   10 00000000         ; *
+   11 00000000         ; * @par
+   12 00000000         ; * ARM Limited (ARM) is supplying this software for use
+                        with Cortex-M
+   13 00000000         ; * processor based microcontrollers.  This file can be 
+                       freely distributed
+   14 00000000         ; * within development tools that are supporting such AR
+                       M based processors.
+   15 00000000         ; *
+   16 00000000         ; * @par
+   17 00000000         ; * THIS SOFTWARE IS PROVIDED "AS IS".  NO WARRANTIES, W
+                       HETHER EXPRESS, IMPLIED
+   18 00000000         ; * OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, IMPLIED
+                        WARRANTIES OF
+   19 00000000         ; * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+                        APPLY TO THIS SOFTWARE.
+   20 00000000         ; * ARM SHALL NOT, IN ANY CIRCUMSTANCES, BE LIABLE FOR S
+                       PECIAL, INCIDENTAL, OR
+   21 00000000         ; * CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
+   22 00000000         ; *
+   23 00000000         ; ******************************************************
+                       ************************/
+   24 00000000         ;/*
+   25 00000000         ;//-------- <<< Use Configuration Wizard in Context Menu
+                        >>> ------------------
+   26 00000000         ;*/
+   27 00000000         
+   28 00000000         
+   29 00000000         ; <h> Stack Configuration
+   30 00000000         ;   <o> Stack Size (in Bytes) <0x0-0xFFFFFFFF:8>
+   31 00000000         ; </h>
+   32 00000000         
+   33 00000000 00000400 
+                       Stack_Size
+                               EQU              0x00000400
+   34 00000000         
+   35 00000000                 AREA             STACK, NOINIT, READWRITE, ALIGN
+=4
+   36 00000000         Stack_Mem
+                               SPACE            Stack_Size
+   37 00000400         __initial_sp
+   38 00000400         
+   39 00000400         
+   40 00000400         ; <h> Heap Configuration
+   41 00000400         ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
+   42 00000400         ; </h>
+   43 00000400         
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   44 00000400 00000400 
+                       Heap_Size
+                               EQU              0x00000400
+   45 00000400         
+   46 00000400                 AREA             HEAP, NOINIT, READWRITE, ALIGN=
+4
+   47 00000000         __heap_base
+   48 00000000         Heap_Mem
+                               SPACE            Heap_Size
+   49 00000400         __heap_limit
+   50 00000400         
+   51 00000400         
+   52 00000400                 PRESERVE8
+   53 00000400                 THUMB
+   54 00000400         
+   55 00000400         
+   56 00000400         ; Vector Table Mapped to Address 0 at Reset
+   57 00000400         
+   58 00000400                 AREA             RESET, DATA, READONLY
+   59 00000000                 EXPORT           __Vectors
+   60 00000000         
+   61 00000000 00000000 
+                       __Vectors
+                               DCD              __initial_sp ; Top of Stack
+   62 00000004 00000000        DCD              Reset_Handler ; Reset Handler
+   63 00000008 00000000        DCD              0           ; NMI Handler
+   64 0000000C 00000000        DCD              0           ; Hard Fault Handle
+                                                            r
+   65 00000010 00000000        DCD              0           ; Reserved
+   66 00000014 00000000        DCD              0           ; Reserved
+   67 00000018 00000000        DCD              0           ; Reserved
+   68 0000001C 00000000        DCD              0           ; Reserved
+   69 00000020 00000000        DCD              0           ; Reserved
+   70 00000024 00000000        DCD              0           ; Reserved
+   71 00000028 00000000        DCD              0           ; Reserved
+   72 0000002C 00000000        DCD              0           ; SVCall Handler
+   73 00000030 00000000        DCD              0           ; Reserved
+   74 00000034 00000000        DCD              0           ; Reserved
+   75 00000038 00000000        DCD              0           ; PendSV Handler
+   76 0000003C 00000000        DCD              0           ; SysTick Handler
+   77 00000040 00000000        DCD              UART_Handler ; IRQ0 Handler
+   78 00000044 00000000        DCD              FM_IQ_Dump_Done ; IRQ1 Handler
+   79 00000048 00000000        DCD              Demodulated_Data_Dump_Done 
+                                                            ; IRQ2 Handler
+   80 0000004C 00000000        DCD              RSSI_Scan_Done ; IRQ3 Handler 
+   81 00000050         
+   82 00000050         
+   83 00000050         
+   84 00000050                 AREA             |.text|, CODE, READONLY
+   85 00000000         
+   86 00000000         
+   87 00000000         ; Reset Handler
+   88 00000000         
+   89 00000000         Reset_Handler
+                               PROC
+   90 00000000                 GLOBAL           Reset_Handler
+   91 00000000                 ENTRY
+   92 00000000                 IMPORT           __main
+   93 00000000 480D            LDR              R0, =__main
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+   94 00000002 4680            MOV              R8, R0
+   95 00000004 46C1            MOV              R9, R8
+   96 00000006 F7FF FFFE       BL               __main
+   97 0000000A                 ENDP
+   98 0000000A         
+   99 0000000A         
+  100 0000000A         
+  101 0000000A         Demodulated_Data_Dump_Done
+                               PROC
+  102 0000000A         
+  103 0000000A                 EXPORT           Demodulated_Data_Dump_Done
+  104 0000000A                 IMPORT           UARTFM_Demodulated_Data_Dump_Do
+ne_Handler
+  105 0000000A B507            PUSH             {R0,R1,R2,LR}
+  106 0000000C F7FF FFFE       BL               UARTFM_Demodulated_Data_Dump_Do
+ne_Handler
+  107 00000010 BD07            POP              {R0,R1,R2,PC}
+  108 00000012                 ENDP
+  109 00000012         
+  110 00000012         FM_IQ_Dump_Done
+                               PROC
+  111 00000012         
+  112 00000012         
+  113 00000012                 EXPORT           FM_IQ_Dump_Done
+  114 00000012                 IMPORT           UARTFM_IQ_Dump_Done_Handler
+  115 00000012 B507            PUSH             {R0,R1,R2,LR}
+  116 00000014 F7FF FFFE       BL               UARTFM_IQ_Dump_Done_Handler
+  117 00000018 BD07            POP              {R0,R1,R2,PC}
+  118 0000001A                 ENDP
+  119 0000001A         
+  120 0000001A         
+  121 0000001A         
+  122 0000001A         UART_Handler
+                               PROC
+  123 0000001A                 EXPORT           UART_Handler            [WEAK]
+  124 0000001A                 IMPORT           UARTHandle
+  125 0000001A B507            PUSH             {R0,R1,R2,LR}
+  126 0000001C F7FF FFFE       BL               UARTHandle
+  127 00000020 BD07            POP              {R0,R1,R2,PC}
+  128 00000022                 ENDP
+  129 00000022         
+  130 00000022         
+  131 00000022         RSSI_Scan_Done
+                               PROC
+  132 00000022                 EXPORT           RSSI_Scan_Done            [WEAK
+]
+  133 00000022                 IMPORT           RSSIScanHandler
+  134 00000022 B507            PUSH             {R0,R1,R2,LR}
+  135 00000024 F7FF FFFE       BL               RSSIScanHandler
+  136 00000028 BD07            POP              {R0,R1,R2,PC}
+  137 0000002A                 ENDP
+  138 0000002A         
+  139 0000002A         
+  140 0000002A 00 00           ALIGN            4
+  141 0000002C         
+  142 0000002C                 IF               :DEF:__MICROLIB
+  149 0000002C         
+  150 0000002C                 IMPORT           __use_two_region_memory
+  151 0000002C                 EXPORT           __user_initial_stackheap
+
+
+
+ARM Macro Assembler    Page 4 
+
+
+  152 0000002C         
+  153 0000002C         __user_initial_stackheap
+  154 0000002C         
+  155 0000002C 4803            LDR              R0, =  Heap_Mem
+  156 0000002E 4904            LDR              R1, =(Stack_Mem + Stack_Size)
+  157 00000030 4A04            LDR              R2, = (Heap_Mem +  Heap_Size)
+  158 00000032 4B05            LDR              R3, = Stack_Mem
+  159 00000034 4770            BX               LR
+  160 00000036         
+  161 00000036 00 00           ALIGN
+  162 00000038         
+  163 00000038                 ENDIF
+  164 00000038         
+  165 00000038                 END
+              00000000 
+              00000000 
+              00000400 
+              00000400 
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
+ork --depend=.\startup_cmsdk_cm0.d -o.\startup_cmsdk_cm0.o -IC:\Users\JefferyLi
+\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include -
+-predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 536" --predefine
+="CMSDK_CM0 SETA 1" --list=.\listings\startup_cmsdk_cm0.lst ..\src\startup_CMSD
+K_CM0.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+STACK 00000000
+
+Symbol: STACK
+   Definitions
+      At line 35 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      None
+Comment: STACK unused
+Stack_Mem 00000000
+
+Symbol: Stack_Mem
+   Definitions
+      At line 36 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 156 in file ..\src\startup_CMSDK_CM0.s
+      At line 158 in file ..\src\startup_CMSDK_CM0.s
+
+__initial_sp 00000400
+
+Symbol: __initial_sp
+   Definitions
+      At line 37 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 61 in file ..\src\startup_CMSDK_CM0.s
+Comment: __initial_sp used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+HEAP 00000000
+
+Symbol: HEAP
+   Definitions
+      At line 46 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      None
+Comment: HEAP unused
+Heap_Mem 00000000
+
+Symbol: Heap_Mem
+   Definitions
+      At line 48 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 155 in file ..\src\startup_CMSDK_CM0.s
+      At line 157 in file ..\src\startup_CMSDK_CM0.s
+
+__heap_base 00000000
+
+Symbol: __heap_base
+   Definitions
+      At line 47 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      None
+Comment: __heap_base unused
+__heap_limit 00000400
+
+Symbol: __heap_limit
+   Definitions
+      At line 49 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      None
+Comment: __heap_limit unused
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 58 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 61 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 59 in file ..\src\startup_CMSDK_CM0.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 84 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      None
+Comment: .text unused
+Demodulated_Data_Dump_Done 0000000A
+
+Symbol: Demodulated_Data_Dump_Done
+   Definitions
+      At line 101 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 79 in file ..\src\startup_CMSDK_CM0.s
+      At line 103 in file ..\src\startup_CMSDK_CM0.s
+
+FM_IQ_Dump_Done 00000012
+
+Symbol: FM_IQ_Dump_Done
+   Definitions
+      At line 110 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 78 in file ..\src\startup_CMSDK_CM0.s
+      At line 113 in file ..\src\startup_CMSDK_CM0.s
+
+RSSI_Scan_Done 00000022
+
+Symbol: RSSI_Scan_Done
+   Definitions
+      At line 131 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 80 in file ..\src\startup_CMSDK_CM0.s
+      At line 132 in file ..\src\startup_CMSDK_CM0.s
+
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 89 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 62 in file ..\src\startup_CMSDK_CM0.s
+      At line 90 in file ..\src\startup_CMSDK_CM0.s
+
+UART_Handler 0000001A
+
+Symbol: UART_Handler
+   Definitions
+      At line 122 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 77 in file ..\src\startup_CMSDK_CM0.s
+      At line 123 in file ..\src\startup_CMSDK_CM0.s
+
+__user_initial_stackheap 0000002C
+
+Symbol: __user_initial_stackheap
+   Definitions
+      At line 153 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 151 in file ..\src\startup_CMSDK_CM0.s
+Comment: __user_initial_stackheap used once
+7 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+Heap_Size 00000400
+
+Symbol: Heap_Size
+   Definitions
+      At line 44 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 48 in file ..\src\startup_CMSDK_CM0.s
+      At line 157 in file ..\src\startup_CMSDK_CM0.s
+
+Stack_Size 00000400
+
+Symbol: Stack_Size
+   Definitions
+      At line 33 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 36 in file ..\src\startup_CMSDK_CM0.s
+      At line 156 in file ..\src\startup_CMSDK_CM0.s
+
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+RSSIScanHandler 00000000
+
+Symbol: RSSIScanHandler
+   Definitions
+      At line 133 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 135 in file ..\src\startup_CMSDK_CM0.s
+Comment: RSSIScanHandler used once
+UARTFM_Demodulated_Data_Dump_Done_Handler 00000000
+
+Symbol: UARTFM_Demodulated_Data_Dump_Done_Handler
+   Definitions
+      At line 104 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 106 in file ..\src\startup_CMSDK_CM0.s
+Comment: UARTFM_Demodulated_Data_Dump_Done_Handler used once
+UARTFM_IQ_Dump_Done_Handler 00000000
+
+Symbol: UARTFM_IQ_Dump_Done_Handler
+   Definitions
+      At line 114 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 116 in file ..\src\startup_CMSDK_CM0.s
+Comment: UARTFM_IQ_Dump_Done_Handler used once
+UARTHandle 00000000
+
+Symbol: UARTHandle
+   Definitions
+      At line 124 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 126 in file ..\src\startup_CMSDK_CM0.s
+Comment: UARTHandle used once
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 92 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 93 in file ..\src\startup_CMSDK_CM0.s
+      At line 96 in file ..\src\startup_CMSDK_CM0.s
+
+__use_two_region_memory 00000000
+
+Symbol: __use_two_region_memory
+   Definitions
+      At line 150 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      None
+Comment: __use_two_region_memory unused
+6 symbols
+361 symbols in table

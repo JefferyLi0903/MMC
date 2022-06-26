@@ -76,7 +76,8 @@ __Vectors       DCD     __initial_sp              ; Top of Stack
                 DCD     0          				  ; SysTick Handler
                 DCD     UART_Handler              ; IRQ0 Handler
                 DCD     FM_IQ_Dump_Done           ; IRQ1 Handler
-				DCD     Demodulated_Data_Dump_Done           ; IRQ1 Handler	
+				DCD     Demodulated_Data_Dump_Done; IRQ2 Handler
+                DCD     RSSI_Scan_Done            ; IRQ3 Handler	
 					
 					
 
@@ -123,6 +124,15 @@ UART_Handler    PROC
 				IMPORT UARTHandle
 				PUSH	{R0,R1,R2,LR}
                 BL		UARTHandle
+				POP		{R0,R1,R2,PC}
+                ENDP
+
+
+RSSI_Scan_Done  PROC
+                EXPORT RSSI_Scan_Done            [WEAK]
+				IMPORT RSSIScanHandler
+				PUSH	{R0,R1,R2,LR}
+                BL		RSSIScanHandler
 				POP		{R0,R1,R2,PC}
                 ENDP
 

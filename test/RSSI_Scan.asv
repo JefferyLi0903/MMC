@@ -1,0 +1,11 @@
+load RSSI_Scan.mat;
+figure(1);
+plot(linspace(87.02,107.98,1050),Dec_list);
+title('RSSI Dec_list')
+xlabel('Frequency(KHz)')
+ylabel('RSSI')
+figure(2);
+plot(Log_list);
+title('RSSI evaluation centered of real station channel')
+xlabel('Frequency(KHz)')
+ylabel('RSSI')

@@ -8,24 +8,24 @@ IO Statistics
   #inout                    1
 
 Utilization Statistics
-#lut                    16698   out of  19600   85.19%
-#reg                     1843   out of  19600    9.40%
-#le                     16829
-  #lut only             14986   out of  16829   89.05%
-  #reg only               131   out of  16829    0.78%
-  #lut&reg               1712   out of  16829   10.17%
-#dsp                       25   out of     29   86.21%
+#lut                    17306   out of  19600   88.30%
+#reg                     2390   out of  19600   12.19%
+#le                     17629
+  #lut only             15239   out of  17629   86.44%
+  #reg only               323   out of  17629    1.83%
+  #lut&reg               2067   out of  17629   11.72%
+#dsp                       26   out of     29   89.66%
 #bram                      32   out of     64   50.00%
   #bram9k                  32
   #fifo9k                   0
-#bram32k                    0   out of     16    0.00%
+#bram32k                    7   out of     16   43.75%
 #adc                        1   out of      1  100.00%
 #pad                       31   out of    186   16.67%
   #ireg                     0
   #oreg                     0
   #treg                     0
 #pll                        2   out of      4   50.00%
-#gclk                      11   out of     16   68.75%
+#gclk                      13   out of     16   81.25%
 
 
 Detailed IO Report
@@ -67,20 +67,20 @@ Report Hierarchy Area:
 +----------------------------------------------------------------------+
 |Instance |Module       |le    |lut    |ripple |seq    |bram   |dsp    |
 +----------------------------------------------------------------------+
-|top      |CortexM0_SoC |16829 |16386  |312    |1843   |32     |25     |
+|top      |CortexM0_SoC |17629 |16853  |453    |2390   |39     |26     |
 +----------------------------------------------------------------------+
 
 
 DataNet Average Fanout:
 
    Index     Fanout     Nets   
-    #1          1       14862  
-    #2          2       9930   
-    #3          3        511   
-    #4          4        503   
-    #5        5-10       654   
-    #6        11-50      450   
-    #7       51-100      37    
-    #8       101-500      4    
-    #9        >500       19    
-  Average     3.13             
+    #1          1       15409  
+    #2          2       10176  
+    #3          3        643   
+    #4          4        487   
+    #5        5-10       684   
+    #6        11-50      472   
+    #7       51-100      39    
+    #8       101-500      9    
+    #9        >500       18    
+  Average     3.11             

@@ -71,7 +71,13 @@ void ChannelSelection_control(unsigned int data)
 	  UARTString("  Stop Reciever  ");
 	  WriteUART('\n');
 	}
-	
+	else if(data=='C')
+	{
+		singleFrequencyRSSI();
+		UARTString("RSSI SCAN START!");
+	  WriteUART('\n');
+		RSSI_scan_cmd();
+	}
 	else if(data=='U')   // Dump IQ data
 	{
 		if(FM_Receiver_state==1)
@@ -121,7 +127,7 @@ void ChannelSelection_control(unsigned int data)
 		    FM_Receiver_state = 2;
 	      UARTString("  adjust gain please enter +/-  ");
 	      WriteUART('\n');
-		}else 
+		}else
 		{
 			  UARTString("  please enter 'A' to start the FM first!   ");
 	      WriteUART('\n');
@@ -201,7 +207,7 @@ void ChannelSelection_control(unsigned int data)
 		  	if(FM_current_INT<36)                    //29~36; step:1
 				{
 					FM_current_INT=FM_current_INT+1;					
-					REG2=FM_current_INT*65535 + FM_current_FRAC*16+2;
+					REG2=FM_current_INT*65536 + FM_current_FRAC*16+2;
 					SPI_RFD(REG2);
 					
 					UARTString("  current INT is:  ");
@@ -398,7 +404,7 @@ void ChannelSelection_control(unsigned int data)
 	  ChannelControlDisplay.freq =99.0;
 	  ChannelControlDisplay.INT =FM_current_INT;
 	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);		
+	  Channel_control(ChannelControlDisplay);
 
 		
 	  UARTString("  Channel: 99.0MHz  ");

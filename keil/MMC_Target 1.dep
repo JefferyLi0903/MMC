@@ -1,20 +1,21 @@
 Dependencies for Project 'MMC', Target 'Target 1': (DO NOT MODIFY !)
-CompilerVersion: 6160000::V6.16::ARMCLANG
-F (..\src\auxiliary.c)(0x6288D9F3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -IC:/Users/JefferyLi/AppData/Local/Arm/Packs/Keil/V2M-MPS2_CMx_BSP/1.8.0/Device/CMSDK_CM0/Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o ./auxiliary.o -MD)
-I (..\src\code_def.h)(0x6291E3A8)
-I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
-I (D:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
-F (..\src\channelSelection_control.c)(0x6292F4D5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -IC:/Users/JefferyLi/AppData/Local/Arm/Packs/Keil/V2M-MPS2_CMx_BSP/1.8.0/Device/CMSDK_CM0/Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o ./channelselection_control.o -MD)
-I (..\src\code_def.h)(0x6291E3A8)
-I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
-I (D:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
-F (..\src\code_def.c)(0x62931941)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -IC:/Users/JefferyLi/AppData/Local/Arm/Packs/Keil/V2M-MPS2_CMx_BSP/1.8.0/Device/CMSDK_CM0/Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o ./code_def.o -MD)
-I (..\src\code_def.h)(0x6291E3A8)
-I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
-I (D:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
-F (..\src\code_def.h)(0x6291E3A8)()
-F (..\src\main.c)(0x6293190A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -IC:/Users/JefferyLi/AppData/Local/Arm/Packs/Keil/V2M-MPS2_CMx_BSP/1.8.0/Device/CMSDK_CM0/Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o ./main.o -MD)
-I (..\src\code_def.h)(0x6291E3A8)
-I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
-I (D:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
-F (..\src\startup_CMSDK_CM0.s)(0x6290432B)(--target=arm-arm-none-eabi -mcpu=cortex-m0 -masm=auto -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-IC:/Users/JefferyLi/AppData/Local/Arm/Packs/Keil/V2M-MPS2_CMx_BSP/1.8.0/Device/CMSDK_CM0/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 536" -Wa,armasm,--pd,"CMSDK_CM0 SETA 1"-o ./startup_cmsdk_cm0.o)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (..\src\auxiliary.c)(0x6288D9F3)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections-IC:\Users\JefferyLi\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o .\auxiliary.o --omf_browse .\auxiliary.crf --depend .\auxiliary.d)
+I (..\src\code_def.h)(0x62B7A918)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+F (..\src\code_def.c)(0x62B7F1D8)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections-IC:\Users\JefferyLi\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o .\code_def.o --omf_browse .\code_def.crf --depend .\code_def.d)
+I (..\src\code_def.h)(0x62B7A918)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x60252378)
+F (..\src\code_def.h)(0x62B7A918)()
+F (..\src\main.c)(0x62B7DAD7)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections-IC:\Users\JefferyLi\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (..\src\code_def.h)(0x62B7A918)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+F (..\src\startup_CMSDK_CM0.s)(0x62B69773)(--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Users\JefferyLi\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include--pd "__UVISION_VERSION SETA 536" --pd "CMSDK_CM0 SETA 1"--list .\listings\startup_cmsdk_cm0.lst --xref -o .\startup_cmsdk_cm0.o --depend .\startup_cmsdk_cm0.d)
+F (..\src\channelSelection_control.c)(0x62B7014F)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections-IC:\Users\JefferyLi\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o .\channelselection_control.o --omf_browse .\channelselection_control.crf --depend .\channelselection_control.d)
+I (..\src\code_def.h)(0x62B7A918)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)

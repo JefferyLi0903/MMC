@@ -8,18 +8,18 @@ IO Statistics
   #inout                    1
 
 LUT Statistics
-#Total_luts              9465
-  #lut4                  7001
-  #lut5                  1664
+#Total_luts              9608
+  #lut4                  7075
+  #lut5                  1631
   #lut6                     0
   #lut5_mx41                0
-  #lut4_alu1b             800
+  #lut4_alu1b             902
 
 Utilization Statistics
-#lut                     9465   out of  19600   48.29%
-#reg                     1843   out of  19600    9.40%
+#lut                     9608   out of  19600   49.02%
+#reg                     1921   out of  19600    9.80%
 #le                         0
-#dsp                       25   out of     29   86.21%
+#dsp                       26   out of     29   89.66%
 #bram                      32   out of     64   50.00%
   #bram9k                  32
   #fifo9k                   0
@@ -36,9 +36,9 @@ Report Hierarchy Area:
 +------------------------------------------------------------------------------+
 |Instance            |Module           |lut    |ripple |seq    |bram   |dsp    |
 +------------------------------------------------------------------------------+
-|top                 |CortexM0_SoC     |8665   |800    |1843   |32     |25     |
-|  FM_Display        |FM_Display       |182    |90     |81     |0      |0      |
-|  FM_HW             |FM_HW            |3402   |493    |314    |0      |22     |
+|top                 |CortexM0_SoC     |8706   |902    |1921   |32     |26     |
+|  FM_Display        |FM_Display       |180    |90     |81     |0      |0      |
+|  FM_HW             |FM_HW            |3473   |595    |391    |0      |23     |
 |    FM_Demodulation |FM_Demodulation  |12     |422    |268    |0      |22     |
-|  u_logic           |cortexm0ds_logic |4764   |173    |1300   |0      |3      |
+|  u_logic           |cortexm0ds_logic |4719   |173    |1301   |0      |3      |
 +------------------------------------------------------------------------------+

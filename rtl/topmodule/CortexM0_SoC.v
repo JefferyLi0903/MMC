@@ -1,4 +1,4 @@
-
+`include "header.vh"
 module CortexM0_SoC #(
  parameter FM_ADDR_WIDTH = 13,    
  parameter ADDR_WIDTH = 12
@@ -41,8 +41,9 @@ wire [31:0] IRQ;
 wire interrupt_UART;
 wire interrupt_IQ_done;
 wire Demo_Dump_Done_Interrupt;
+wire RSSI_interrupt;
 /*Connect the IRQ with UART*/
-assign IRQ = {29'b0,Demo_Dump_Done_Interrupt,interrupt_IQ_done,interrupt_UART};
+assign IRQ = {28'b0,RSSI_interrupt,Demo_Dump_Done_Interrupt,interrupt_IQ_done,interrupt_UART};
 
 /***************************/
 
@@ -582,8 +583,8 @@ FM_HW FM_HW(
    .FM_HW_state             (FM_HW_state),
    .IQ_Write_Done_interrupt (interrupt_IQ_done),
    .audio_pwm               (audio_pwm),
-   .Demo_Dump_Done_Interrupt (Demo_Dump_Done_Interrupt)
-
+   .Demo_Dump_Done_Interrupt (Demo_Dump_Done_Interrupt),
+   .RSSI_interrupt           (RSSI_interrupt)
  );
 
 
@@ -656,7 +657,7 @@ UART_TX UART_TX(
 
 wire CW_CLK_MSI; //synthesis keep;
 wire CLK_Lock_MSI;
-
+`ifndef SIM_PROFILE
 RF_REF_24M MSI_REF_CLK(
    .refclk(clk),
    .reset(1'b0),
@@ -665,6 +666,6 @@ RF_REF_24M MSI_REF_CLK(
    .clk0_out(CW_CLK_MSI),   
    .clk3_out(MSI_REFCLK)
 );
-
+`endif
 
 endmodule

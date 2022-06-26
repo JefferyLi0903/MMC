@@ -1,3 +1,4 @@
+`include "../topmodule/header.vh"
 module FM_HW #(
     parameter FM_ADDR_WIDTH = 13
 )(
@@ -10,8 +11,9 @@ module FM_HW #(
    input [FM_ADDR_WIDTH-1:0] rdaddr,
    input [31:0] wdata,
    input [3:0] wea,
-   output [31:0] rdata,
+   output wire [31:0] rdata,
    output reg [3:0] FM_HW_state,
+   output wire RSSI_interrupt,
    output wire IQ_Write_Done_interrupt,
    output wire Demo_Dump_Done_Interrupt,
    output wire audio_pwm
@@ -19,9 +21,11 @@ module FM_HW #(
 
 reg adc_Power_down=1'b1;  //1: power down, 0?power on
 wire EOC;
+wire [31:0] rd_DUMP;
+wire [31:0] rd_SCAN;
 
-//reg [3:0] FM_HW_state;
-reg [7:0] RSSI_Scan_parameters;
+
+
 reg [4:0] ADC_dump_parameters;
 
 /* 
@@ -37,27 +41,31 @@ localparam dumpIQ_or_audio = 1'b1;
 localparam FM_HW_STATE_IDLE = 4'b0000;
 localparam FM_HW_STATE_RCEV = 4'b0010;   //Receiver State, receiver, dump IQ or audio data
 localparam FM_HW_STATE_RSSI = 4'b0100;   //RSSI Scan state
-localparam FM_HW_STATE_RSSI_SNR_Verify = 4'b1000;
+localparam FM_HW_STATE_RSSI_DONE = 4'b1000;     //Sent from core, marking the end of single RSSI scan
+
+reg RSSI_Scan_Start;
 
 always@(posedge clk or negedge RSTn ) begin
       if (!RSTn) begin
           FM_HW_state <= FM_HW_STATE_IDLE;       
           adc_Power_down <=1'b1;    
       end
-      else if ((wraddr==15'h004)&&(wdata[7:4]==4'b0001)&&(wea>3'b0))  begin     //control to normal FM receiver On
-           FM_HW_state <= FM_HW_STATE_RCEV;
-           adc_Power_down <=1'b0; 
+      else if ((wraddr==15'h004)&&(wdata[7:4]==4'b0001)&&(wea==4'hf))  begin     //control to normal FM receiver On
+          FM_HW_state <= FM_HW_STATE_RCEV;
+          adc_Power_down <=1'b0; 
       end 
-      else if ((wraddr==15'h004)&&(wdata[7:4]==4'b0010)&&(wea>3'b0))  begin     //control to normal FM receiver OFF
-           FM_HW_state <= FM_HW_STATE_IDLE;
-           adc_Power_down <=1'b1; 
+      else if ((wraddr==15'h004)&&(wdata[7:4]==4'b0010)&&(wea==4'hf))  begin     //control to normal FM receiver OFF
+          FM_HW_state <= FM_HW_STATE_IDLE;
+          adc_Power_down <=1'b1; 
       end 
-      else if ((wraddr==15'h004)&&(wdata[15:8]==8'h01)&&(wea>3'b0)) begin     //RSSI scan parameters
-           FM_HW_state <= FM_HW_STATE_RSSI; 
-           RSSI_Scan_parameters <= wdata[15:8];
-           adc_Power_down <=1'b0; 
-      end      
-
+      else if ((wraddr==15'h004)&&(wdata[15:8]==8'h01)&&(wea==4'hf)) begin     //RSSI scan start parameters
+          FM_HW_state <= FM_HW_STATE_RSSI; 
+          adc_Power_down <=1'b0; 
+      end
+      else if ((wraddr==13'h004)&&(wdata[15:8]==8'h02)&&(wea==4'hf)) begin     //RSSI scan done parameters
+          FM_HW_state <= FM_HW_STATE_RSSI_DONE;
+          adc_Power_down <=1'b0;
+      end
 end
 
 wire CW_CLK; //synthesis keep;
@@ -66,7 +74,7 @@ wire CLK_Lock;
 wire clk_PWM1;
 wire clk_PWM2;
 
-
+`ifndef SIM_PROFILE
 PLL_Demodulation U1  //use final adc clk 200Khz
 (
    .refclk(clk),
@@ -78,26 +86,7 @@ PLL_Demodulation U1  //use final adc clk 200Khz
    .clk2_out(clk_PWM1),           //20M
    .clk4_out(clk_PWM2)          //40M
 );     
-
-
-/*
-
-// for Model Simulation ONLY
-
-reg [2:0] sim_PWM_clk;
-reg sim_clk_PWM1;
-always@(posedge clk or negedge RSTn ) begin
-  if (!RSTn) begin  sim_clk_PWM1 <= 1'b0; sim_PWM_clk <=3'b000; end 
-  else if (sim_PWM_clk == 3'b101) begin
-           sim_clk_PWM1 <= 1'b1;
-           sim_PWM_clk <=3'b000;
-           end
-  else begin
-           sim_clk_PWM1 <= 1'b0;   
-           sim_PWM_clk = sim_PWM_clk+1'b1;
-       end
-end
-*/
+`endif
 
 //ADC通道4,6轮询
 reg[2:0] Channel;
@@ -117,7 +106,7 @@ end
 wire [11:0]ADC_Data ; //synthesis keep;
 
 //CH6-P12 MSI I data, CH4-M12 MSI Q data 
-
+`ifndef SIM_PROFILE
 ADC_Sampling U2
 (
  	.eoc(EOC),
@@ -127,11 +116,7 @@ ADC_Sampling U2
         .s(Channel),
 	.soc(1'b1)
 );
-
-
-/*
-
-// for Model Simulation ONLY
+`else
 
 ADC_Sample_debug ADC_Sample_debug( 
    .eoc(EOC), 
@@ -139,32 +124,30 @@ ADC_Sample_debug ADC_Sample_debug(
    .clk(clk),
    .RSTn(RSTn),
    .channel(Channel)
-);   
+);
 
-*/
+reg [2:0] sim_PWM_clk;
+reg sim_clk_PWM1;
+always@(posedge clk or negedge RSTn ) begin
+  if (!RSTn) begin  sim_clk_PWM1 <= 1'b0; sim_PWM_clk <=3'b000; end 
+  else if (sim_PWM_clk == 3'b101) begin
+           sim_clk_PWM1 <= 1'b1;
+           sim_PWM_clk <=3'b000;
+           end
+  else begin
+           sim_clk_PWM1 <= 1'b0;   
+           sim_PWM_clk = sim_PWM_clk+1'b1;
+       end
+end
+`endif
 
-// select FM_Dump_Data_IQ or FM_Dump_Data_Audio 
 
-FM_Dump_Data  FM_Dump_Data_IQ
-(
-   .clk(clk),
-   .RSTn(RSTn),
-   .dump_data_clk(EOC),
-   .FM_HW_state(FM_HW_state),
-   .wraddr(wraddr),
-   .rdaddr(wraddr),
-   .wdata(wdata),
-   .wea(wea),
-   .dump_data(ADC_Data[11:4]),
-   .rdata(rdata),
-   .Dump_Done_Interrupt(Dump_Done_Interrupt)
-
- );
 
 
 wire [9:0] demodulated_signal_downsample;
 FM_Demodulation FM_Demodulation
  (
+
    .EOC(EOC),
    .Channel(Channel),
    .FM_HW_state(FM_HW_state),
@@ -176,10 +159,36 @@ FM_Demodulation FM_Demodulation
  );
 
 
+ FM_RSSI_SCAN FM_RSSI_SCAN
+ (
+   .clk(clk),
+   .rdaddr(wraddr),
+   .rdata(rd_SCAN),
+   .EOC(EOC),
+   .Channel(Channel),
+   .FM_HW_state(FM_HW_state),
+   .RSTn(RSTn),
+   .ADC_Data(ADC_Data),
+   .RSSI_interrupt(RSSI_interrupt) 
+ );
 
-/*
 // select FM_Dump_Data_IQ or FM_Dump_Data_Audio 
-
+ FM_Dump_Data  FM_Dump_Data_IQ
+ (
+    .clk(clk),
+    .RSTn(RSTn),
+    .dump_data_clk(EOC),
+    .FM_HW_state(FM_HW_state),
+    .wraddr(wraddr),
+    .rdaddr(rdaddr),
+    .wdata(wdata),
+    .wea(wea),
+    .dump_data(ADC_Data[11:4]),
+    .rdata(rd_DUMP),
+    .Dump_Done_Interrupt(Dump_Done_Interrupt)
+ 
+  );
+/*
 FM_Dump_Data  FM_Dump_Data_Audio
 (
    .clk(clk),
@@ -205,8 +214,11 @@ FM_Dump_Data  FM_Dump_Data_Audio
 Aduio_PWM Audio_PWM
 (
   .clk_fm_demo_sampling(clk_fm_demo_sampling),
+`ifndef SIM_PROFILE
   .clk(clk_PWM1),           //simulating 20K or 40K * 200KHz ADC sampling clk
-  //.clk(sim_clk_PWM1),     // for Model Simulation ONLY
+`else
+  .clk(sim_clk_PWM1),     // for Model Simulation ONLY
+`endif
   .RSTn(RSTn),  
   .demod_en(adc_Power_down),
   .demodulated_signal_downsample(demodulated_signal_downsample),
@@ -219,6 +231,6 @@ assign LED_Out = {audio_pwm,audio_pwm,audio_pwm,audio_pwm,~audio_pwm,~audio_pwm,
 
 assign IQ_Write_Done_interrupt = dumpIQ_or_audio? Dump_Done_Interrupt:1'b0;
 assign Demo_Dump_Done_Interrupt = (~dumpIQ_or_audio)? Dump_Done_Interrupt:1'b0;
-
+assign rdata = (FM_HW_state == FM_HW_STATE_RSSI) ? rd_SCAN:rd_DUMP;
 
 endmodule

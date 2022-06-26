@@ -138,8 +138,8 @@ clc;
 % RSSI_result(27)=mean(RSSI);
 % x_axis=[x_axis -10];
 % 
-% fmdata=loadFile_FM_IQ('./CaptureData/IQ/IQ_934_15dB(+0Hz)10.txt');
-% RSSI=real(fmdata).*real(fmdata) + imag(fmdata).*imag(fmdata);
+fmdata=loadFile_FM_IQ('./CaptureData/IQ/IQ_934_15dB(+0Hz)10.txt');
+RSSI=real(fmdata).*real(fmdata) + imag(fmdata).*imag(fmdata);
 % RSSI_result(28)=mean(RSSI);
 % x_axis=[x_axis 0];
 % 
@@ -310,7 +310,7 @@ plot(x_axis,10*log10(RSSI_result))
 title('RSSI evaluation centered of real station channel')
 xlabel('Frequency offset(KHz)')
 ylabel('RSSI in dB')
-%Add line @ center freq
+Add line @ center freq
 y1=get(gca,'ylim');
 hold on;
 plot([0 0],y1,'r-','linewidth',1);
