@@ -4,7 +4,7 @@
 
 ### RSSI分布描述
 
-<img src="../MMC/docs/pic/扫频算法描述.png" alt="image-20220626145138666" style="zoom:33%;" />
+<img src="../MMC/docs/pic/image.png"/>
 
 该图为频率范围$f\in[87MHz,108MHz]$下的RSSI的对数坐标分布$RSSI_{log}=10\times\log{RSSI}$。
 
