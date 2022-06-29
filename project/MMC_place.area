@@ -2,25 +2,25 @@ standard
 ***Report Model: CortexM0_SoC***
 
 IO Statistics
-#IO                        31
-  #input                    4
-  #output                  26
+#IO                        39
+  #input                    8
+  #output                  30
   #inout                    1
 
 Utilization Statistics
-#lut                    16425   out of  19600   83.80%
-#reg                     2390   out of  19600   12.19%
-#le                     16791
-  #lut only             14401   out of  16791   85.77%
-  #reg only               366   out of  16791    2.18%
-  #lut&reg               2024   out of  16791   12.05%
+#lut                    16581   out of  19600   84.60%
+#reg                     2517   out of  19600   12.84%
+#le                     16834
+  #lut only             14317   out of  16834   85.05%
+  #reg only               253   out of  16834    1.50%
+  #lut&reg               2264   out of  16834   13.45%
 #dsp                       26   out of     29   89.66%
 #bram                      32   out of     64   50.00%
   #bram9k                  32
   #fifo9k                   0
-#bram32k                    7   out of     16   43.75%
+#bram32k                    6   out of     16   37.50%
 #adc                        1   out of      1  100.00%
-#pad                       31   out of    186   16.67%
+#pad                       39   out of    186   20.97%
   #ireg                     0
   #oreg                     0
   #treg                     0
@@ -34,6 +34,10 @@ Detailed IO Report
      RXD          INPUT        F12        LVCMOS33          N/A          PULLUP      NONE    
     SWCLK         INPUT         R2        LVCMOS33          N/A          PULLUP      NONE    
      clk          INPUT         R7        LVCMOS33          N/A          PULLUP      NONE    
+    col[3]        INPUT        F10        LVTTL33           N/A          PULLUP      NONE    
+    col[2]        INPUT        C11        LVTTL33           N/A          PULLUP      NONE    
+    col[1]        INPUT        D11        LVTTL33           N/A          PULLUP      NONE    
+    col[0]        INPUT        E11        LVTTL33           N/A          PULLUP      NONE    
     LED[7]       OUTPUT        F16        LVCMOS33           8            NONE       NONE    
     LED[6]       OUTPUT        E16        LVCMOS33           8            NONE       NONE    
     LED[5]       OUTPUT        E13        LVCMOS33           8            NONE       NONE    
@@ -48,6 +52,10 @@ Detailed IO Report
   MSI_SDATA      OUTPUT         N9        LVCMOS33           8            NONE       NONE    
      TXD         OUTPUT        D12        LVCMOS33           8            NONE       NONE    
   audio_pwm      OUTPUT         N8        LVCMOS33           8            NONE       NONE    
+    row[3]       OUTPUT         D9        LVTTL33            8            NONE       NONE    
+    row[2]       OUTPUT         F9        LVTTL33            8            NONE       NONE    
+    row[1]       OUTPUT        C10        LVTTL33            8            NONE       NONE    
+    row[0]       OUTPUT        E10        LVTTL33            8            NONE       NONE    
     seg[7]       OUTPUT         C8        LVCMOS33           8            NONE       NONE    
     seg[6]       OUTPUT         A8        LVCMOS33           8            NONE       NONE    
     seg[5]       OUTPUT         B5        LVCMOS33           8            NONE       NONE    
@@ -66,5 +74,5 @@ Report Hierarchy Area:
 +----------------------------------------------------------------------+
 |Instance |Module       |le    |lut    |ripple |seq    |bram   |dsp    |
 +----------------------------------------------------------------------+
-|top      |CortexM0_SoC |16791 |15972  |453    |2390   |39     |26     |
+|top      |CortexM0_SoC |16834 |16108  |473    |2517   |38     |26     |
 +----------------------------------------------------------------------+

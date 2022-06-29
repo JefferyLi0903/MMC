@@ -1,13 +1,13 @@
 module CW_TOP_WRAPPER(jtdi, jtck, jrstn, jscan, jshift, jupdate, jtdo, non_bus_din, bus_din, trig_clk, wt_ce, wt_en, wt_addr);
-	localparam DEFAULT_CTRL_REG_LEN = 231;
+	localparam DEFAULT_CTRL_REG_LEN = 223;
 	localparam DEFAULT_STAT_REG_LEN = 18;
 	localparam DEFAULT_STOP_LEN = 2730;
-	localparam DEFAULT_NON_BUS_NODE_NUM = 2;
+	localparam DEFAULT_NON_BUS_NODE_NUM = 0;
 	localparam DEFAULT_BUS_NODE_NUM = 48;
 	localparam DEFAULT_BUS_NUM = 3;
-	localparam DEFAULT_BUS1_WIDTH = 32;
-	localparam DEFAULT_BUS2_WIDTH = 3;
-	localparam DEFAULT_BUS3_WIDTH = 13;
+	localparam DEFAULT_BUS1_WIDTH = 16;
+	localparam DEFAULT_BUS2_WIDTH = 16;
+	localparam DEFAULT_BUS3_WIDTH = 16;
 	input jtdi;
 	input jtck;
 	input jrstn;

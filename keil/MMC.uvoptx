@@ -173,12 +173,12 @@
         <Ww>
           <count>4</count>
           <WinNumber>1</WinNumber>
-          <ItemText>i </ItemText>
+          <ItemText>rssilist[rssi_index].RSSI</ItemText>
         </Ww>
         <Ww>
           <count>5</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rssilist[rssi_index].RSSI</ItemText>
+          <ItemText>channelcontrollist</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>

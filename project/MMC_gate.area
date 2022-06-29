@@ -2,22 +2,22 @@ standard
 ***Report Model: CortexM0_SoC***
 
 IO Statistics
-#IO                        31
-  #input                    4
-  #output                  26
+#IO                        39
+  #input                    8
+  #output                  30
   #inout                    1
 
 LUT Statistics
-#Total_luts              9608
-  #lut4                  7075
-  #lut5                  1631
+#Total_luts              9828
+  #lut4                  7291
+  #lut5                  1581
   #lut6                     0
   #lut5_mx41                0
-  #lut4_alu1b             902
+  #lut4_alu1b             956
 
 Utilization Statistics
-#lut                     9608   out of  19600   49.02%
-#reg                     1921   out of  19600    9.80%
+#lut                     9828   out of  19600   50.14%
+#reg                     2074   out of  19600   10.58%
 #le                         0
 #dsp                       26   out of     29   89.66%
 #bram                      32   out of     64   50.00%
@@ -26,7 +26,7 @@ Utilization Statistics
 #bram32k                    0   out of     16    0.00%
 #dram                    1040
 #adc                        1   out of      1  100.00%
-#pad                       31   out of    186   16.67%
+#pad                       39   out of    186   20.97%
   #ireg                     0
   #oreg                     0
   #treg                     0
@@ -36,9 +36,9 @@ Report Hierarchy Area:
 +------------------------------------------------------------------------------+
 |Instance            |Module           |lut    |ripple |seq    |bram   |dsp    |
 +------------------------------------------------------------------------------+
-|top                 |CortexM0_SoC     |8706   |902    |1921   |32     |26     |
+|top                 |CortexM0_SoC     |8872   |956    |2074   |32     |26     |
 |  FM_Display        |FM_Display       |180    |90     |81     |0      |0      |
 |  FM_HW             |FM_HW            |3473   |595    |391    |0      |23     |
 |    FM_Demodulation |FM_Demodulation  |12     |422    |268    |0      |22     |
-|  u_logic           |cortexm0ds_logic |4719   |173    |1301   |0      |3      |
+|  u_logic           |cortexm0ds_logic |4791   |173    |1317   |0      |3      |
 +------------------------------------------------------------------------------+

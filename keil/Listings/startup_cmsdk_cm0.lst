@@ -114,109 +114,286 @@ ARM Macro Assembler    Page 2
    79 00000048 00000000        DCD              Demodulated_Data_Dump_Done 
                                                             ; IRQ2 Handler
    80 0000004C 00000000        DCD              RSSI_Scan_Done ; IRQ3 Handler 
-   81 00000050         
-   82 00000050         
-   83 00000050         
-   84 00000050                 AREA             |.text|, CODE, READONLY
-   85 00000000         
-   86 00000000         
-   87 00000000         ; Reset Handler
-   88 00000000         
-   89 00000000         Reset_Handler
-                               PROC
-   90 00000000                 GLOBAL           Reset_Handler
-   91 00000000                 ENTRY
-   92 00000000                 IMPORT           __main
-   93 00000000 480D            LDR              R0, =__main
+   81 00000050 00000000        DCD              KEY15_Handler ; IRQ4 Handler
+   82 00000054 00000000        DCD              KEY14_Handler ; IRQ5 Handler
+   83 00000058 00000000        DCD              KEY13_Handler ; IRQ6 Handler
+   84 0000005C 00000000        DCD              KEY12_Handler ; IRQ7 Handler
+   85 00000060 00000000        DCD              KEY11_Handler ; IRQ8 Handler
+   86 00000064 00000000        DCD              KEY10_Handler ; IRQ9 Handler
+   87 00000068 00000000        DCD              KEY9_Handler ; IRQ10 Handler
+   88 0000006C 00000000        DCD              KEY8_Handler ; IRQ11 Handler
+   89 00000070 00000000        DCD              KEY7_Handler ; IRQ12 Handler
+   90 00000074 00000000        DCD              KEY6_Handler ; IRQ13 Handler
+   91 00000078 00000000        DCD              KEY5_Handler ; IRQ14 Handler
+   92 0000007C 00000000        DCD              KEY4_Handler ; IRQ15 Handler
+   93 00000080 00000000        DCD              KEY3_Handler ; IRQ16 Handler
+   94 00000084 00000000        DCD              KEY2_Handler ; IRQ17 Handler
 
 
 
 ARM Macro Assembler    Page 3 
 
 
-   94 00000002 4680            MOV              R8, R0
-   95 00000004 46C1            MOV              R9, R8
-   96 00000006 F7FF FFFE       BL               __main
-   97 0000000A                 ENDP
-   98 0000000A         
-   99 0000000A         
-  100 0000000A         
-  101 0000000A         Demodulated_Data_Dump_Done
+   95 00000088 00000000        DCD              KEY1_Handler ; IRQ18 Handler
+   96 0000008C 00000000        DCD              KEY0_Handler ; IRQ19 Handler
+   97 00000090         
+   98 00000090         
+   99 00000090         
+  100 00000090                 AREA             |.text|, CODE, READONLY
+  101 00000000         
+  102 00000000         
+  103 00000000         ; Reset Handler
+  104 00000000         
+  105 00000000         Reset_Handler
                                PROC
-  102 0000000A         
-  103 0000000A                 EXPORT           Demodulated_Data_Dump_Done
-  104 0000000A                 IMPORT           UARTFM_Demodulated_Data_Dump_Do
+  106 00000000                 GLOBAL           Reset_Handler
+  107 00000000                 ENTRY
+  108 00000000                 IMPORT           __main
+  109 00000000 482D            LDR              R0, =__main
+  110 00000002 4680            MOV              R8, R0
+  111 00000004 46C1            MOV              R9, R8
+  112 00000006 F7FF FFFE       BL               __main
+  113 0000000A                 ENDP
+  114 0000000A         
+  115 0000000A         
+  116 0000000A         
+  117 0000000A         Demodulated_Data_Dump_Done
+                               PROC
+  118 0000000A         
+  119 0000000A                 EXPORT           Demodulated_Data_Dump_Done
+  120 0000000A                 IMPORT           UARTFM_Demodulated_Data_Dump_Do
 ne_Handler
-  105 0000000A B507            PUSH             {R0,R1,R2,LR}
-  106 0000000C F7FF FFFE       BL               UARTFM_Demodulated_Data_Dump_Do
+  121 0000000A B507            PUSH             {R0,R1,R2,LR}
+  122 0000000C F7FF FFFE       BL               UARTFM_Demodulated_Data_Dump_Do
 ne_Handler
-  107 00000010 BD07            POP              {R0,R1,R2,PC}
-  108 00000012                 ENDP
-  109 00000012         
-  110 00000012         FM_IQ_Dump_Done
+  123 00000010 BD07            POP              {R0,R1,R2,PC}
+  124 00000012                 ENDP
+  125 00000012         
+  126 00000012         FM_IQ_Dump_Done
                                PROC
-  111 00000012         
-  112 00000012         
-  113 00000012                 EXPORT           FM_IQ_Dump_Done
-  114 00000012                 IMPORT           UARTFM_IQ_Dump_Done_Handler
-  115 00000012 B507            PUSH             {R0,R1,R2,LR}
-  116 00000014 F7FF FFFE       BL               UARTFM_IQ_Dump_Done_Handler
-  117 00000018 BD07            POP              {R0,R1,R2,PC}
-  118 0000001A                 ENDP
-  119 0000001A         
-  120 0000001A         
-  121 0000001A         
-  122 0000001A         UART_Handler
+  127 00000012         
+  128 00000012         
+  129 00000012                 EXPORT           FM_IQ_Dump_Done
+  130 00000012                 IMPORT           UARTFM_IQ_Dump_Done_Handler
+  131 00000012 B507            PUSH             {R0,R1,R2,LR}
+  132 00000014 F7FF FFFE       BL               UARTFM_IQ_Dump_Done_Handler
+  133 00000018 BD07            POP              {R0,R1,R2,PC}
+  134 0000001A                 ENDP
+  135 0000001A         
+  136 0000001A         
+  137 0000001A         
+  138 0000001A         UART_Handler
                                PROC
-  123 0000001A                 EXPORT           UART_Handler            [WEAK]
-  124 0000001A                 IMPORT           UARTHandle
-  125 0000001A B507            PUSH             {R0,R1,R2,LR}
-  126 0000001C F7FF FFFE       BL               UARTHandle
-  127 00000020 BD07            POP              {R0,R1,R2,PC}
-  128 00000022                 ENDP
-  129 00000022         
-  130 00000022         
-  131 00000022         RSSI_Scan_Done
-                               PROC
-  132 00000022                 EXPORT           RSSI_Scan_Done            [WEAK
-]
-  133 00000022                 IMPORT           RSSIScanHandler
-  134 00000022 B507            PUSH             {R0,R1,R2,LR}
-  135 00000024 F7FF FFFE       BL               RSSIScanHandler
-  136 00000028 BD07            POP              {R0,R1,R2,PC}
-  137 0000002A                 ENDP
-  138 0000002A         
-  139 0000002A         
-  140 0000002A 00 00           ALIGN            4
-  141 0000002C         
-  142 0000002C                 IF               :DEF:__MICROLIB
-  149 0000002C         
-  150 0000002C                 IMPORT           __use_two_region_memory
-  151 0000002C                 EXPORT           __user_initial_stackheap
+  139 0000001A                 EXPORT           UART_Handler            [WEAK]
+  140 0000001A                 IMPORT           UARTHandle
+  141 0000001A B507            PUSH             {R0,R1,R2,LR}
+  142 0000001C F7FF FFFE       BL               UARTHandle
+  143 00000020 BD07            POP              {R0,R1,R2,PC}
+  144 00000022                 ENDP
+  145 00000022         
+  146 00000022         
+  147 00000022         RSSI_Scan_Done
 
 
 
 ARM Macro Assembler    Page 4 
 
 
-  152 0000002C         
-  153 0000002C         __user_initial_stackheap
-  154 0000002C         
-  155 0000002C 4803            LDR              R0, =  Heap_Mem
-  156 0000002E 4904            LDR              R1, =(Stack_Mem + Stack_Size)
-  157 00000030 4A04            LDR              R2, = (Heap_Mem +  Heap_Size)
-  158 00000032 4B05            LDR              R3, = Stack_Mem
-  159 00000034 4770            BX               LR
-  160 00000036         
-  161 00000036 00 00           ALIGN
-  162 00000038         
-  163 00000038                 ENDIF
-  164 00000038         
-  165 00000038                 END
+                               PROC
+  148 00000022                 EXPORT           RSSI_Scan_Done            [WEAK
+]
+  149 00000022                 IMPORT           RSSIScanHandler
+  150 00000022 B507            PUSH             {R0,R1,R2,LR}
+  151 00000024 F7FF FFFE       BL               RSSIScanHandler
+  152 00000028 BD07            POP              {R0,R1,R2,PC}
+  153 0000002A                 ENDP
+  154 0000002A         
+  155 0000002A         KEY0_Handler
+                               PROC
+  156 0000002A                 EXPORT           KEY0_Handler            [WEAK]
+  157 0000002A                 IMPORT           KEY0
+  158 0000002A B507            PUSH             {R0,R1,R2,LR}
+  159 0000002C F7FF FFFE       BL               KEY0
+  160 00000030 BD07            POP              {R0,R1,R2,PC}
+  161 00000032                 ENDP
+  162 00000032         
+  163 00000032         KEY1_Handler
+                               PROC
+  164 00000032                 EXPORT           KEY1_Handler            [WEAK]
+  165 00000032                 IMPORT           KEY1
+  166 00000032 B507            PUSH             {R0,R1,R2,LR}
+  167 00000034 F7FF FFFE       BL               KEY1
+  168 00000038 BD07            POP              {R0,R1,R2,PC}
+  169 0000003A                 ENDP
+  170 0000003A         
+  171 0000003A         KEY2_Handler
+                               PROC
+  172 0000003A                 EXPORT           KEY2_Handler            [WEAK]
+  173 0000003A                 IMPORT           KEY2
+  174 0000003A B507            PUSH             {R0,R1,R2,LR}
+  175 0000003C F7FF FFFE       BL               KEY2
+  176 00000040 BD07            POP              {R0,R1,R2,PC}
+  177 00000042                 ENDP
+  178 00000042         
+  179 00000042         KEY3_Handler
+                               PROC
+  180 00000042                 EXPORT           KEY3_Handler            [WEAK]
+  181 00000042                 IMPORT           KEY3
+  182 00000042 B507            PUSH             {R0,R1,R2,LR}
+  183 00000044 F7FF FFFE       BL               KEY3
+  184 00000048 BD07            POP              {R0,R1,R2,PC}
+  185 0000004A                 ENDP
+  186 0000004A         
+  187 0000004A         KEY4_Handler
+                               PROC
+  188 0000004A                 EXPORT           KEY4_Handler            [WEAK]
+  189 0000004A                 IMPORT           KEY4
+  190 0000004A B507            PUSH             {R0,R1,R2,LR}
+  191 0000004C F7FF FFFE       BL               KEY4
+  192 00000050 BD07            POP              {R0,R1,R2,PC}
+  193 00000052                 ENDP
+  194 00000052         
+  195 00000052         KEY5_Handler
+                               PROC
+  196 00000052                 EXPORT           KEY5_Handler            [WEAK]
+  197 00000052                 IMPORT           KEY5
+  198 00000052 B507            PUSH             {R0,R1,R2,LR}
+
+
+
+ARM Macro Assembler    Page 5 
+
+
+  199 00000054 F7FF FFFE       BL               KEY5
+  200 00000058 BD07            POP              {R0,R1,R2,PC}
+  201 0000005A                 ENDP
+  202 0000005A         
+  203 0000005A         KEY6_Handler
+                               PROC
+  204 0000005A                 EXPORT           KEY6_Handler            [WEAK]
+  205 0000005A                 IMPORT           KEY6
+  206 0000005A B507            PUSH             {R0,R1,R2,LR}
+  207 0000005C F7FF FFFE       BL               KEY6
+  208 00000060 BD07            POP              {R0,R1,R2,PC}
+  209 00000062                 ENDP
+  210 00000062         
+  211 00000062         KEY7_Handler
+                               PROC
+  212 00000062                 EXPORT           KEY7_Handler            [WEAK]
+  213 00000062                 IMPORT           KEY7
+  214 00000062 B507            PUSH             {R0,R1,R2,LR}
+  215 00000064 F7FF FFFE       BL               KEY7
+  216 00000068 BD07            POP              {R0,R1,R2,PC}
+  217 0000006A                 ENDP
+  218 0000006A         
+  219 0000006A         KEY8_Handler
+                               PROC
+  220 0000006A                 EXPORT           KEY8_Handler            [WEAK]
+  221 0000006A                 IMPORT           KEY8
+  222 0000006A B507            PUSH             {R0,R1,R2,LR}
+  223 0000006C F7FF FFFE       BL               KEY8
+  224 00000070 BD07            POP              {R0,R1,R2,PC}
+  225 00000072                 ENDP
+  226 00000072         
+  227 00000072         KEY9_Handler
+                               PROC
+  228 00000072                 EXPORT           KEY9_Handler            [WEAK]
+  229 00000072                 IMPORT           KEY9
+  230 00000072 B507            PUSH             {R0,R1,R2,LR}
+  231 00000074 F7FF FFFE       BL               KEY9
+  232 00000078 BD07            POP              {R0,R1,R2,PC}
+  233 0000007A                 ENDP
+  234 0000007A         
+  235 0000007A         KEY10_Handler
+                               PROC
+  236 0000007A                 EXPORT           KEY10_Handler            [WEAK]
+  237 0000007A                 IMPORT           KEY10
+  238 0000007A B507            PUSH             {R0,R1,R2,LR}
+  239 0000007C F7FF FFFE       BL               KEY10
+  240 00000080 BD07            POP              {R0,R1,R2,PC}
+  241 00000082                 ENDP
+  242 00000082         
+  243 00000082         KEY11_Handler
+                               PROC
+  244 00000082                 EXPORT           KEY11_Handler            [WEAK]
+  245 00000082                 IMPORT           KEY11
+  246 00000082 B507            PUSH             {R0,R1,R2,LR}
+  247 00000084 F7FF FFFE       BL               KEY11
+  248 00000088 BD07            POP              {R0,R1,R2,PC}
+  249 0000008A                 ENDP
+  250 0000008A         
+  251 0000008A         KEY12_Handler
+
+
+
+ARM Macro Assembler    Page 6 
+
+
+                               PROC
+  252 0000008A                 EXPORT           KEY12_Handler            [WEAK]
+  253 0000008A                 IMPORT           KEY12
+  254 0000008A B507            PUSH             {R0,R1,R2,LR}
+  255 0000008C F7FF FFFE       BL               KEY12
+  256 00000090 BD07            POP              {R0,R1,R2,PC}
+  257 00000092                 ENDP
+  258 00000092         
+  259 00000092         KEY13_Handler
+                               PROC
+  260 00000092                 EXPORT           KEY13_Handler            [WEAK]
+  261 00000092                 IMPORT           KEY13
+  262 00000092 B507            PUSH             {R0,R1,R2,LR}
+  263 00000094 F7FF FFFE       BL               KEY13
+  264 00000098 BD07            POP              {R0,R1,R2,PC}
+  265 0000009A                 ENDP
+  266 0000009A         
+  267 0000009A         KEY14_Handler
+                               PROC
+  268 0000009A                 EXPORT           KEY14_Handler            [WEAK]
+  269 0000009A                 IMPORT           KEY14
+  270 0000009A B507            PUSH             {R0,R1,R2,LR}
+  271 0000009C F7FF FFFE       BL               KEY14
+  272 000000A0 BD07            POP              {R0,R1,R2,PC}
+  273 000000A2                 ENDP
+  274 000000A2         
+  275 000000A2         KEY15_Handler
+                               PROC
+  276 000000A2                 EXPORT           KEY15_Handler            [WEAK]
+  277 000000A2                 IMPORT           KEY15
+  278 000000A2 B507            PUSH             {R0,R1,R2,LR}
+  279 000000A4 F7FF FFFE       BL               KEY15
+  280 000000A8 BD07            POP              {R0,R1,R2,PC}
+  281 000000AA                 ENDP
+  282 000000AA         
+  283 000000AA 00 00           ALIGN            4
+  284 000000AC         
+  285 000000AC                 IF               :DEF:__MICROLIB
+  292 000000AC         
+  293 000000AC                 IMPORT           __use_two_region_memory
+  294 000000AC                 EXPORT           __user_initial_stackheap
+  295 000000AC         
+  296 000000AC         __user_initial_stackheap
+  297 000000AC         
+  298 000000AC 4803            LDR              R0, =  Heap_Mem
+  299 000000AE 4904            LDR              R1, =(Stack_Mem + Stack_Size)
+  300 000000B0 4A04            LDR              R2, = (Heap_Mem +  Heap_Size)
+  301 000000B2 4B05            LDR              R3, = Stack_Mem
+  302 000000B4 4770            BX               LR
+  303 000000B6         
+  304 000000B6 00 00           ALIGN
+  305 000000B8         
+  306 000000B8                 ENDIF
+  307 000000B8         
+  308 000000B8                 END
               00000000 
               00000000 
               00000400 
               00000400 
+
+
+
+ARM Macro Assembler    Page 7 
+
+
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
 ork --depend=.\startup_cmsdk_cm0.d -o.\startup_cmsdk_cm0.o -IC:\Users\JefferyLi
@@ -244,8 +421,8 @@ Symbol: Stack_Mem
    Definitions
       At line 36 in file ..\src\startup_CMSDK_CM0.s
    Uses
-      At line 156 in file ..\src\startup_CMSDK_CM0.s
-      At line 158 in file ..\src\startup_CMSDK_CM0.s
+      At line 299 in file ..\src\startup_CMSDK_CM0.s
+      At line 301 in file ..\src\startup_CMSDK_CM0.s
 
 __initial_sp 00000400
 
@@ -276,8 +453,8 @@ Symbol: Heap_Mem
    Definitions
       At line 48 in file ..\src\startup_CMSDK_CM0.s
    Uses
-      At line 155 in file ..\src\startup_CMSDK_CM0.s
-      At line 157 in file ..\src\startup_CMSDK_CM0.s
+      At line 298 in file ..\src\startup_CMSDK_CM0.s
+      At line 300 in file ..\src\startup_CMSDK_CM0.s
 
 __heap_base 00000000
 
@@ -329,7 +506,7 @@ Relocatable symbols
 
 Symbol: .text
    Definitions
-      At line 84 in file ..\src\startup_CMSDK_CM0.s
+      At line 100 in file ..\src\startup_CMSDK_CM0.s
    Uses
       None
 Comment: .text unused
@@ -337,52 +514,52 @@ Demodulated_Data_Dump_Done 0000000A
 
 Symbol: Demodulated_Data_Dump_Done
    Definitions
-      At line 101 in file ..\src\startup_CMSDK_CM0.s
+      At line 117 in file ..\src\startup_CMSDK_CM0.s
    Uses
       At line 79 in file ..\src\startup_CMSDK_CM0.s
-      At line 103 in file ..\src\startup_CMSDK_CM0.s
+      At line 119 in file ..\src\startup_CMSDK_CM0.s
 
 FM_IQ_Dump_Done 00000012
 
 Symbol: FM_IQ_Dump_Done
    Definitions
-      At line 110 in file ..\src\startup_CMSDK_CM0.s
+      At line 126 in file ..\src\startup_CMSDK_CM0.s
    Uses
       At line 78 in file ..\src\startup_CMSDK_CM0.s
-      At line 113 in file ..\src\startup_CMSDK_CM0.s
+      At line 129 in file ..\src\startup_CMSDK_CM0.s
 
-RSSI_Scan_Done 00000022
+KEY0_Handler 0000002A
 
-Symbol: RSSI_Scan_Done
+Symbol: KEY0_Handler
    Definitions
-      At line 131 in file ..\src\startup_CMSDK_CM0.s
+      At line 155 in file ..\src\startup_CMSDK_CM0.s
    Uses
-      At line 80 in file ..\src\startup_CMSDK_CM0.s
-      At line 132 in file ..\src\startup_CMSDK_CM0.s
+      At line 96 in file ..\src\startup_CMSDK_CM0.s
+      At line 156 in file ..\src\startup_CMSDK_CM0.s
 
-Reset_Handler 00000000
+KEY10_Handler 0000007A
 
-Symbol: Reset_Handler
+Symbol: KEY10_Handler
    Definitions
-      At line 89 in file ..\src\startup_CMSDK_CM0.s
+      At line 235 in file ..\src\startup_CMSDK_CM0.s
    Uses
-      At line 62 in file ..\src\startup_CMSDK_CM0.s
-      At line 90 in file ..\src\startup_CMSDK_CM0.s
+      At line 86 in file ..\src\startup_CMSDK_CM0.s
+      At line 236 in file ..\src\startup_CMSDK_CM0.s
 
-UART_Handler 0000001A
+KEY11_Handler 00000082
 
-Symbol: UART_Handler
+Symbol: KEY11_Handler
    Definitions
-      At line 122 in file ..\src\startup_CMSDK_CM0.s
+      At line 243 in file ..\src\startup_CMSDK_CM0.s
    Uses
-      At line 77 in file ..\src\startup_CMSDK_CM0.s
-      At line 123 in file ..\src\startup_CMSDK_CM0.s
+      At line 85 in file ..\src\startup_CMSDK_CM0.s
+      At line 244 in file ..\src\startup_CMSDK_CM0.s
 
-__user_initial_stackheap 0000002C
+KEY12_Handler 0000008A
 
-Symbol: __user_initial_stackheap
+Symbol: KEY12_Handler
    Definitions
-      At line 153 in file ..\src\startup_CMSDK_CM0.s
+      At line 251 in file ..\src\startup_CMSDK_CM0.s
    Uses
 
 
@@ -390,9 +567,165 @@ Symbol: __user_initial_stackheap
 ARM Macro Assembler    Page 2 Alphabetic symbol ordering
 Relocatable symbols
 
-      At line 151 in file ..\src\startup_CMSDK_CM0.s
+      At line 84 in file ..\src\startup_CMSDK_CM0.s
+      At line 252 in file ..\src\startup_CMSDK_CM0.s
+
+KEY13_Handler 00000092
+
+Symbol: KEY13_Handler
+   Definitions
+      At line 259 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 83 in file ..\src\startup_CMSDK_CM0.s
+      At line 260 in file ..\src\startup_CMSDK_CM0.s
+
+KEY14_Handler 0000009A
+
+Symbol: KEY14_Handler
+   Definitions
+      At line 267 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 82 in file ..\src\startup_CMSDK_CM0.s
+      At line 268 in file ..\src\startup_CMSDK_CM0.s
+
+KEY15_Handler 000000A2
+
+Symbol: KEY15_Handler
+   Definitions
+      At line 275 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 81 in file ..\src\startup_CMSDK_CM0.s
+      At line 276 in file ..\src\startup_CMSDK_CM0.s
+
+KEY1_Handler 00000032
+
+Symbol: KEY1_Handler
+   Definitions
+      At line 163 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 95 in file ..\src\startup_CMSDK_CM0.s
+      At line 164 in file ..\src\startup_CMSDK_CM0.s
+
+KEY2_Handler 0000003A
+
+Symbol: KEY2_Handler
+   Definitions
+      At line 171 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 94 in file ..\src\startup_CMSDK_CM0.s
+      At line 172 in file ..\src\startup_CMSDK_CM0.s
+
+KEY3_Handler 00000042
+
+Symbol: KEY3_Handler
+   Definitions
+      At line 179 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 93 in file ..\src\startup_CMSDK_CM0.s
+      At line 180 in file ..\src\startup_CMSDK_CM0.s
+
+KEY4_Handler 0000004A
+
+
+
+
+ARM Macro Assembler    Page 3 Alphabetic symbol ordering
+Relocatable symbols
+
+Symbol: KEY4_Handler
+   Definitions
+      At line 187 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 92 in file ..\src\startup_CMSDK_CM0.s
+      At line 188 in file ..\src\startup_CMSDK_CM0.s
+
+KEY5_Handler 00000052
+
+Symbol: KEY5_Handler
+   Definitions
+      At line 195 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 91 in file ..\src\startup_CMSDK_CM0.s
+      At line 196 in file ..\src\startup_CMSDK_CM0.s
+
+KEY6_Handler 0000005A
+
+Symbol: KEY6_Handler
+   Definitions
+      At line 203 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 90 in file ..\src\startup_CMSDK_CM0.s
+      At line 204 in file ..\src\startup_CMSDK_CM0.s
+
+KEY7_Handler 00000062
+
+Symbol: KEY7_Handler
+   Definitions
+      At line 211 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 89 in file ..\src\startup_CMSDK_CM0.s
+      At line 212 in file ..\src\startup_CMSDK_CM0.s
+
+KEY8_Handler 0000006A
+
+Symbol: KEY8_Handler
+   Definitions
+      At line 219 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 88 in file ..\src\startup_CMSDK_CM0.s
+      At line 220 in file ..\src\startup_CMSDK_CM0.s
+
+KEY9_Handler 00000072
+
+Symbol: KEY9_Handler
+   Definitions
+      At line 227 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 87 in file ..\src\startup_CMSDK_CM0.s
+      At line 228 in file ..\src\startup_CMSDK_CM0.s
+
+RSSI_Scan_Done 00000022
+
+Symbol: RSSI_Scan_Done
+   Definitions
+      At line 147 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 80 in file ..\src\startup_CMSDK_CM0.s
+
+
+
+ARM Macro Assembler    Page 4 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 148 in file ..\src\startup_CMSDK_CM0.s
+
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 105 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 62 in file ..\src\startup_CMSDK_CM0.s
+      At line 106 in file ..\src\startup_CMSDK_CM0.s
+
+UART_Handler 0000001A
+
+Symbol: UART_Handler
+   Definitions
+      At line 138 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 77 in file ..\src\startup_CMSDK_CM0.s
+      At line 139 in file ..\src\startup_CMSDK_CM0.s
+
+__user_initial_stackheap 000000AC
+
+Symbol: __user_initial_stackheap
+   Definitions
+      At line 296 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 294 in file ..\src\startup_CMSDK_CM0.s
 Comment: __user_initial_stackheap used once
-7 symbols
+23 symbols
 
 
 
@@ -406,7 +739,7 @@ Symbol: Heap_Size
       At line 44 in file ..\src\startup_CMSDK_CM0.s
    Uses
       At line 48 in file ..\src\startup_CMSDK_CM0.s
-      At line 157 in file ..\src\startup_CMSDK_CM0.s
+      At line 300 in file ..\src\startup_CMSDK_CM0.s
 
 Stack_Size 00000400
 
@@ -415,7 +748,7 @@ Symbol: Stack_Size
       At line 33 in file ..\src\startup_CMSDK_CM0.s
    Uses
       At line 36 in file ..\src\startup_CMSDK_CM0.s
-      At line 156 in file ..\src\startup_CMSDK_CM0.s
+      At line 299 in file ..\src\startup_CMSDK_CM0.s
 
 2 symbols
 
@@ -424,54 +757,200 @@ Symbol: Stack_Size
 ARM Macro Assembler    Page 1 Alphabetic symbol ordering
 External symbols
 
+KEY0 00000000
+
+Symbol: KEY0
+   Definitions
+      At line 157 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 159 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY0 used once
+KEY1 00000000
+
+Symbol: KEY1
+   Definitions
+      At line 165 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 167 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY1 used once
+KEY10 00000000
+
+Symbol: KEY10
+   Definitions
+      At line 237 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 239 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY10 used once
+KEY11 00000000
+
+Symbol: KEY11
+   Definitions
+      At line 245 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 247 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY11 used once
+KEY12 00000000
+
+Symbol: KEY12
+   Definitions
+      At line 253 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 255 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY12 used once
+KEY13 00000000
+
+Symbol: KEY13
+   Definitions
+      At line 261 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 263 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY13 used once
+KEY14 00000000
+
+Symbol: KEY14
+   Definitions
+      At line 269 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 271 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY14 used once
+KEY15 00000000
+
+Symbol: KEY15
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+External symbols
+
+   Definitions
+      At line 277 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 279 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY15 used once
+KEY2 00000000
+
+Symbol: KEY2
+   Definitions
+      At line 173 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 175 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY2 used once
+KEY3 00000000
+
+Symbol: KEY3
+   Definitions
+      At line 181 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 183 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY3 used once
+KEY4 00000000
+
+Symbol: KEY4
+   Definitions
+      At line 189 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 191 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY4 used once
+KEY5 00000000
+
+Symbol: KEY5
+   Definitions
+      At line 197 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 199 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY5 used once
+KEY6 00000000
+
+Symbol: KEY6
+   Definitions
+      At line 205 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 207 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY6 used once
+KEY7 00000000
+
+Symbol: KEY7
+   Definitions
+      At line 213 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 215 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY7 used once
+KEY8 00000000
+
+Symbol: KEY8
+   Definitions
+      At line 221 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+
+
+
+ARM Macro Assembler    Page 3 Alphabetic symbol ordering
+External symbols
+
+      At line 223 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY8 used once
+KEY9 00000000
+
+Symbol: KEY9
+   Definitions
+      At line 229 in file ..\src\startup_CMSDK_CM0.s
+   Uses
+      At line 231 in file ..\src\startup_CMSDK_CM0.s
+Comment: KEY9 used once
 RSSIScanHandler 00000000
 
 Symbol: RSSIScanHandler
    Definitions
-      At line 133 in file ..\src\startup_CMSDK_CM0.s
+      At line 149 in file ..\src\startup_CMSDK_CM0.s
    Uses
-      At line 135 in file ..\src\startup_CMSDK_CM0.s
+      At line 151 in file ..\src\startup_CMSDK_CM0.s
 Comment: RSSIScanHandler used once
 UARTFM_Demodulated_Data_Dump_Done_Handler 00000000
 
 Symbol: UARTFM_Demodulated_Data_Dump_Done_Handler
    Definitions
-      At line 104 in file ..\src\startup_CMSDK_CM0.s
+      At line 120 in file ..\src\startup_CMSDK_CM0.s
    Uses
-      At line 106 in file ..\src\startup_CMSDK_CM0.s
+      At line 122 in file ..\src\startup_CMSDK_CM0.s
 Comment: UARTFM_Demodulated_Data_Dump_Done_Handler used once
 UARTFM_IQ_Dump_Done_Handler 00000000
 
 Symbol: UARTFM_IQ_Dump_Done_Handler
    Definitions
-      At line 114 in file ..\src\startup_CMSDK_CM0.s
+      At line 130 in file ..\src\startup_CMSDK_CM0.s
    Uses
-      At line 116 in file ..\src\startup_CMSDK_CM0.s
+      At line 132 in file ..\src\startup_CMSDK_CM0.s
 Comment: UARTFM_IQ_Dump_Done_Handler used once
 UARTHandle 00000000
 
 Symbol: UARTHandle
    Definitions
-      At line 124 in file ..\src\startup_CMSDK_CM0.s
+      At line 140 in file ..\src\startup_CMSDK_CM0.s
    Uses
-      At line 126 in file ..\src\startup_CMSDK_CM0.s
+      At line 142 in file ..\src\startup_CMSDK_CM0.s
 Comment: UARTHandle used once
 __main 00000000
 
 Symbol: __main
    Definitions
-      At line 92 in file ..\src\startup_CMSDK_CM0.s
+      At line 108 in file ..\src\startup_CMSDK_CM0.s
    Uses
-      At line 93 in file ..\src\startup_CMSDK_CM0.s
-      At line 96 in file ..\src\startup_CMSDK_CM0.s
+      At line 109 in file ..\src\startup_CMSDK_CM0.s
+      At line 112 in file ..\src\startup_CMSDK_CM0.s
 
 __use_two_region_memory 00000000
 
 Symbol: __use_two_region_memory
    Definitions
-      At line 150 in file ..\src\startup_CMSDK_CM0.s
+      At line 293 in file ..\src\startup_CMSDK_CM0.s
    Uses
       None
 Comment: __use_two_region_memory unused
-6 symbols
-361 symbols in table
+
+
+
+ARM Macro Assembler    Page 4 Alphabetic symbol ordering
+External symbols
+
+22 symbols
+393 symbols in table

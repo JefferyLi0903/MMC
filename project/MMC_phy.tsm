@@ -1,368 +1,407 @@
 eagle_s20
-12 22 609 18220 1000000000 9 0
--10.879 0.249 CortexM0_SoC eagle_s20 BG256 Detail 8 1
+12 22 687 18594 896242330 9 0
+-13.826 0.304 CortexM0_SoC eagle_s20 BG256 Detail 8 1
 clock: DeriveClock
-12 1000000000 18220 4
+12 896242330 18594 4
 Setup check
 22 3
-Endpoint: FM_HW/FM_Dump_Data_IQ/reg0_b5|FM_HW/FM_Dump_Data_IQ/reg0_b3
-22 -10.879000 40816291 3
-Timing path: u_logic/_al_u2680|u_logic/Vzupw6_reg.clk->FM_HW/FM_Dump_Data_IQ/reg0_b5|FM_HW/FM_Dump_Data_IQ/reg0_b3
-u_logic/_al_u2680|u_logic/Vzupw6_reg.clk
-FM_HW/FM_Dump_Data_IQ/reg0_b5|FM_HW/FM_Dump_Data_IQ/reg0_b3
-24 -10.879000 19.884000 30.763000 20 20
-u_logic/Vzupw6 u_logic/_al_u4224|u_logic/_al_u121.c[0]
-u_logic/Vo3ju6_lutinv u_logic/_al_u1992|u_logic/_al_u2497.a[0]
-u_logic/_al_u2497_o u_logic/_al_u2340|u_logic/_al_u2499.b[0]
-u_logic/_al_u2499_o u_logic/_al_u2508|u_logic/_al_u1569.a[1]
-u_logic/_al_u2508_o u_logic/_al_u2509|u_logic/_al_u4626.d[1]
-u_logic/_al_u2509_o u_logic/_al_u2510|u_logic/W8hbx6_reg.d[1]
-u_logic/_al_u2510_o u_logic/_al_u2587|u_logic/L6lax6_reg.d[1]
-u_logic/_al_u2587_o u_logic/_al_u2588|u_logic/T5yax6_reg.b[1]
-u_logic/R0ghu6 u_logic/add2/ucin_al_u4737.b[0]
-u_logic/N5fpw6[3] u_logic/_al_u2550|u_logic/_al_u2560.d[0]
-u_logic/_al_u2560_o u_logic/_al_u2561|u_logic/_al_u2551.b[1]
-u_logic/_al_u2561_o u_logic/_al_u4281|RAMDATA_Interface/reg0_b2.b[0]
-HADDR[4] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r79_c1_m0.c[1]
-FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i79_005 FM_HW/_al_u2796|FM_HW/_al_u3251.b[1]
-FM_HW/_al_u2796_o FM_HW/_al_u2606|FM_HW/_al_u2797.c[0]
-FM_HW/_al_u2797_o FM_HW/_al_u2798.c[1]
-FM_HW/_al_u2798_o FM_HW/_al_u3903|FM_HW/_al_u2801.a[0]
-FM_HW/_al_u2801_o FM_HW/_al_u1343|FM_HW/_al_u2813.b[0]
-FM_HW/_al_u2813_o FM_HW/FM_Demodulation/reg5_b113.b[0]
-FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_mux_b5/B7_0 FM_HW/FM_Dump_Data_IQ/reg0_b5|FM_HW/FM_Dump_Data_IQ/reg0_b3.a[1]
+Endpoint: FM_HW/FM_Dump_Data_IQ/reg0_b1|FM_HW/FM_Dump_Data_IQ/reg0_b4
+22 -13.826000 48997858 3
+Timing path: u_logic/P5vpw6_reg.clk->FM_HW/FM_Dump_Data_IQ/reg0_b1|FM_HW/FM_Dump_Data_IQ/reg0_b4
+u_logic/P5vpw6_reg.clk
+FM_HW/FM_Dump_Data_IQ/reg0_b1|FM_HW/FM_Dump_Data_IQ/reg0_b4
+24 -13.826000 19.884000 33.710000 24 24
+u_logic/P5vpw6 cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b7|cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b6.b[0]
+u_logic/Llaow6_lutinv u_logic/_al_u1671|u_logic/_al_u2549.a[0]
+u_logic/_al_u2549_o u_logic/_al_u2551|u_logic/Fpnpw6_reg.a[1]
+u_logic/_al_u2551_o u_logic/_al_u2552.a[1]
+u_logic/_al_u2552_o u_logic/_al_u2556|u_logic/_al_u1730.a[1]
+u_logic/_al_u2556_o u_logic/_al_u2563|u_logic/_al_u159.a[1]
+u_logic/_al_u2563_o u_logic/_al_u2564|u_logic/_al_u4431.d[1]
+u_logic/_al_u2564_o u_logic/_al_u2565|u_logic/_al_u2892.d[1]
+u_logic/_al_u2565_o u_logic/_al_u2566|u_logic/_al_u2882.d[1]
+u_logic/_al_u2566_o u_logic/_al_u2641|u_logic/_al_u2759.d[1]
+u_logic/Vtzhu6 u_logic/_al_u2643.d[0]
+u_logic/R0ghu6 u_logic/add2/ucin_al_u4809.b[0]
+u_logic/add2/c3 u_logic/add2/u3_al_u4810.fci
+u_logic/N5fpw6[4] u_logic/_al_u4753|u_logic/_al_u2604.c[0]
+u_logic/_al_u2604_o u_logic/_al_u2605|u_logic/Ibqpw6_reg.d[1]
+u_logic/_al_u2605_o u_logic/_al_u3990|RAMDATA_Interface/reg0_b3.b[0]
+HADDR[5] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r478_c1_m0.d[0]
+FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i478_004 FM_HW/_al_u3089|FM_HW/_al_u3091.b[0]
+FM_HW/_al_u3091_o FM_HW/_al_u3090|FM_HW/_al_u3092.c[0]
+FM_HW/_al_u3092_o FM_HW/_al_u2670|FM_HW/_al_u3093.b[0]
+FM_HW/_al_u3093_o FM_HW/_al_u1562|FM_HW/_al_u3094.c[0]
+FM_HW/_al_u3094_o FM_HW/_al_u3115.a[1]
+FM_HW/_al_u3115_o FM_HW/_al_u1583|FM_HW/FM_Demodulation/reg5_b57.a[0]
+FM_HW/_al_u3159_o FM_HW/FM_Dump_Data_IQ/reg0_b1|FM_HW/FM_Dump_Data_IQ/reg0_b4.a[0]
 
-Timing path: u_logic/_al_u2680|u_logic/Vzupw6_reg.clk->FM_HW/FM_Dump_Data_IQ/reg0_b5|FM_HW/FM_Dump_Data_IQ/reg0_b3
-u_logic/_al_u2680|u_logic/Vzupw6_reg.clk
-FM_HW/FM_Dump_Data_IQ/reg0_b5|FM_HW/FM_Dump_Data_IQ/reg0_b3
-89 -10.879000 19.884000 30.763000 20 20
-u_logic/Vzupw6 u_logic/_al_u4224|u_logic/_al_u121.c[0]
-u_logic/Vo3ju6_lutinv u_logic/_al_u1992|u_logic/_al_u2497.a[0]
-u_logic/_al_u2497_o u_logic/_al_u2340|u_logic/_al_u2499.b[0]
-u_logic/_al_u2499_o u_logic/_al_u2508|u_logic/_al_u1569.a[1]
-u_logic/_al_u2508_o u_logic/_al_u2509|u_logic/_al_u4626.d[1]
-u_logic/_al_u2509_o u_logic/_al_u2510|u_logic/W8hbx6_reg.d[1]
-u_logic/_al_u2510_o u_logic/_al_u2587|u_logic/L6lax6_reg.d[1]
-u_logic/_al_u2587_o u_logic/_al_u2588|u_logic/T5yax6_reg.b[1]
-u_logic/R0ghu6 u_logic/add2/ucin_al_u4737.b[0]
-u_logic/N5fpw6[3] u_logic/_al_u2550|u_logic/_al_u2560.d[0]
-u_logic/_al_u2560_o u_logic/_al_u2561|u_logic/_al_u2551.b[1]
-u_logic/_al_u2561_o u_logic/_al_u4281|RAMDATA_Interface/reg0_b2.b[0]
-HADDR[4] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r79_c1_m0.c[1]
-FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i79_005 FM_HW/_al_u2796|FM_HW/_al_u3251.b[1]
-FM_HW/_al_u2796_o FM_HW/_al_u2606|FM_HW/_al_u2797.c[0]
-FM_HW/_al_u2797_o FM_HW/_al_u2798.c[0]
-FM_HW/_al_u2798_o FM_HW/_al_u3903|FM_HW/_al_u2801.a[0]
-FM_HW/_al_u2801_o FM_HW/_al_u1343|FM_HW/_al_u2813.b[0]
-FM_HW/_al_u2813_o FM_HW/FM_Demodulation/reg5_b113.b[0]
-FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_mux_b5/B7_0 FM_HW/FM_Dump_Data_IQ/reg0_b5|FM_HW/FM_Dump_Data_IQ/reg0_b3.a[1]
+Timing path: u_logic/P5vpw6_reg.clk->FM_HW/FM_Dump_Data_IQ/reg0_b1|FM_HW/FM_Dump_Data_IQ/reg0_b4
+u_logic/P5vpw6_reg.clk
+FM_HW/FM_Dump_Data_IQ/reg0_b1|FM_HW/FM_Dump_Data_IQ/reg0_b4
+97 -13.826000 19.884000 33.710000 24 24
+u_logic/P5vpw6 cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b7|cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b6.b[0]
+u_logic/Llaow6_lutinv u_logic/_al_u1671|u_logic/_al_u2549.a[0]
+u_logic/_al_u2549_o u_logic/_al_u2551|u_logic/Fpnpw6_reg.a[1]
+u_logic/_al_u2551_o u_logic/_al_u2552.a[0]
+u_logic/_al_u2552_o u_logic/_al_u2556|u_logic/_al_u1730.a[1]
+u_logic/_al_u2556_o u_logic/_al_u2563|u_logic/_al_u159.a[1]
+u_logic/_al_u2563_o u_logic/_al_u2564|u_logic/_al_u4431.d[1]
+u_logic/_al_u2564_o u_logic/_al_u2565|u_logic/_al_u2892.d[1]
+u_logic/_al_u2565_o u_logic/_al_u2566|u_logic/_al_u2882.d[1]
+u_logic/_al_u2566_o u_logic/_al_u2641|u_logic/_al_u2759.d[1]
+u_logic/Vtzhu6 u_logic/_al_u2643.d[0]
+u_logic/R0ghu6 u_logic/add2/ucin_al_u4809.b[0]
+u_logic/add2/c3 u_logic/add2/u3_al_u4810.fci
+u_logic/N5fpw6[4] u_logic/_al_u4753|u_logic/_al_u2604.c[0]
+u_logic/_al_u2604_o u_logic/_al_u2605|u_logic/Ibqpw6_reg.d[1]
+u_logic/_al_u2605_o u_logic/_al_u3990|RAMDATA_Interface/reg0_b3.b[0]
+HADDR[5] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r478_c1_m0.d[0]
+FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i478_004 FM_HW/_al_u3089|FM_HW/_al_u3091.b[0]
+FM_HW/_al_u3091_o FM_HW/_al_u3090|FM_HW/_al_u3092.c[0]
+FM_HW/_al_u3092_o FM_HW/_al_u2670|FM_HW/_al_u3093.b[0]
+FM_HW/_al_u3093_o FM_HW/_al_u1562|FM_HW/_al_u3094.c[0]
+FM_HW/_al_u3094_o FM_HW/_al_u3115.a[1]
+FM_HW/_al_u3115_o FM_HW/_al_u1583|FM_HW/FM_Demodulation/reg5_b57.a[0]
+FM_HW/_al_u3159_o FM_HW/FM_Dump_Data_IQ/reg0_b1|FM_HW/FM_Dump_Data_IQ/reg0_b4.a[0]
 
-Timing path: u_logic/_al_u2662|u_logic/Ufopw6_reg.clk->FM_HW/FM_Dump_Data_IQ/reg0_b5|FM_HW/FM_Dump_Data_IQ/reg0_b3
-u_logic/_al_u2662|u_logic/Ufopw6_reg.clk
-FM_HW/FM_Dump_Data_IQ/reg0_b5|FM_HW/FM_Dump_Data_IQ/reg0_b3
-154 -10.864000 19.884000 30.748000 20 20
-u_logic/Ufopw6 u_logic/_al_u4224|u_logic/_al_u121.d[0]
-u_logic/Vo3ju6_lutinv u_logic/_al_u1992|u_logic/_al_u2497.a[0]
-u_logic/_al_u2497_o u_logic/_al_u2340|u_logic/_al_u2499.b[0]
-u_logic/_al_u2499_o u_logic/_al_u2508|u_logic/_al_u1569.a[1]
-u_logic/_al_u2508_o u_logic/_al_u2509|u_logic/_al_u4626.d[1]
-u_logic/_al_u2509_o u_logic/_al_u2510|u_logic/W8hbx6_reg.d[1]
-u_logic/_al_u2510_o u_logic/_al_u2587|u_logic/L6lax6_reg.d[1]
-u_logic/_al_u2587_o u_logic/_al_u2588|u_logic/T5yax6_reg.b[1]
-u_logic/R0ghu6 u_logic/add2/ucin_al_u4737.b[0]
-u_logic/N5fpw6[3] u_logic/_al_u2550|u_logic/_al_u2560.d[0]
-u_logic/_al_u2560_o u_logic/_al_u2561|u_logic/_al_u2551.b[1]
-u_logic/_al_u2561_o u_logic/_al_u4281|RAMDATA_Interface/reg0_b2.b[0]
-HADDR[4] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r79_c1_m0.c[1]
-FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i79_005 FM_HW/_al_u2796|FM_HW/_al_u3251.b[1]
-FM_HW/_al_u2796_o FM_HW/_al_u2606|FM_HW/_al_u2797.c[0]
-FM_HW/_al_u2797_o FM_HW/_al_u2798.c[1]
-FM_HW/_al_u2798_o FM_HW/_al_u3903|FM_HW/_al_u2801.a[0]
-FM_HW/_al_u2801_o FM_HW/_al_u1343|FM_HW/_al_u2813.b[0]
-FM_HW/_al_u2813_o FM_HW/FM_Demodulation/reg5_b113.b[0]
-FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_mux_b5/B7_0 FM_HW/FM_Dump_Data_IQ/reg0_b5|FM_HW/FM_Dump_Data_IQ/reg0_b3.a[1]
-
-
-Endpoint: FM_HW/_al_u3093|FM_HW/FM_Dump_Data_IQ/reg0_b4
-219 -10.773000 47643106 3
-Timing path: u_logic/_al_u2680|u_logic/Vzupw6_reg.clk->FM_HW/_al_u3093|FM_HW/FM_Dump_Data_IQ/reg0_b4
-u_logic/_al_u2680|u_logic/Vzupw6_reg.clk
-FM_HW/_al_u3093|FM_HW/FM_Dump_Data_IQ/reg0_b4
-221 -10.773000 19.884000 30.657000 20 20
-u_logic/Vzupw6 u_logic/_al_u4224|u_logic/_al_u121.c[0]
-u_logic/Vo3ju6_lutinv u_logic/_al_u1992|u_logic/_al_u2497.a[0]
-u_logic/_al_u2497_o u_logic/_al_u2340|u_logic/_al_u2499.b[0]
-u_logic/_al_u2499_o u_logic/_al_u2508|u_logic/_al_u1569.a[1]
-u_logic/_al_u2508_o u_logic/_al_u2509|u_logic/_al_u4626.d[1]
-u_logic/_al_u2509_o u_logic/_al_u2510|u_logic/W8hbx6_reg.d[1]
-u_logic/_al_u2510_o u_logic/_al_u2587|u_logic/L6lax6_reg.d[1]
-u_logic/_al_u2587_o u_logic/_al_u2588|u_logic/T5yax6_reg.b[1]
-u_logic/R0ghu6 u_logic/add2/ucin_al_u4737.b[0]
-u_logic/N5fpw6[3] u_logic/_al_u2550|u_logic/_al_u2560.d[0]
-u_logic/_al_u2560_o u_logic/_al_u2561|u_logic/_al_u2551.b[1]
-u_logic/_al_u2561_o u_logic/_al_u4281|RAMDATA_Interface/reg0_b2.b[0]
-HADDR[4] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r79_c1_m0.c[0]
-FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i79_004 FM_HW/_al_u2796|FM_HW/_al_u3251.b[0]
-FM_HW/_al_u3251_o FM_HW/_al_u2795|FM_HW/_al_u3252.c[0]
-FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_mux_b4/B1_19 FM_HW/_al_u1320|FM_HW/_al_u3255.a[0]
-FM_HW/_al_u3255_o FM_HW/_al_u3256|FM_HW/_al_u2777.b[1]
-FM_HW/_al_u3256_o FM_HW/_al_u3267.a[1]
-FM_HW/_al_u3267_o FM_HW/_al_u2184|FM_HW/_al_u3332.a[0]
-FM_HW/_al_u3332_o FM_HW/_al_u3093|FM_HW/FM_Dump_Data_IQ/reg0_b4.c[0]
-
-Timing path: u_logic/_al_u2680|u_logic/Vzupw6_reg.clk->FM_HW/_al_u3093|FM_HW/FM_Dump_Data_IQ/reg0_b4
-u_logic/_al_u2680|u_logic/Vzupw6_reg.clk
-FM_HW/_al_u3093|FM_HW/FM_Dump_Data_IQ/reg0_b4
-286 -10.773000 19.884000 30.657000 20 20
-u_logic/Vzupw6 u_logic/_al_u4224|u_logic/_al_u121.c[0]
-u_logic/Vo3ju6_lutinv u_logic/_al_u1992|u_logic/_al_u2497.a[0]
-u_logic/_al_u2497_o u_logic/_al_u2340|u_logic/_al_u2499.b[0]
-u_logic/_al_u2499_o u_logic/_al_u2508|u_logic/_al_u1569.a[1]
-u_logic/_al_u2508_o u_logic/_al_u2509|u_logic/_al_u4626.d[1]
-u_logic/_al_u2509_o u_logic/_al_u2510|u_logic/W8hbx6_reg.d[1]
-u_logic/_al_u2510_o u_logic/_al_u2587|u_logic/L6lax6_reg.d[1]
-u_logic/_al_u2587_o u_logic/_al_u2588|u_logic/T5yax6_reg.b[1]
-u_logic/R0ghu6 u_logic/add2/ucin_al_u4737.b[0]
-u_logic/N5fpw6[3] u_logic/_al_u2550|u_logic/_al_u2560.d[0]
-u_logic/_al_u2560_o u_logic/_al_u2561|u_logic/_al_u2551.b[1]
-u_logic/_al_u2561_o u_logic/_al_u4281|RAMDATA_Interface/reg0_b2.b[0]
-HADDR[4] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r79_c1_m0.c[0]
-FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i79_004 FM_HW/_al_u2796|FM_HW/_al_u3251.b[0]
-FM_HW/_al_u3251_o FM_HW/_al_u2795|FM_HW/_al_u3252.c[0]
-FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_mux_b4/B1_19 FM_HW/_al_u1320|FM_HW/_al_u3255.a[0]
-FM_HW/_al_u3255_o FM_HW/_al_u3256|FM_HW/_al_u2777.b[1]
-FM_HW/_al_u3256_o FM_HW/_al_u3267.a[0]
-FM_HW/_al_u3267_o FM_HW/_al_u2184|FM_HW/_al_u3332.a[0]
-FM_HW/_al_u3332_o FM_HW/_al_u3093|FM_HW/FM_Dump_Data_IQ/reg0_b4.c[0]
-
-Timing path: u_logic/_al_u2662|u_logic/Ufopw6_reg.clk->FM_HW/_al_u3093|FM_HW/FM_Dump_Data_IQ/reg0_b4
-u_logic/_al_u2662|u_logic/Ufopw6_reg.clk
-FM_HW/_al_u3093|FM_HW/FM_Dump_Data_IQ/reg0_b4
-351 -10.758000 19.884000 30.642000 20 20
-u_logic/Ufopw6 u_logic/_al_u4224|u_logic/_al_u121.d[0]
-u_logic/Vo3ju6_lutinv u_logic/_al_u1992|u_logic/_al_u2497.a[0]
-u_logic/_al_u2497_o u_logic/_al_u2340|u_logic/_al_u2499.b[0]
-u_logic/_al_u2499_o u_logic/_al_u2508|u_logic/_al_u1569.a[1]
-u_logic/_al_u2508_o u_logic/_al_u2509|u_logic/_al_u4626.d[1]
-u_logic/_al_u2509_o u_logic/_al_u2510|u_logic/W8hbx6_reg.d[1]
-u_logic/_al_u2510_o u_logic/_al_u2587|u_logic/L6lax6_reg.d[1]
-u_logic/_al_u2587_o u_logic/_al_u2588|u_logic/T5yax6_reg.b[1]
-u_logic/R0ghu6 u_logic/add2/ucin_al_u4737.b[0]
-u_logic/N5fpw6[3] u_logic/_al_u2550|u_logic/_al_u2560.d[0]
-u_logic/_al_u2560_o u_logic/_al_u2561|u_logic/_al_u2551.b[1]
-u_logic/_al_u2561_o u_logic/_al_u4281|RAMDATA_Interface/reg0_b2.b[0]
-HADDR[4] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r79_c1_m0.c[0]
-FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i79_004 FM_HW/_al_u2796|FM_HW/_al_u3251.b[0]
-FM_HW/_al_u3251_o FM_HW/_al_u2795|FM_HW/_al_u3252.c[0]
-FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_mux_b4/B1_19 FM_HW/_al_u1320|FM_HW/_al_u3255.a[0]
-FM_HW/_al_u3255_o FM_HW/_al_u3256|FM_HW/_al_u2777.b[1]
-FM_HW/_al_u3256_o FM_HW/_al_u3267.a[1]
-FM_HW/_al_u3267_o FM_HW/_al_u2184|FM_HW/_al_u3332.a[0]
-FM_HW/_al_u3332_o FM_HW/_al_u3093|FM_HW/FM_Dump_Data_IQ/reg0_b4.c[0]
+Timing path: u_logic/P5vpw6_reg.clk->FM_HW/FM_Dump_Data_IQ/reg0_b1|FM_HW/FM_Dump_Data_IQ/reg0_b4
+u_logic/P5vpw6_reg.clk
+FM_HW/FM_Dump_Data_IQ/reg0_b1|FM_HW/FM_Dump_Data_IQ/reg0_b4
+170 -13.826000 19.884000 33.710000 24 24
+u_logic/P5vpw6 cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b7|cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b6.b[0]
+u_logic/Llaow6_lutinv u_logic/_al_u1671|u_logic/_al_u2549.a[0]
+u_logic/_al_u2549_o u_logic/_al_u2551|u_logic/Fpnpw6_reg.a[1]
+u_logic/_al_u2551_o u_logic/_al_u2552.a[1]
+u_logic/_al_u2552_o u_logic/_al_u2556|u_logic/_al_u1730.a[1]
+u_logic/_al_u2556_o u_logic/_al_u2563|u_logic/_al_u159.a[1]
+u_logic/_al_u2563_o u_logic/_al_u2564|u_logic/_al_u4431.d[1]
+u_logic/_al_u2564_o u_logic/_al_u2565|u_logic/_al_u2892.d[1]
+u_logic/_al_u2565_o u_logic/_al_u2566|u_logic/_al_u2882.d[1]
+u_logic/_al_u2566_o u_logic/_al_u2641|u_logic/_al_u2759.d[1]
+u_logic/Vtzhu6 u_logic/_al_u2643.d[0]
+u_logic/R0ghu6 u_logic/add2/ucin_al_u4809.b[0]
+u_logic/add2/c3 u_logic/add2/u3_al_u4810.fci
+u_logic/N5fpw6[4] u_logic/_al_u4753|u_logic/_al_u2604.c[0]
+u_logic/_al_u2604_o u_logic/_al_u2605|u_logic/Ibqpw6_reg.d[1]
+u_logic/_al_u2605_o u_logic/_al_u3990|RAMDATA_Interface/reg0_b3.b[0]
+HADDR[5] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r478_c1_m0.d[0]
+FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i478_004 FM_HW/_al_u3089|FM_HW/_al_u3091.b[0]
+FM_HW/_al_u3091_o FM_HW/_al_u3090|FM_HW/_al_u3092.c[0]
+FM_HW/_al_u3092_o FM_HW/_al_u2670|FM_HW/_al_u3093.b[0]
+FM_HW/_al_u3093_o FM_HW/_al_u1562|FM_HW/_al_u3094.c[0]
+FM_HW/_al_u3094_o FM_HW/_al_u3115.a[0]
+FM_HW/_al_u3115_o FM_HW/_al_u1583|FM_HW/FM_Demodulation/reg5_b57.a[0]
+FM_HW/_al_u3159_o FM_HW/FM_Dump_Data_IQ/reg0_b1|FM_HW/FM_Dump_Data_IQ/reg0_b4.a[0]
 
 
-Endpoint: FM_HW/_al_u1257|FM_HW/FM_Dump_Data_IQ/reg0_b2
-416 -10.589000 31524130 3
-Timing path: u_logic/_al_u2680|u_logic/Vzupw6_reg.clk->FM_HW/_al_u1257|FM_HW/FM_Dump_Data_IQ/reg0_b2
-u_logic/_al_u2680|u_logic/Vzupw6_reg.clk
-FM_HW/_al_u1257|FM_HW/FM_Dump_Data_IQ/reg0_b2
-418 -10.589000 19.884000 30.473000 19 19
-u_logic/Vzupw6 u_logic/_al_u4224|u_logic/_al_u121.c[0]
-u_logic/Vo3ju6_lutinv u_logic/_al_u1992|u_logic/_al_u2497.a[0]
-u_logic/_al_u2497_o u_logic/_al_u2340|u_logic/_al_u2499.b[0]
-u_logic/_al_u2499_o u_logic/_al_u2508|u_logic/_al_u1569.a[1]
-u_logic/_al_u2508_o u_logic/_al_u2509|u_logic/_al_u4626.d[1]
-u_logic/_al_u2509_o u_logic/_al_u2510|u_logic/W8hbx6_reg.d[1]
-u_logic/_al_u2510_o u_logic/_al_u2587|u_logic/L6lax6_reg.d[1]
-u_logic/_al_u2587_o u_logic/_al_u2588|u_logic/T5yax6_reg.b[1]
-u_logic/R0ghu6 u_logic/add2/ucin_al_u4737.b[0]
-u_logic/N5fpw6[3] u_logic/_al_u2550|u_logic/_al_u2560.d[0]
-u_logic/_al_u2560_o u_logic/_al_u2561|u_logic/_al_u2551.b[1]
-u_logic/_al_u2561_o u_logic/_al_u4281|RAMDATA_Interface/reg0_b2.b[0]
-HADDR[4] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r65_c0_m1.c[0]
-FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i65_002 FM_HW/_al_u1318|FM_HW/_al_u1743.b[1]
-FM_HW/_al_u1318_o FM_HW/_al_u1746|FM_HW/_al_u1319.b[0]
-FM_HW/_al_u1319_o FM_HW/_al_u1320|FM_HW/_al_u3255.c[1]
-FM_HW/_al_u1320_o FM_HW/_al_u1321|FM_HW/_al_u3874.b[1]
-FM_HW/_al_u1321_o FM_HW/_al_u1344.b[1]
-FM_HW/_al_u1344_o FM_HW/_al_u1257|FM_HW/FM_Dump_Data_IQ/reg0_b2.c[0]
+Endpoint: FM_HW/_al_u3650|FM_HW/FM_Dump_Data_IQ/reg0_b7
+243 -13.737000 33724860 3
+Timing path: u_logic/P5vpw6_reg.clk->FM_HW/_al_u3650|FM_HW/FM_Dump_Data_IQ/reg0_b7
+u_logic/P5vpw6_reg.clk
+FM_HW/_al_u3650|FM_HW/FM_Dump_Data_IQ/reg0_b7
+245 -13.737000 19.884000 33.621000 24 24
+u_logic/P5vpw6 cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b7|cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b6.b[0]
+u_logic/Llaow6_lutinv u_logic/_al_u1671|u_logic/_al_u2549.a[0]
+u_logic/_al_u2549_o u_logic/_al_u2551|u_logic/Fpnpw6_reg.a[1]
+u_logic/_al_u2551_o u_logic/_al_u2552.a[1]
+u_logic/_al_u2552_o u_logic/_al_u2556|u_logic/_al_u1730.a[1]
+u_logic/_al_u2556_o u_logic/_al_u2563|u_logic/_al_u159.a[1]
+u_logic/_al_u2563_o u_logic/_al_u2564|u_logic/_al_u4431.d[1]
+u_logic/_al_u2564_o u_logic/_al_u2565|u_logic/_al_u2892.d[1]
+u_logic/_al_u2565_o u_logic/_al_u2566|u_logic/_al_u2882.d[1]
+u_logic/_al_u2566_o u_logic/_al_u2641|u_logic/_al_u2759.d[1]
+u_logic/Vtzhu6 u_logic/_al_u2643.d[0]
+u_logic/R0ghu6 u_logic/add2/ucin_al_u4809.b[0]
+u_logic/add2/c3 u_logic/add2/u3_al_u4810.fci
+u_logic/N5fpw6[4] u_logic/_al_u4753|u_logic/_al_u2604.c[0]
+u_logic/_al_u2604_o u_logic/_al_u2605|u_logic/Ibqpw6_reg.d[1]
+u_logic/_al_u2605_o u_logic/_al_u3990|RAMDATA_Interface/reg0_b3.b[0]
+HADDR[5] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r399_c1_m1.d[1]
+FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i399_007 FM_HW/_al_u2331|FM_HW/_al_u2330.b[0]
+FM_HW/_al_u2330_o FM_HW/_al_u2331|FM_HW/_al_u2330.c[1]
+FM_HW/_al_u2331_o FM_HW/FM_Demodulation/reg5_b19|FM_HW/FM_Demodulation/reg5_b18.b[1]
+FM_HW/_al_u2334_o FM_HW/_al_u2338.b[1]
+FM_HW/_al_u2338_o FM_HW/FM_Demodulation/reg5_b53|FM_HW/FM_Demodulation/reg5_b59.b[1]
+FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_mux_b7/B6_3 FM_HW/_al_u2380|FM_HW/_al_u850.b[1]
+FM_HW/_al_u2380_o FM_HW/_al_u3650|FM_HW/FM_Dump_Data_IQ/reg0_b7.c[0]
 
-Timing path: u_logic/_al_u2680|u_logic/Vzupw6_reg.clk->FM_HW/_al_u1257|FM_HW/FM_Dump_Data_IQ/reg0_b2
-u_logic/_al_u2680|u_logic/Vzupw6_reg.clk
-FM_HW/_al_u1257|FM_HW/FM_Dump_Data_IQ/reg0_b2
-481 -10.589000 19.884000 30.473000 19 19
-u_logic/Vzupw6 u_logic/_al_u4224|u_logic/_al_u121.c[0]
-u_logic/Vo3ju6_lutinv u_logic/_al_u1992|u_logic/_al_u2497.a[0]
-u_logic/_al_u2497_o u_logic/_al_u2340|u_logic/_al_u2499.b[0]
-u_logic/_al_u2499_o u_logic/_al_u2508|u_logic/_al_u1569.a[1]
-u_logic/_al_u2508_o u_logic/_al_u2509|u_logic/_al_u4626.d[1]
-u_logic/_al_u2509_o u_logic/_al_u2510|u_logic/W8hbx6_reg.d[1]
-u_logic/_al_u2510_o u_logic/_al_u2587|u_logic/L6lax6_reg.d[1]
-u_logic/_al_u2587_o u_logic/_al_u2588|u_logic/T5yax6_reg.b[1]
-u_logic/R0ghu6 u_logic/add2/ucin_al_u4737.b[0]
-u_logic/N5fpw6[3] u_logic/_al_u2550|u_logic/_al_u2560.d[0]
-u_logic/_al_u2560_o u_logic/_al_u2561|u_logic/_al_u2551.b[1]
-u_logic/_al_u2561_o u_logic/_al_u4281|RAMDATA_Interface/reg0_b2.b[0]
-HADDR[4] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r65_c0_m1.c[0]
-FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i65_002 FM_HW/_al_u1318|FM_HW/_al_u1743.b[1]
-FM_HW/_al_u1318_o FM_HW/_al_u1746|FM_HW/_al_u1319.b[0]
-FM_HW/_al_u1319_o FM_HW/_al_u1320|FM_HW/_al_u3255.c[1]
-FM_HW/_al_u1320_o FM_HW/_al_u1321|FM_HW/_al_u3874.b[1]
-FM_HW/_al_u1321_o FM_HW/_al_u1344.b[0]
-FM_HW/_al_u1344_o FM_HW/_al_u1257|FM_HW/FM_Dump_Data_IQ/reg0_b2.c[0]
+Timing path: u_logic/P5vpw6_reg.clk->FM_HW/_al_u3650|FM_HW/FM_Dump_Data_IQ/reg0_b7
+u_logic/P5vpw6_reg.clk
+FM_HW/_al_u3650|FM_HW/FM_Dump_Data_IQ/reg0_b7
+318 -13.737000 19.884000 33.621000 24 24
+u_logic/P5vpw6 cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b7|cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b6.b[0]
+u_logic/Llaow6_lutinv u_logic/_al_u1671|u_logic/_al_u2549.a[0]
+u_logic/_al_u2549_o u_logic/_al_u2551|u_logic/Fpnpw6_reg.a[1]
+u_logic/_al_u2551_o u_logic/_al_u2552.a[0]
+u_logic/_al_u2552_o u_logic/_al_u2556|u_logic/_al_u1730.a[1]
+u_logic/_al_u2556_o u_logic/_al_u2563|u_logic/_al_u159.a[1]
+u_logic/_al_u2563_o u_logic/_al_u2564|u_logic/_al_u4431.d[1]
+u_logic/_al_u2564_o u_logic/_al_u2565|u_logic/_al_u2892.d[1]
+u_logic/_al_u2565_o u_logic/_al_u2566|u_logic/_al_u2882.d[1]
+u_logic/_al_u2566_o u_logic/_al_u2641|u_logic/_al_u2759.d[1]
+u_logic/Vtzhu6 u_logic/_al_u2643.d[0]
+u_logic/R0ghu6 u_logic/add2/ucin_al_u4809.b[0]
+u_logic/add2/c3 u_logic/add2/u3_al_u4810.fci
+u_logic/N5fpw6[4] u_logic/_al_u4753|u_logic/_al_u2604.c[0]
+u_logic/_al_u2604_o u_logic/_al_u2605|u_logic/Ibqpw6_reg.d[1]
+u_logic/_al_u2605_o u_logic/_al_u3990|RAMDATA_Interface/reg0_b3.b[0]
+HADDR[5] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r399_c1_m1.d[1]
+FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i399_007 FM_HW/_al_u2331|FM_HW/_al_u2330.b[0]
+FM_HW/_al_u2330_o FM_HW/_al_u2331|FM_HW/_al_u2330.c[1]
+FM_HW/_al_u2331_o FM_HW/FM_Demodulation/reg5_b19|FM_HW/FM_Demodulation/reg5_b18.b[1]
+FM_HW/_al_u2334_o FM_HW/_al_u2338.b[1]
+FM_HW/_al_u2338_o FM_HW/FM_Demodulation/reg5_b53|FM_HW/FM_Demodulation/reg5_b59.b[1]
+FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_mux_b7/B6_3 FM_HW/_al_u2380|FM_HW/_al_u850.b[1]
+FM_HW/_al_u2380_o FM_HW/_al_u3650|FM_HW/FM_Dump_Data_IQ/reg0_b7.c[0]
 
-Timing path: u_logic/_al_u2662|u_logic/Ufopw6_reg.clk->FM_HW/_al_u1257|FM_HW/FM_Dump_Data_IQ/reg0_b2
-u_logic/_al_u2662|u_logic/Ufopw6_reg.clk
-FM_HW/_al_u1257|FM_HW/FM_Dump_Data_IQ/reg0_b2
-544 -10.574000 19.884000 30.458000 19 19
-u_logic/Ufopw6 u_logic/_al_u4224|u_logic/_al_u121.d[0]
-u_logic/Vo3ju6_lutinv u_logic/_al_u1992|u_logic/_al_u2497.a[0]
-u_logic/_al_u2497_o u_logic/_al_u2340|u_logic/_al_u2499.b[0]
-u_logic/_al_u2499_o u_logic/_al_u2508|u_logic/_al_u1569.a[1]
-u_logic/_al_u2508_o u_logic/_al_u2509|u_logic/_al_u4626.d[1]
-u_logic/_al_u2509_o u_logic/_al_u2510|u_logic/W8hbx6_reg.d[1]
-u_logic/_al_u2510_o u_logic/_al_u2587|u_logic/L6lax6_reg.d[1]
-u_logic/_al_u2587_o u_logic/_al_u2588|u_logic/T5yax6_reg.b[1]
-u_logic/R0ghu6 u_logic/add2/ucin_al_u4737.b[0]
-u_logic/N5fpw6[3] u_logic/_al_u2550|u_logic/_al_u2560.d[0]
-u_logic/_al_u2560_o u_logic/_al_u2561|u_logic/_al_u2551.b[1]
-u_logic/_al_u2561_o u_logic/_al_u4281|RAMDATA_Interface/reg0_b2.b[0]
-HADDR[4] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r65_c0_m1.c[0]
-FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i65_002 FM_HW/_al_u1318|FM_HW/_al_u1743.b[1]
-FM_HW/_al_u1318_o FM_HW/_al_u1746|FM_HW/_al_u1319.b[0]
-FM_HW/_al_u1319_o FM_HW/_al_u1320|FM_HW/_al_u3255.c[1]
-FM_HW/_al_u1320_o FM_HW/_al_u1321|FM_HW/_al_u3874.b[1]
-FM_HW/_al_u1321_o FM_HW/_al_u1344.b[1]
-FM_HW/_al_u1344_o FM_HW/_al_u1257|FM_HW/FM_Dump_Data_IQ/reg0_b2.c[0]
+Timing path: u_logic/P5vpw6_reg.clk->FM_HW/_al_u3650|FM_HW/FM_Dump_Data_IQ/reg0_b7
+u_logic/P5vpw6_reg.clk
+FM_HW/_al_u3650|FM_HW/FM_Dump_Data_IQ/reg0_b7
+391 -13.737000 19.884000 33.621000 24 24
+u_logic/P5vpw6 cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b7|cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b6.b[0]
+u_logic/Llaow6_lutinv u_logic/_al_u1671|u_logic/_al_u2549.a[0]
+u_logic/_al_u2549_o u_logic/_al_u2551|u_logic/Fpnpw6_reg.a[1]
+u_logic/_al_u2551_o u_logic/_al_u2552.a[1]
+u_logic/_al_u2552_o u_logic/_al_u2556|u_logic/_al_u1730.a[1]
+u_logic/_al_u2556_o u_logic/_al_u2563|u_logic/_al_u159.a[1]
+u_logic/_al_u2563_o u_logic/_al_u2564|u_logic/_al_u4431.d[1]
+u_logic/_al_u2564_o u_logic/_al_u2565|u_logic/_al_u2892.d[1]
+u_logic/_al_u2565_o u_logic/_al_u2566|u_logic/_al_u2882.d[1]
+u_logic/_al_u2566_o u_logic/_al_u2641|u_logic/_al_u2759.d[1]
+u_logic/Vtzhu6 u_logic/_al_u2643.d[0]
+u_logic/R0ghu6 u_logic/add2/ucin_al_u4809.b[0]
+u_logic/add2/c3 u_logic/add2/u3_al_u4810.fci
+u_logic/N5fpw6[4] u_logic/_al_u4753|u_logic/_al_u2604.c[0]
+u_logic/_al_u2604_o u_logic/_al_u2605|u_logic/Ibqpw6_reg.d[1]
+u_logic/_al_u2605_o u_logic/_al_u3990|RAMDATA_Interface/reg0_b3.b[0]
+HADDR[5] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r399_c1_m1.d[1]
+FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i399_007 FM_HW/_al_u2331|FM_HW/_al_u2330.b[0]
+FM_HW/_al_u2330_o FM_HW/_al_u2331|FM_HW/_al_u2330.c[1]
+FM_HW/_al_u2331_o FM_HW/FM_Demodulation/reg5_b19|FM_HW/FM_Demodulation/reg5_b18.b[1]
+FM_HW/_al_u2334_o FM_HW/_al_u2338.b[0]
+FM_HW/_al_u2338_o FM_HW/FM_Demodulation/reg5_b53|FM_HW/FM_Demodulation/reg5_b59.b[1]
+FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_mux_b7/B6_3 FM_HW/_al_u2380|FM_HW/_al_u850.b[1]
+FM_HW/_al_u2380_o FM_HW/_al_u3650|FM_HW/FM_Dump_Data_IQ/reg0_b7.c[0]
+
+
+Endpoint: FM_HW/_al_u3584|FM_HW/FM_Dump_Data_IQ/reg0_b5
+464 -13.686000 37671203 3
+Timing path: u_logic/P5vpw6_reg.clk->FM_HW/_al_u3584|FM_HW/FM_Dump_Data_IQ/reg0_b5
+u_logic/P5vpw6_reg.clk
+FM_HW/_al_u3584|FM_HW/FM_Dump_Data_IQ/reg0_b5
+466 -13.686000 19.884000 33.570000 24 24
+u_logic/P5vpw6 cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b7|cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b6.b[0]
+u_logic/Llaow6_lutinv u_logic/_al_u1671|u_logic/_al_u2549.a[0]
+u_logic/_al_u2549_o u_logic/_al_u2551|u_logic/Fpnpw6_reg.a[1]
+u_logic/_al_u2551_o u_logic/_al_u2552.a[1]
+u_logic/_al_u2552_o u_logic/_al_u2556|u_logic/_al_u1730.a[1]
+u_logic/_al_u2556_o u_logic/_al_u2563|u_logic/_al_u159.a[1]
+u_logic/_al_u2563_o u_logic/_al_u2564|u_logic/_al_u4431.d[1]
+u_logic/_al_u2564_o u_logic/_al_u2565|u_logic/_al_u2892.d[1]
+u_logic/_al_u2565_o u_logic/_al_u2566|u_logic/_al_u2882.d[1]
+u_logic/_al_u2566_o u_logic/_al_u2641|u_logic/_al_u2759.d[1]
+u_logic/Vtzhu6 u_logic/_al_u2643.d[0]
+u_logic/R0ghu6 u_logic/add2/ucin_al_u4809.b[0]
+u_logic/add2/c3 u_logic/add2/u3_al_u4810.fci
+u_logic/N5fpw6[4] u_logic/_al_u4753|u_logic/_al_u2604.c[0]
+u_logic/_al_u2604_o u_logic/_al_u2605|u_logic/Ibqpw6_reg.d[1]
+u_logic/_al_u2605_o u_logic/_al_u3990|RAMDATA_Interface/reg0_b3.b[0]
+HADDR[5] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r475_c1_m0.d[1]
+FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i475_005 FM_HW/_al_u2351|FM_HW/_al_u3012.b[0]
+FM_HW/_al_u3012_o FM_HW/_al_u3013|FM_HW/_al_u2666.c[1]
+FM_HW/_al_u3013_o FM_HW/_al_u3016.b[1]
+FM_HW/_al_u3016_o FM_HW/_al_u1918|FM_HW/_al_u3019.a[0]
+FM_HW/_al_u3019_o FM_HW/_al_u3030|FM_HW/_al_u795.b[1]
+FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_mux_b5/B5_7 FM_HW/_al_u3158|FM_HW/FM_Demodulation/reg5_b52.a[0]
+FM_HW/_al_u3072_o FM_HW/_al_u3584|FM_HW/FM_Dump_Data_IQ/reg0_b5.c[0]
+
+Timing path: u_logic/P5vpw6_reg.clk->FM_HW/_al_u3584|FM_HW/FM_Dump_Data_IQ/reg0_b5
+u_logic/P5vpw6_reg.clk
+FM_HW/_al_u3584|FM_HW/FM_Dump_Data_IQ/reg0_b5
+539 -13.686000 19.884000 33.570000 24 24
+u_logic/P5vpw6 cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b7|cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b6.b[0]
+u_logic/Llaow6_lutinv u_logic/_al_u1671|u_logic/_al_u2549.a[0]
+u_logic/_al_u2549_o u_logic/_al_u2551|u_logic/Fpnpw6_reg.a[1]
+u_logic/_al_u2551_o u_logic/_al_u2552.a[0]
+u_logic/_al_u2552_o u_logic/_al_u2556|u_logic/_al_u1730.a[1]
+u_logic/_al_u2556_o u_logic/_al_u2563|u_logic/_al_u159.a[1]
+u_logic/_al_u2563_o u_logic/_al_u2564|u_logic/_al_u4431.d[1]
+u_logic/_al_u2564_o u_logic/_al_u2565|u_logic/_al_u2892.d[1]
+u_logic/_al_u2565_o u_logic/_al_u2566|u_logic/_al_u2882.d[1]
+u_logic/_al_u2566_o u_logic/_al_u2641|u_logic/_al_u2759.d[1]
+u_logic/Vtzhu6 u_logic/_al_u2643.d[0]
+u_logic/R0ghu6 u_logic/add2/ucin_al_u4809.b[0]
+u_logic/add2/c3 u_logic/add2/u3_al_u4810.fci
+u_logic/N5fpw6[4] u_logic/_al_u4753|u_logic/_al_u2604.c[0]
+u_logic/_al_u2604_o u_logic/_al_u2605|u_logic/Ibqpw6_reg.d[1]
+u_logic/_al_u2605_o u_logic/_al_u3990|RAMDATA_Interface/reg0_b3.b[0]
+HADDR[5] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r475_c1_m0.d[1]
+FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i475_005 FM_HW/_al_u2351|FM_HW/_al_u3012.b[0]
+FM_HW/_al_u3012_o FM_HW/_al_u3013|FM_HW/_al_u2666.c[1]
+FM_HW/_al_u3013_o FM_HW/_al_u3016.b[1]
+FM_HW/_al_u3016_o FM_HW/_al_u1918|FM_HW/_al_u3019.a[0]
+FM_HW/_al_u3019_o FM_HW/_al_u3030|FM_HW/_al_u795.b[1]
+FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_mux_b5/B5_7 FM_HW/_al_u3158|FM_HW/FM_Demodulation/reg5_b52.a[0]
+FM_HW/_al_u3072_o FM_HW/_al_u3584|FM_HW/FM_Dump_Data_IQ/reg0_b5.c[0]
+
+Timing path: u_logic/P5vpw6_reg.clk->FM_HW/_al_u3584|FM_HW/FM_Dump_Data_IQ/reg0_b5
+u_logic/P5vpw6_reg.clk
+FM_HW/_al_u3584|FM_HW/FM_Dump_Data_IQ/reg0_b5
+612 -13.686000 19.884000 33.570000 24 24
+u_logic/P5vpw6 cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b7|cw_top/wrapper_cwc_top/trigger_inst/HAS_BUS_DETECTOR$BUS_DETECTOR[0]$bus_detector_inst1/reg0_b6.b[0]
+u_logic/Llaow6_lutinv u_logic/_al_u1671|u_logic/_al_u2549.a[0]
+u_logic/_al_u2549_o u_logic/_al_u2551|u_logic/Fpnpw6_reg.a[1]
+u_logic/_al_u2551_o u_logic/_al_u2552.a[1]
+u_logic/_al_u2552_o u_logic/_al_u2556|u_logic/_al_u1730.a[1]
+u_logic/_al_u2556_o u_logic/_al_u2563|u_logic/_al_u159.a[1]
+u_logic/_al_u2563_o u_logic/_al_u2564|u_logic/_al_u4431.d[1]
+u_logic/_al_u2564_o u_logic/_al_u2565|u_logic/_al_u2892.d[1]
+u_logic/_al_u2565_o u_logic/_al_u2566|u_logic/_al_u2882.d[1]
+u_logic/_al_u2566_o u_logic/_al_u2641|u_logic/_al_u2759.d[1]
+u_logic/Vtzhu6 u_logic/_al_u2643.d[0]
+u_logic/R0ghu6 u_logic/add2/ucin_al_u4809.b[0]
+u_logic/add2/c3 u_logic/add2/u3_al_u4810.fci
+u_logic/N5fpw6[4] u_logic/_al_u4753|u_logic/_al_u2604.c[0]
+u_logic/_al_u2604_o u_logic/_al_u2605|u_logic/Ibqpw6_reg.d[1]
+u_logic/_al_u2605_o u_logic/_al_u3990|RAMDATA_Interface/reg0_b3.b[0]
+HADDR[5] FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_r475_c1_m0.d[1]
+FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_i475_005 FM_HW/_al_u2351|FM_HW/_al_u3012.b[0]
+FM_HW/_al_u3012_o FM_HW/_al_u3013|FM_HW/_al_u2666.c[1]
+FM_HW/_al_u3013_o FM_HW/_al_u3016.b[0]
+FM_HW/_al_u3016_o FM_HW/_al_u1918|FM_HW/_al_u3019.a[0]
+FM_HW/_al_u3019_o FM_HW/_al_u3030|FM_HW/_al_u795.b[1]
+FM_HW/FM_Dump_Data_IQ/al_ram_mem_IQ_do_mux_b5/B5_7 FM_HW/_al_u3158|FM_HW/FM_Demodulation/reg5_b52.a[0]
+FM_HW/_al_u3072_o FM_HW/_al_u3584|FM_HW/FM_Dump_Data_IQ/reg0_b5.c[0]
 
 
 
 Hold check
-607 3
-Endpoint: RAM_CODE/ram_mem_unify_al_u20_4096x8_sub_000000_000
-609 0.249000 12 3
-Timing path: RAMCODE_Interface/reg0_b10|RAMCODE_Interface/reg0_b7.clk->RAM_CODE/ram_mem_unify_al_u20_4096x8_sub_000000_000
-RAMCODE_Interface/reg0_b10|RAMCODE_Interface/reg0_b7.clk
-RAM_CODE/ram_mem_unify_al_u20_4096x8_sub_000000_000
-611 0.249000 0.200000 0.449000 0 1
-RAMCODE_WADDR[7] RAM_CODE/ram_mem_unify_al_u20_4096x8_sub_000000_000.addra[8]
+685 3
+Endpoint: SPI_TX/FIFO_SPI/al_ram_mem_r1_c1_l
+687 0.304000 94 3
+Timing path: _al_u270|SPI_TX/FIFO_SPI/reg1_b0.clk->SPI_TX/FIFO_SPI/al_ram_mem_r1_c1_l
+_al_u270|SPI_TX/FIFO_SPI/reg1_b0.clk
+SPI_TX/FIFO_SPI/al_ram_mem_r1_c1_l
+689 0.304000 0.134000 0.438000 1 1
+SPI_TX/FIFO_SPI/wp[0] SPI_TX/FIFO_SPI/al_ram_mem_r1_c1_l.a[0]
 
-Timing path: RAMCODE_Interface/reg0_b6|RAMCODE_Interface/reg0_b4.clk->RAM_CODE/ram_mem_unify_al_u20_4096x8_sub_000000_000
-RAMCODE_Interface/reg0_b6|RAMCODE_Interface/reg0_b4.clk
-RAM_CODE/ram_mem_unify_al_u20_4096x8_sub_000000_000
-638 0.259000 0.200000 0.459000 0 1
-RAMCODE_WADDR[4] RAM_CODE/ram_mem_unify_al_u20_4096x8_sub_000000_000.addra[5]
+Timing path: UART_Interface/rd_en_reg_reg|SPI_Interface/wr_en_reg_reg.clk->SPI_TX/FIFO_SPI/al_ram_mem_r1_c1_l
+UART_Interface/rd_en_reg_reg|SPI_Interface/wr_en_reg_reg.clk
+SPI_TX/FIFO_SPI/al_ram_mem_r1_c1_l
+716 1.596000 0.134000 1.730000 2 2
+SPI_Interface/wr_en_reg _al_u128|_al_u130.d[1]
+SPI_TX_Data[4] SPI_TX/FIFO_SPI/al_ram_mem_r1_c1_l.a[1]
 
-Timing path: RAMCODE_Interface/reg0_b6|RAMCODE_Interface/reg0_b4.clk->RAM_CODE/ram_mem_unify_al_u20_4096x8_sub_000000_000
-RAMCODE_Interface/reg0_b6|RAMCODE_Interface/reg0_b4.clk
-RAM_CODE/ram_mem_unify_al_u20_4096x8_sub_000000_000
-665 0.411000 0.200000 0.611000 0 1
-RAMCODE_WADDR[6] RAM_CODE/ram_mem_unify_al_u20_4096x8_sub_000000_000.addra[7]
-
-
-Endpoint: SPI_TX/FIFO_SPI/al_ram_mem_r0_c1_l
-692 0.304000 94 3
-Timing path: _al_u376|SPI_TX/FIFO_SPI/reg1_b2.clk->SPI_TX/FIFO_SPI/al_ram_mem_r0_c1_l
-_al_u376|SPI_TX/FIFO_SPI/reg1_b2.clk
-SPI_TX/FIFO_SPI/al_ram_mem_r0_c1_l
-694 0.304000 0.134000 0.438000 1 1
-SPI_TX/FIFO_SPI/wp[2] SPI_TX/FIFO_SPI/al_ram_mem_r0_c1_l.c[0]
-
-Timing path: _al_u294|SPI_Interface/wr_en_reg_reg.clk->SPI_TX/FIFO_SPI/al_ram_mem_r0_c1_l
-_al_u294|SPI_Interface/wr_en_reg_reg.clk
-SPI_TX/FIFO_SPI/al_ram_mem_r0_c1_l
-721 1.964000 0.134000 2.098000 2 2
-SPI_Interface/wr_en_reg _al_u114|_al_u116.d[0]
-SPI_TX_Data[6] SPI_TX/FIFO_SPI/al_ram_mem_r0_c1_l.c[1]
-
-Timing path: u_logic/_al_u2859|u_logic/Wvgax6_reg.clk->SPI_TX/FIFO_SPI/al_ram_mem_r0_c1_l
-u_logic/_al_u2859|u_logic/Wvgax6_reg.clk
-SPI_TX/FIFO_SPI/al_ram_mem_r0_c1_l
-750 3.117000 0.134000 3.251000 3 3
-u_logic/Wvgax6 u_logic/_al_u2540|u_logic/Z9abx6_reg.d[0]
-HWDATA[6] _al_u114|_al_u116.c[0]
-SPI_TX_Data[6] SPI_TX/FIFO_SPI/al_ram_mem_r0_c1_l.c[1]
+Timing path: u_logic/_al_u3978|u_logic/Wvgax6_reg.clk->SPI_TX/FIFO_SPI/al_ram_mem_r1_c1_l
+u_logic/_al_u3978|u_logic/Wvgax6_reg.clk
+SPI_TX/FIFO_SPI/al_ram_mem_r1_c1_l
+745 3.696000 0.134000 3.830000 3 3
+u_logic/Wvgax6 u_logic/_al_u3342|u_logic/Kqhbx6_reg.d[0]
+HWDATA[4] _al_u128|_al_u130.c[1]
+SPI_TX_Data[4] SPI_TX/FIFO_SPI/al_ram_mem_r1_c1_l.a[1]
 
 
-Endpoint: FM_HW/FM_Demodulation/mult20_
-781 0.308000 10 3
-Timing path: FM_HW/FM_Demodulation/reg5_b30|FM_HW/FM_Demodulation/reg5_b31.clk->FM_HW/FM_Demodulation/mult20_
-FM_HW/FM_Demodulation/reg5_b30|FM_HW/FM_Demodulation/reg5_b31.clk
-FM_HW/FM_Demodulation/mult20_
-783 0.308000 0.100000 0.408000 0 1
-FM_HW/FM_Demodulation/dmd_data_filter[3][0] FM_HW/FM_Demodulation/mult20_.a[0]
+Endpoint: FM_HW/FM_Demodulation/mult7_
+776 0.308000 10 3
+Timing path: FM_HW/FM_RSSI_SCAN/add2/ucin_al_u4000.clk->FM_HW/FM_Demodulation/mult7_
+FM_HW/FM_RSSI_SCAN/add2/ucin_al_u4000.clk
+FM_HW/FM_Demodulation/mult7_
+778 0.308000 0.100000 0.408000 0 1
+FM_HW/FM_Demodulation/dmd_data_filter[16][3] FM_HW/FM_Demodulation/mult7_.a[3]
 
-Timing path: FM_HW/FM_Demodulation/reg5_b30|FM_HW/FM_Demodulation/reg5_b31.clk->FM_HW/FM_Demodulation/mult20_
-FM_HW/FM_Demodulation/reg5_b30|FM_HW/FM_Demodulation/reg5_b31.clk
-FM_HW/FM_Demodulation/mult20_
-810 0.320000 0.100000 0.420000 0 1
-FM_HW/FM_Demodulation/dmd_data_filter[3][1] FM_HW/FM_Demodulation/mult20_.a[1]
+Timing path: FM_HW/FM_Demodulation/reg5_b160|FM_HW/FM_Demodulation/reg5_b162.clk->FM_HW/FM_Demodulation/mult7_
+FM_HW/FM_Demodulation/reg5_b160|FM_HW/FM_Demodulation/reg5_b162.clk
+FM_HW/FM_Demodulation/mult7_
+805 0.320000 0.100000 0.420000 0 1
+FM_HW/FM_Demodulation/dmd_data_filter[16][2] FM_HW/FM_Demodulation/mult7_.a[2]
 
-Timing path: FM_HW/FM_Demodulation/reg5_b36|FM_HW/FM_Demodulation/reg5_b37.clk->FM_HW/FM_Demodulation/mult20_
-FM_HW/FM_Demodulation/reg5_b36|FM_HW/FM_Demodulation/reg5_b37.clk
-FM_HW/FM_Demodulation/mult20_
-837 0.320000 0.100000 0.420000 0 1
-FM_HW/FM_Demodulation/dmd_data_filter[3][6] FM_HW/FM_Demodulation/mult20_.a[6]
+Timing path: FM_HW/FM_Demodulation/sub0_2/u0|sub0_2/ucin.clk->FM_HW/FM_Demodulation/mult7_
+FM_HW/FM_Demodulation/sub0_2/u0|sub0_2/ucin.clk
+FM_HW/FM_Demodulation/mult7_
+832 0.466000 0.100000 0.566000 0 1
+FM_HW/FM_Demodulation/dmd_data_filter[16][8] FM_HW/FM_Demodulation/mult7_.a[8]
+
+
+Endpoint: RAM_CODE/ram_mem_unify_al_u10_4096x8_sub_000000_006
+859 0.313000 12 3
+Timing path: RAMCODE_Interface/reg0_b9|RAMCODE_Interface/reg0_b8.clk->RAM_CODE/ram_mem_unify_al_u10_4096x8_sub_000000_006
+RAMCODE_Interface/reg0_b9|RAMCODE_Interface/reg0_b8.clk
+RAM_CODE/ram_mem_unify_al_u10_4096x8_sub_000000_006
+861 0.313000 0.200000 0.513000 0 1
+RAMCODE_WADDR[8] RAM_CODE/ram_mem_unify_al_u10_4096x8_sub_000000_006.addra[9]
+
+Timing path: RAMCODE_Interface/reg0_b9|RAMCODE_Interface/reg0_b8.clk->RAM_CODE/ram_mem_unify_al_u10_4096x8_sub_000000_006
+RAMCODE_Interface/reg0_b9|RAMCODE_Interface/reg0_b8.clk
+RAM_CODE/ram_mem_unify_al_u10_4096x8_sub_000000_006
+888 0.579000 0.200000 0.779000 0 1
+RAMCODE_WADDR[9] RAM_CODE/ram_mem_unify_al_u10_4096x8_sub_000000_006.addra[10]
+
+Timing path: RAMCODE_Interface/reg0_b11|RAMCODE_Interface/reg0_b10.clk->RAM_CODE/ram_mem_unify_al_u10_4096x8_sub_000000_006
+RAMCODE_Interface/reg0_b11|RAMCODE_Interface/reg0_b10.clk
+RAM_CODE/ram_mem_unify_al_u10_4096x8_sub_000000_006
+915 0.582000 0.200000 0.782000 0 1
+RAMCODE_WADDR[10] RAM_CODE/ram_mem_unify_al_u10_4096x8_sub_000000_006.addra[11]
 
 
 
 Recovery check
-864 3
-Endpoint: cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b212|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b208
-866 6.858000 1 1
-Timing path: cw_top/wrapper_cwc_top/cfg_int_inst/tap_inst/rst_reg.clk->cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b212|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b208
-cw_top/wrapper_cwc_top/cfg_int_inst/tap_inst/rst_reg.clk
-cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b212|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b208
-868 6.858000 9.700000 2.842000 0 1
-cw_top/wrapper_cwc_top/cfg_int_inst/rst cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b212|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b208.sr
+942 3
+Endpoint: cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b55|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b68
+944 7.068000 1 1
+Timing path: _al_u570|cw_top/wrapper_cwc_top/cfg_int_inst/tap_inst/rst_reg.clk->cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b55|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b68
+_al_u570|cw_top/wrapper_cwc_top/cfg_int_inst/tap_inst/rst_reg.clk
+cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b55|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b68
+946 7.068000 9.700000 2.632000 0 1
+cw_top/wrapper_cwc_top/cfg_int_inst/rst cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b55|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b68.sr
 
 
-Endpoint: cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b140|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b144
-895 6.858000 1 1
-Timing path: cw_top/wrapper_cwc_top/cfg_int_inst/tap_inst/rst_reg.clk->cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b140|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b144
-cw_top/wrapper_cwc_top/cfg_int_inst/tap_inst/rst_reg.clk
-cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b140|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b144
-897 6.858000 9.700000 2.842000 0 1
-cw_top/wrapper_cwc_top/cfg_int_inst/rst cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b140|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b144.sr
+Endpoint: cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b63|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b64
+973 7.068000 1 1
+Timing path: _al_u570|cw_top/wrapper_cwc_top/cfg_int_inst/tap_inst/rst_reg.clk->cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b63|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b64
+_al_u570|cw_top/wrapper_cwc_top/cfg_int_inst/tap_inst/rst_reg.clk
+cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b63|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b64
+975 7.068000 9.700000 2.632000 0 1
+cw_top/wrapper_cwc_top/cfg_int_inst/rst cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b63|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b64.sr
 
 
-Endpoint: cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b47|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b48
-924 6.929000 1 1
-Timing path: cw_top/wrapper_cwc_top/cfg_int_inst/tap_inst/rst_reg.clk->cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b47|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b48
-cw_top/wrapper_cwc_top/cfg_int_inst/tap_inst/rst_reg.clk
-cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b47|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b48
-926 6.929000 9.700000 2.771000 0 1
-cw_top/wrapper_cwc_top/cfg_int_inst/rst cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b47|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b48.sr
+Endpoint: cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b140|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b141
+1002 7.197000 1 1
+Timing path: _al_u570|cw_top/wrapper_cwc_top/cfg_int_inst/tap_inst/rst_reg.clk->cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b140|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b141
+_al_u570|cw_top/wrapper_cwc_top/cfg_int_inst/tap_inst/rst_reg.clk
+cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b140|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b141
+1004 7.197000 9.700000 2.503000 0 1
+cw_top/wrapper_cwc_top/cfg_int_inst/rst cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b140|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg2_b141.sr
 
 
 
 Removal check
-953 3
-Endpoint: cw_top/wrapper_cwc_top/trigger_inst/reg1_b15|cw_top/wrapper_cwc_top/trigger_inst/reg1_b14
-955 0.426000 1 1
-Timing path: _al_u300|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b0.clk->cw_top/wrapper_cwc_top/trigger_inst/reg1_b15|cw_top/wrapper_cwc_top/trigger_inst/reg1_b14
-_al_u300|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b0.clk
-cw_top/wrapper_cwc_top/trigger_inst/reg1_b15|cw_top/wrapper_cwc_top/trigger_inst/reg1_b14
-957 0.426000 0.300000 0.726000 0 1
-cw_top/wrapper_cwc_top/control[0] cw_top/wrapper_cwc_top/trigger_inst/reg1_b15|cw_top/wrapper_cwc_top/trigger_inst/reg1_b14.sr
+1031 3
+Endpoint: u_logic/_al_u2894|u_logic/Wfspw6_reg
+1033 0.438000 1 1
+Timing path: u_logic/_al_u2275|cpuresetn_reg.clk->u_logic/_al_u2894|u_logic/Wfspw6_reg
+u_logic/_al_u2275|cpuresetn_reg.clk
+u_logic/_al_u2894|u_logic/Wfspw6_reg
+1035 0.438000 0.300000 0.738000 0 1
+cpuresetn u_logic/_al_u2894|u_logic/Wfspw6_reg.sr
 
 
-Endpoint: cw_top/wrapper_cwc_top/trigger_inst/sub0/ucin_al_u598
-984 0.503000 1 1
-Timing path: _al_u300|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b0.clk->cw_top/wrapper_cwc_top/trigger_inst/sub0/ucin_al_u598
-_al_u300|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b0.clk
-cw_top/wrapper_cwc_top/trigger_inst/sub0/ucin_al_u598
-986 0.503000 0.300000 0.803000 0 1
-cw_top/wrapper_cwc_top/control[0] cw_top/wrapper_cwc_top/trigger_inst/sub0/ucin_al_u598.sr
+Endpoint: u_logic/_al_u3144|u_logic/Kojpw6_reg
+1062 0.465000 1 1
+Timing path: u_logic/_al_u2275|cpuresetn_reg.clk->u_logic/_al_u3144|u_logic/Kojpw6_reg
+u_logic/_al_u2275|cpuresetn_reg.clk
+u_logic/_al_u3144|u_logic/Kojpw6_reg
+1064 0.465000 0.300000 0.765000 0 1
+cpuresetn u_logic/_al_u3144|u_logic/Kojpw6_reg.sr
 
 
-Endpoint: cw_top/wrapper_cwc_top/trigger_inst/reg2_b2
-1013 0.503000 1 1
-Timing path: _al_u300|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b0.clk->cw_top/wrapper_cwc_top/trigger_inst/reg2_b2
-_al_u300|cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b0.clk
-cw_top/wrapper_cwc_top/trigger_inst/reg2_b2
-1015 0.503000 0.300000 0.803000 0 1
-cw_top/wrapper_cwc_top/control[0] cw_top/wrapper_cwc_top/trigger_inst/reg2_b2.sr
+Endpoint: cw_top/wrapper_cwc_top/trigger_inst/emb_ctrl_inst/reg1_b5|cw_top/wrapper_cwc_top/trigger_inst/emb_ctrl_inst/reg1_b6
+1091 0.475000 1 1
+Timing path: cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b0.clk->cw_top/wrapper_cwc_top/trigger_inst/emb_ctrl_inst/reg1_b5|cw_top/wrapper_cwc_top/trigger_inst/emb_ctrl_inst/reg1_b6
+cw_top/wrapper_cwc_top/cfg_int_inst/reg_inst/reg1_b0.clk
+cw_top/wrapper_cwc_top/trigger_inst/emb_ctrl_inst/reg1_b5|cw_top/wrapper_cwc_top/trigger_inst/emb_ctrl_inst/reg1_b6
+1093 0.475000 0.300000 0.775000 0 1
+cw_top/wrapper_cwc_top/control[0] cw_top/wrapper_cwc_top/trigger_inst/emb_ctrl_inst/reg1_b5|cw_top/wrapper_cwc_top/trigger_inst/emb_ctrl_inst/reg1_b6.sr
 
 
 
@@ -371,11 +410,11 @@ cw_top/wrapper_cwc_top/control[0] cw_top/wrapper_cwc_top/trigger_inst/reg2_b2.sr
 Timing group statistics: 
 	Clock constraints: 
 	  Clock Name                                  Min Period     Max Freq           Skew      Fanout            TNS
-	  DeriveClock (50.0MHz)                         30.879ns          32MHz        0.000ns      2706     -552.899ns
+	  DeriveClock (50.0MHz)                         33.826ns          29MHz        0.000ns      2795    -2264.715ns
 	Minimum input arrival time before clock: no constraint path
 	Maximum output required time after clock: no constraint path
 	Maximum combinational path delay: no constraint path
-Warning: No clock constraint on 13 clock net(s): 
+Warning: No clock constraint on 14 clock net(s): 
 	CW_CLK_MSI
 	FM_Display/clk_1KHz
 	FM_HW/ADC_CLK
@@ -388,5 +427,6 @@ Warning: No clock constraint on 13 clock net(s):
 	MSI_REFCLK_pad
 	clk_pad
 	jtck
+	scan_unit/scan_clk
 	u_logic/SWCLKTCK_pad
 

@@ -70,8 +70,24 @@ void SPIwrite(int INT, int FRAC, int AFC, int Gain);
 int  RSSI_Read(void);
 void RSSIScanHandler(void);
 void RSSI_scan_cmd(void);
-/*
-//Insert your Function declaration here
+void RSSIScanscreen(void);
+int  Bubbling(int* rssi);
+void regWrite(float freq);
 
-
-*/
+//Key interrupt handlers
+void KEY0(void);
+void KEY1(void);
+void KEY2(void);
+void KEY3(void);
+void KEY4(void);
+void KEY5(void);
+void KEY6(void);
+void KEY7(void);
+void KEY8(void);
+void KEY9(void);
+void KEY10(void);
+void KEY11(void);
+void KEY12(void);
+void KEY13(void);
+void KEY14(void);
+void KEY15(void);

@@ -22,43 +22,29 @@ Dialog DLL:      TARMCM1.DLL V1.14.4.0
  
 <h2>Project:</h2>
 D:\Documents\MMC\keil\MMC.uvprojx
-Project File Date:  06/25/2022
+Project File Date:  06/29/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'Target 1'
 assembling startup_CMSDK_CM0.s...
 compiling main.c...
-..\src\code_def.h(72): warning:  #1-D: last line of file ends without a newline
-  void RSSI_scan_cmd(void);
-..\src\main.c(11): warning:  #177-D: variable "string"  was declared but never referenced
-  	char string[32] = {0};
-..\src\main.c(13): warning:  #177-D: variable "MSI_SPI_Data"  was declared but never referenced
-  	unsigned int MSI_SPI_Data= 0;
-..\src\main.c(14): warning:  #177-D: variable "ChannelControlDisplay"  was declared but never referenced
-  	ChannelControlType ChannelControlDisplay;
-..\src\main.c: 4 warnings, 0 errors
 compiling auxiliary.c...
-..\src\code_def.h(72): warning:  #1-D: last line of file ends without a newline
-  void RSSI_scan_cmd(void);
 ..\src\auxiliary.c(9): warning:  #550-D: variable "isNegative"  was set but never used
   	int isNegative = 0;
-..\src\auxiliary.c: 2 warnings, 0 errors
-compiling code_def.c...
-..\src\code_def.h(72): warning:  #1-D: last line of file ends without a newline
-  void RSSI_scan_cmd(void);
-..\src\code_def.c: 1 warning, 0 errors
+..\src\auxiliary.c: 1 warning, 0 errors
 compiling channelSelection_control.c...
-..\src\code_def.h(72): warning:  #1-D: last line of file ends without a newline
-  void RSSI_scan_cmd(void);
-..\src\channelSelection_control.c: 1 warning, 0 errors
+compiling code_def.c...
+..\src\code_def.c(228): warning:  #177-D: variable "j"  was declared but never referenced
+  	int j;
+..\src\code_def.c: 1 warning, 0 errors
 linking...
 .\MMC.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Program Size: Code=10492 RO-data=176 RW-data=40 ZI-data=10664  
+Program Size: Code=12384 RO-data=240 RW-data=40 ZI-data=10920  
 Finished: 0 information, 1 warning and 0 error messages.
 After Build - User command #1: fromelf -cvf .\MMC.axf --vhx --32x1 -o MMC.hex
 After Build - User command #2: fromelf -cvf .\MMC.axf -o MMC.txt
-".\MMC.axf" - 0 Error(s), 9 Warning(s).
+".\MMC.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 

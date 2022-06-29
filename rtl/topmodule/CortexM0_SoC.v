@@ -17,7 +17,9 @@ module CortexM0_SoC #(
         output wire  MSI_SCLK,        
         output wire  audio_pwm,         
         output wire  [3:0] sel,        
-        output wire  [7:0] seg           
+        output wire  [7:0] seg,
+        input wire [3:0] col,
+        output wire [3:0] row           
 );
 
 
@@ -42,9 +44,14 @@ wire interrupt_UART;
 wire interrupt_IQ_done;
 wire Demo_Dump_Done_Interrupt;
 wire RSSI_interrupt;
-/*Connect the IRQ with UART*/
-assign IRQ = {28'b0,RSSI_interrupt,Demo_Dump_Done_Interrupt,interrupt_IQ_done,interrupt_UART};
-
+wire [15:0] key_interrupt;
+wire [15:0] key_in;
+wire [15:0] key_out;
+/*Set IRQ*/
+assign IRQ = {12'b0,key_interrupt,RSSI_interrupt,Demo_Dump_Done_Interrupt,interrupt_IQ_done,interrupt_UART};
+keyboard_scan scan_unit(clk,col,row,key_in);
+key_filter filter_unit(.clk(clk),.rstn(RSTn),.key_in(key_in),.key_deb(key_out),.en());
+pulse_gen pulse_gen_unit(clk,RSTn,key_out,key_interrupt);
 /***************************/
 
 wire RXEV;

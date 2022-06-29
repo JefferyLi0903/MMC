@@ -78,6 +78,22 @@ __Vectors       DCD     __initial_sp              ; Top of Stack
                 DCD     FM_IQ_Dump_Done           ; IRQ1 Handler
 				DCD     Demodulated_Data_Dump_Done; IRQ2 Handler
                 DCD     RSSI_Scan_Done            ; IRQ3 Handler	
+                DCD     KEY15_Handler             ; IRQ4 Handler
+                DCD     KEY14_Handler             ; IRQ5 Handler
+                DCD     KEY13_Handler             ; IRQ6 Handler
+                DCD     KEY12_Handler             ; IRQ7 Handler
+                DCD     KEY11_Handler             ; IRQ8 Handler
+                DCD     KEY10_Handler             ; IRQ9 Handler
+                DCD     KEY9_Handler              ; IRQ10 Handler
+                DCD     KEY8_Handler              ; IRQ11 Handler
+                DCD     KEY7_Handler              ; IRQ12 Handler
+                DCD     KEY6_Handler              ; IRQ13 Handler
+                DCD     KEY5_Handler              ; IRQ14 Handler
+                DCD     KEY4_Handler              ; IRQ15 Handler
+                DCD     KEY3_Handler              ; IRQ16 Handler
+                DCD     KEY2_Handler              ; IRQ17 Handler
+                DCD     KEY1_Handler              ; IRQ18 Handler
+                DCD     KEY0_Handler              ; IRQ19 Handler
 					
 					
 
@@ -136,6 +152,133 @@ RSSI_Scan_Done  PROC
 				POP		{R0,R1,R2,PC}
                 ENDP
 
+KEY0_Handler    PROC
+                EXPORT KEY0_Handler            [WEAK]
+                IMPORT KEY0
+                PUSH    {R0,R1,R2,LR}
+                BL KEY0
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+KEY1_Handler    PROC
+                EXPORT KEY1_Handler            [WEAK]
+                IMPORT KEY1
+                PUSH    {R0,R1,R2,LR}
+                BL KEY1
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+KEY2_Handler    PROC
+                EXPORT KEY2_Handler            [WEAK]
+                IMPORT KEY2
+                PUSH    {R0,R1,R2,LR}
+                BL KEY2
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+KEY3_Handler    PROC
+                EXPORT KEY3_Handler            [WEAK]
+                IMPORT KEY3
+                PUSH    {R0,R1,R2,LR}
+                BL KEY3
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+KEY4_Handler    PROC
+                EXPORT KEY4_Handler            [WEAK]
+                IMPORT KEY4
+                PUSH    {R0,R1,R2,LR}
+                BL KEY4
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+KEY5_Handler    PROC
+                EXPORT KEY5_Handler            [WEAK]
+                IMPORT KEY5
+                PUSH    {R0,R1,R2,LR}
+                BL KEY5
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+KEY6_Handler    PROC
+                EXPORT KEY6_Handler            [WEAK]
+                IMPORT KEY6
+                PUSH    {R0,R1,R2,LR}
+                BL KEY6
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+KEY7_Handler    PROC
+                EXPORT KEY7_Handler            [WEAK]
+                IMPORT KEY7
+                PUSH    {R0,R1,R2,LR}
+                BL KEY7
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+KEY8_Handler    PROC
+                EXPORT KEY8_Handler            [WEAK]
+                IMPORT KEY8
+                PUSH    {R0,R1,R2,LR}
+                BL KEY8
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+KEY9_Handler    PROC
+                EXPORT KEY9_Handler            [WEAK]
+                IMPORT KEY9
+                PUSH    {R0,R1,R2,LR}
+                BL KEY9
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+KEY10_Handler   PROC
+                EXPORT KEY10_Handler            [WEAK]
+                IMPORT KEY10
+                PUSH    {R0,R1,R2,LR}
+                BL KEY10
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+KEY11_Handler   PROC
+                EXPORT KEY11_Handler            [WEAK]
+                IMPORT KEY11
+                PUSH    {R0,R1,R2,LR}
+                BL KEY11
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+KEY12_Handler   PROC
+                EXPORT KEY12_Handler            [WEAK]
+                IMPORT KEY12
+                PUSH    {R0,R1,R2,LR}
+                BL KEY12
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+KEY13_Handler   PROC
+                EXPORT KEY13_Handler            [WEAK]
+                IMPORT KEY13
+                PUSH    {R0,R1,R2,LR}
+                BL KEY13
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+KEY14_Handler   PROC
+                EXPORT KEY14_Handler            [WEAK]
+                IMPORT KEY14
+                PUSH    {R0,R1,R2,LR}
+                BL KEY14
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+KEY15_Handler   PROC
+                EXPORT KEY15_Handler            [WEAK]
+                IMPORT KEY15
+                PUSH    {R0,R1,R2,LR}
+                BL KEY15
+                POP     {R0,R1,R2,PC}
+                ENDP
 
                 ALIGN 4
 

@@ -29,4 +29,11 @@ set_pin_assignment	{ seg[4] }	{ LOCATION = A7; IOSTANDARD = LVCMOS33; }
 set_pin_assignment	{ seg[5] }	{ LOCATION = B5; IOSTANDARD = LVCMOS33; }
 set_pin_assignment	{ seg[6] }	{ LOCATION = A8; IOSTANDARD = LVCMOS33; }
 set_pin_assignment	{ seg[7] }	{ LOCATION = C8; IOSTANDARD = LVCMOS33; }
-
+set_pin_assignment	{ col[0] }	{ LOCATION = E11; IOSTANDARD = LVTTL33; }
+set_pin_assignment	{ col[1] }	{ LOCATION = D11; IOSTANDARD = LVTTL33; }
+set_pin_assignment	{ col[2] }	{ LOCATION = C11; IOSTANDARD = LVTTL33; }
+set_pin_assignment	{ col[3] }	{ LOCATION = F10; IOSTANDARD = LVTTL33; }
+set_pin_assignment	{ row[0] }	{ LOCATION = E10; IOSTANDARD = LVTTL33; }
+set_pin_assignment	{ row[1] }	{ LOCATION = C10; IOSTANDARD = LVTTL33; }
+set_pin_assignment	{ row[2] }	{ LOCATION = F9; IOSTANDARD = LVTTL33; }
+set_pin_assignment	{ row[3] }	{ LOCATION = D9; IOSTANDARD = LVTTL33; }

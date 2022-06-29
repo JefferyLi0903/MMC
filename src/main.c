@@ -6,15 +6,13 @@
 #define SPI_interword_interval 50000
 
 int main()
-{ 
-
+{ 	
+	NVIC_CTRL_ADDR = 0xFFFFF;  //enable lowest 2 interrupts
+/*
 	char string[32] = {0};
 
 	unsigned int MSI_SPI_Data= 0;
 	ChannelControlType ChannelControlDisplay;
-	
-	NVIC_CTRL_ADDR = 15;  //enable lowest 2 interrupts
-/*
 	MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
 	SPI_RFD(MSI_SPI_Data);
 	MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
@@ -46,12 +44,12 @@ int main()
 	Channel_control(ChannelControlDisplay);
 
 	Start_FM_command();
+	IQ_Dump_data();
 */
 
 	
 
 	
-	//IQ_Dump_command(); 
 while(1)
 {
 	    

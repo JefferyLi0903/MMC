@@ -5,15 +5,14 @@
 #define RSSI_Base 0x60000050
 #define STEP 0.02
 #define NUM 1060
+#define OUTNUM 16
+#define Thresh 1900
 
 //global variables
 float freq_I=87.0;
 RSSIType rssilist[NUM];
 int rssi_index=0;
-/*
-//Insert your output declaration here
-
-*/
+ChannelControlType channelcontrollist[OUTNUM];
 
 /*
 
@@ -76,7 +75,7 @@ void UARTString(char *stri)
 	int i;
 	for(i=0;i<(strlen(stri));i++)
 	{
-	  Delay(1000);
+	  	Delay(1000);
 		WriteUART(stri[i]);
 	}
 }
@@ -202,6 +201,16 @@ void singleFrequencyRSSI()
 	int AFC=0;
 	SPIwrite(INT,FRAC,AFC,Gain);
 }
+
+void regWrite(float freq)
+{
+	int INT=floor(freq/3);
+	int FRAC=(freq/3-INT)*3000;
+	int Gain=15;
+	int AFC=0;
+	SPIwrite(INT,FRAC,AFC,Gain);
+}
+
 void RSSI_scan_cmd(void)
 {
 	(*(volatile unsigned int *)FM_Control_Base)=( unsigned int)256;
@@ -231,19 +240,206 @@ void RSSIScanHandler(void)
 		rssi_index=0;
 		#ifndef SIM_PROFILE
 		// Used for Debug mode. 
-		for(j=0;j<NUM;j++){
+		/*
+ 		for(j=0;j<NUM;j++){
 				UARTString(int_to_str(rssilist[j].RSSI));
 				UARTString("\n");
-		}
-		#endif
-		/*
-		//The function is supposed to be called here.
-
+		} 
 		*/
+		#endif
+		RSSIScanscreen();
+		UARTString("Scan done!\n");
+
 	}
 }
 
-/*
-//Insert the complete function here
+void RSSIScanscreen()
+{
+	int i, j, k, n, rssi[OUTNUM];
+	float temp, freq;
+	freq = 87;
+	i = 0;
+	n = 1;
+	for (j = 0; freq += STEP, j < (NUM - 10); j++)
+	{
+		if (rssilist[j].RSSI < Thresh)
+			continue;
+		if ((rssilist[j].RSSI >= rssilist[j - 12].RSSI * 4) && (rssilist[j].RSSI >= rssilist[j + 12].RSSI * 4))
+		{
+			for (k = 0; (k <= i) && (k < 16); k++)
+				if ((freq - channelcontrollist[k].freq) < 0.2)
+				{
+					channelcontrollist[k].freq = (channelcontrollist[k].freq * n + freq) / (n + 1);
+					n += 1;
+					break;
+				}
+			if ((k <= i) && (k < 16))
+				continue;
+			else if (i == 0)
+			{
+				channelcontrollist[i].freq = freq;
+				rssi[i] = rssilist[j].RSSI;
+				i += 1;
+			}
+			else if (i < OUTNUM)
+			{
+				channelcontrollist[i].freq = freq;
+				rssi[i] = rssilist[j].RSSI;
+				if (rssilist[j].RSSI < rssi[0])
+				{
+					rssi[i] = rssi[0];
+					rssi[0] = rssilist[j].RSSI;
+					channelcontrollist[i].freq = channelcontrollist[0].freq;
+					channelcontrollist[0].freq = freq;
+				}
+				i += 1;
+			}
+			else if (rssilist[j].RSSI > rssi[0])
+			{
+				rssi[0] = rssilist[j].RSSI;
+				channelcontrollist[0].freq = freq;
+				Bubbling(rssi);
+			}
+			else
+				continue;
+			n = 1;
+		}
 
-*/
+	}
+	for (i = 0; i < OUTNUM; i++)
+		for (j = 1; j < (OUTNUM - i); j++)
+		{
+			if (channelcontrollist[j].freq < channelcontrollist[j - 1].freq)
+			{
+				temp = channelcontrollist[j].freq;
+				channelcontrollist[j].freq = channelcontrollist[j - 1].freq;
+				channelcontrollist[j - 1].freq = temp;
+			}
+		}
+	for (i = 0; i < OUTNUM; i++)
+	{
+		channelcontrollist[i].INT = floor(channelcontrollist[i].freq / 3);
+		channelcontrollist[i].FRAC = (channelcontrollist[i].freq / 3 - channelcontrollist[i].INT) * 3000;
+		channelcontrollist[i].channel_no = i+1;
+	}
+}
+
+int  Bubbling(int* rssi)
+{
+	int i, j, k;
+	float temp;
+	for (i = 0; i < OUTNUM; i++)
+		for (j = 1; j < (OUTNUM - i); j++)
+		{
+			if (rssi[j] < rssi[j - 1])
+			{
+				k = rssi[j];
+				rssi[j] = rssi[j - 1];
+				rssi[j - 1] = k;
+				temp = channelcontrollist[j].freq;
+				channelcontrollist[j].freq = channelcontrollist[j - 1].freq;
+				channelcontrollist[j - 1].freq = temp;
+			}
+		}
+	return rssi[0];
+}
+
+
+
+//Key_interrupt handlers
+void KEY0(void)
+{
+	UARTString("Channel0\n");
+	regWrite(channelcontrollist[0].freq);
+	Channel_control(channelcontrollist[0]);
+}
+void KEY1(void)
+{
+	UARTString("Channel1\n");
+	regWrite(channelcontrollist[1].freq);
+	Channel_control(channelcontrollist[1]);
+}
+void KEY2(void)
+{
+	UARTString("Channel2\n");
+	regWrite(channelcontrollist[2].freq);
+	Channel_control(channelcontrollist[2]);
+}
+void KEY3(void)
+{
+	UARTString("Channel3\n");
+	regWrite(channelcontrollist[3].freq);
+	Channel_control(channelcontrollist[3]);
+}
+void KEY4(void)
+{
+	UARTString("Channel4\n");
+	regWrite(channelcontrollist[4].freq);
+	Channel_control(channelcontrollist[4]);
+}
+void KEY5(void)
+{
+	UARTString("Channel5\n");
+	regWrite(channelcontrollist[5].freq);
+	Channel_control(channelcontrollist[5]);
+}
+void KEY6(void)
+{
+	UARTString("Channel6\n");
+	regWrite(channelcontrollist[6].freq);
+	Channel_control(channelcontrollist[6]);
+}
+void KEY7(void)
+{
+	UARTString("Channel7\n");
+	regWrite(channelcontrollist[7].freq);
+	Channel_control(channelcontrollist[7]);
+}
+void KEY8(void)
+{
+	UARTString("Channel8\n");
+	regWrite(channelcontrollist[8].freq);
+	Channel_control(channelcontrollist[8]);
+}
+void KEY9(void)
+{
+	UARTString("Channel9\n");
+	regWrite(channelcontrollist[9].freq);
+	Channel_control(channelcontrollist[9]);
+}
+void KEY10(void)
+{
+	UARTString("Channel10\n");
+	regWrite(channelcontrollist[10].freq);
+	Channel_control(channelcontrollist[10]);
+}
+void KEY11(void)
+{
+	UARTString("Channel11\n");
+	regWrite(channelcontrollist[11].freq);
+	Channel_control(channelcontrollist[11]);
+}
+void KEY12(void)
+{
+	UARTString("Channel12\n");
+	regWrite(channelcontrollist[12].freq);
+	Channel_control(channelcontrollist[12]);
+}
+void KEY13(void)
+{
+	UARTString("Channel13\n");
+	regWrite(channelcontrollist[13].freq);
+	Channel_control(channelcontrollist[13]);
+}
+void KEY14(void)
+{
+	UARTString("Channel14\n");
+	regWrite(channelcontrollist[14].freq);
+	Channel_control(channelcontrollist[14]);
+}
+void KEY15(void)
+{
+	UARTString("Channel15\n");
+	regWrite(channelcontrollist[15].freq);
+	Channel_control(channelcontrollist[15]);
+}

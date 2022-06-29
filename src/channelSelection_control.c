@@ -16,7 +16,7 @@ FM_Receiver_state:
 
 Channel(MHZ)       Command from uart   Channel NO.
 
-99	          	          1                1
+99	          	          	  1                1
 94.0	        	          2                2
 96.8	        	          3                3
 94.7	        	          4                4
@@ -28,14 +28,14 @@ Channel(MHZ)       Command from uart   Channel NO.
 105.7	        	          x                10
 97.2	        	          y                11
 101.7	        	          z                12
-98.1                      v                13
-100.1                     w                14
-100.9                     a                15
-103.7                     b                16
-102.7                     c                17
-106.5                     d                18
-107.2                     e                19
-107.7                     h                20
+98.1                      	  v                13
+100.1                     	  w                14
+100.9                     	  a                15
+103.7                     	  b                16
+102.7                     	  c                17
+106.5                     	  d                18
+107.2                     	  e                19
+107.7                     	  h                20
 */
 
 #define REG_1_Gain_mask 0x16001
@@ -74,8 +74,7 @@ void ChannelSelection_control(unsigned int data)
 	else if(data=='C')
 	{
 		singleFrequencyRSSI();
-		UARTString("RSSI SCAN START!");
-	  WriteUART('\n');
+		UARTString("  RSSI SCAN START!  \n");
 		RSSI_scan_cmd();
 	}
 	else if(data=='U')   // Dump IQ data
@@ -379,13 +378,21 @@ void ChannelSelection_control(unsigned int data)
 
 	
 	
-	else if(data=='1')   // formal FM receiver
+else if(data=='1')   // formal FM receiver
 	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
+	MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
     SPI_RFD(MSI_SPI_Data);
     MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
     SPI_RFD(MSI_SPI_Data);
+	REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
 		REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
+	REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
+		REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
+	REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
+		REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
+	REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
+		REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
+	REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
     SPI_RFD(REG2);
     MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
     SPI_RFD(MSI_SPI_Data);
@@ -396,7 +403,7 @@ void ChannelSelection_control(unsigned int data)
     REG3 = 0x00000003;   //Reg3:AFC = 0
     SPI_RFD(REG3);		
 		
-		FM_current_gain=20;
+	FM_current_gain=20;
     FM_current_INT=33;
     FM_current_FRAC=1700;
 		
@@ -410,13 +417,21 @@ void ChannelSelection_control(unsigned int data)
 	  UARTString("  Channel: 99.0MHz  ");
 	  WriteUART('\n');
 	}
- else if(data=='2')   // formal FM receiver
+else if(data=='2')   // formal FM receiver
 	{
-				MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
+	MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
     SPI_RFD(MSI_SPI_Data);
     MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
     SPI_RFD(MSI_SPI_Data);
+	REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
 		REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
+	REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
+		REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
+	REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
+		REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
+	REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
+		REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
+	REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
     SPI_RFD(REG2);
     MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
     SPI_RFD(MSI_SPI_Data);
@@ -427,21 +442,29 @@ void ChannelSelection_control(unsigned int data)
     REG3 = 0x00000003;   //Reg3:AFC = 0
     SPI_RFD(REG3);		
 		
-		FM_current_gain=20;
+	FM_current_gain=20;
     FM_current_INT=30;
     FM_current_FRAC=900;
 
-	  ChannelControlDisplay.channel_no =2;
-	  ChannelControlDisplay.freq =90.9;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
+	ChannelControlDisplay.channel_no =2;
+	ChannelControlDisplay.freq =90.9;
+	ChannelControlDisplay.INT =FM_current_INT;
+	ChannelControlDisplay.FRAC =FM_current_FRAC;
+	Channel_control(ChannelControlDisplay);				
 	  Channel_control(ChannelControlDisplay);				
+	Channel_control(ChannelControlDisplay);				
+	  Channel_control(ChannelControlDisplay);				
+	Channel_control(ChannelControlDisplay);				
+	  Channel_control(ChannelControlDisplay);				
+	Channel_control(ChannelControlDisplay);				
+	  Channel_control(ChannelControlDisplay);				
+	Channel_control(ChannelControlDisplay);				
 		
 		
-	  UARTString("  Channel: 90.9MHz  ");
-	  WriteUART('\n');
+	UARTString("  Channel: 90.9MHz  ");
+	WriteUART('\n');
 	}
- else if(data=='3')   // formal FM receiver
+else if(data=='3')   // formal FM receiver
 	{
 		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
     SPI_RFD(MSI_SPI_Data);
@@ -471,7 +494,7 @@ void ChannelSelection_control(unsigned int data)
 		UARTString("  Channel: 94.0MHz  ");
 	  WriteUART('\n');
 	}
- else if(data=='4')   // formal FM receiver
+else if(data=='4')   // formal FM receiver
 	{
 		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
     SPI_RFD(MSI_SPI_Data);
@@ -742,7 +765,6 @@ else if(data=='x')   // formal FM receiver
 		UARTString("  Channel: 101.7MHz  Donggan 101.7 ");
 	  WriteUART('\n');
 	}		
-	
 else if(data=='v')   // formal FM receiver
 	{
 		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
@@ -775,8 +797,7 @@ else if(data=='v')   // formal FM receiver
 
 		UARTString("  Channel: 98.1MHz ");
 	  WriteUART('\n');
-	}
-	
+	}	
 else if(data=='w')   // formal FM receiver
 	{
 		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
@@ -843,7 +864,6 @@ else if(data=='a')   // formal FM receiver
 		UARTString("  Channel: 100.9 MHz ");
 	  WriteUART('\n');	
 	}
-
 else if(data=='b')   // formal FM receiver
 	{
 		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
@@ -876,8 +896,7 @@ else if(data=='b')   // formal FM receiver
 
 		UARTString("  Channel: 103.7 MHz ");
 	  WriteUART('\n');	
-	}	
-	
+	}		
 else if(data=='c')   // formal FM receiver
 	{
 		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
@@ -911,7 +930,6 @@ else if(data=='c')   // formal FM receiver
 		UARTString("  Channel: 102.7 MHz ");
 	  WriteUART('\n');	
 	}		
-
 else if(data=='d')   // formal FM receiver
 	{
 		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
@@ -944,8 +962,7 @@ else if(data=='d')   // formal FM receiver
 
 		UARTString("  Channel: 106.5 MHz ");
 	  WriteUART('\n');	
-	}			
-	
+	}				
 else if(data=='e')   // formal FM receiver
 	{
 		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
@@ -979,7 +996,6 @@ else if(data=='e')   // formal FM receiver
 		UARTString("  Channel: 107.2 MHz ");
 	  WriteUART('\n');	
 	}			
-
 else if(data=='h')   // formal FM receiver
 	{
 		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
@@ -1016,9 +1032,8 @@ else if(data=='h')   // formal FM receiver
 	
 else  
 	{	
-		
-		UARTString("  Wrong command!   ");
-	  WriteUART('\n');	
+	UARTString("  Wrong command!   ");
+	WriteUART('\n');	
 	}
 	
 }
