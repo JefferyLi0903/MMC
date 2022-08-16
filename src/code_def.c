@@ -13,6 +13,8 @@ float freq_I=87.0;
 RSSIType rssilist[NUM];
 int rssi_index=0;
 ChannelControlType channelcontrollist[OUTNUM];
+ChannelControlType channelcontrolmax;
+
 
 /*
 
@@ -249,7 +251,9 @@ void RSSIScanHandler(void)
 		#endif
 		RSSIScanscreen();
 		UARTString("Scan done!\n");
-
+		Start_FM_command();
+		regWrite(channelcontrolmax.freq);
+		Channel_control(channelcontrolmax);
 	}
 }
 
@@ -260,20 +264,26 @@ void RSSIScanscreen()
 	freq = 87;
 	i = 0;
 	n = 1;
+	for (k = 0; k < OUTNUM ; k++)
+	{
+		channelcontrollist[k].freq = 87.9;
+		channelcontrollist[k].INT = channelcontrollist[i].freq / 3;
+		channelcontrollist[k].FRAC = (channelcontrollist[i].freq / 3 - channelcontrollist[i].INT) * 3000;
+	}
 	for (j = 0; freq += STEP, j < (NUM - 10); j++)
 	{
 		if (rssilist[j].RSSI < Thresh)
 			continue;
 		if ((rssilist[j].RSSI >= rssilist[j - 12].RSSI * 4) && (rssilist[j].RSSI >= rssilist[j + 12].RSSI * 4))
 		{
-			for (k = 0; (k <= i) && (k < 16); k++)
+			for (k = i-1; k >= 0; k--)
 				if ((freq - channelcontrollist[k].freq) < 0.2)
 				{
 					channelcontrollist[k].freq = (channelcontrollist[k].freq * n + freq) / (n + 1);
 					n += 1;
 					break;
 				}
-			if ((k <= i) && (k < 16))
+			if (k>=0)
 				continue;
 			else if (i == 0)
 			{
@@ -281,17 +291,17 @@ void RSSIScanscreen()
 				rssi[i] = rssilist[j].RSSI;
 				i += 1;
 			}
-			else if (i < OUTNUM)
+			else if (i < OUTNUM - 1)
 			{
 				channelcontrollist[i].freq = freq;
 				rssi[i] = rssilist[j].RSSI;
-				if (rssilist[j].RSSI < rssi[0])
-				{
-					rssi[i] = rssi[0];
-					rssi[0] = rssilist[j].RSSI;
-					channelcontrollist[i].freq = channelcontrollist[0].freq;
-					channelcontrollist[0].freq = freq;
+				i += 1;
 				}
+			else if (i == OUTNUM - 1)
+			{
+				channelcontrollist[i].freq = freq;
+				rssi[i] = rssilist[j].RSSI;
+				Bubbling(rssi);
 				i += 1;
 			}
 			else if (rssilist[j].RSSI > rssi[0])
@@ -306,6 +316,7 @@ void RSSIScanscreen()
 		}
 
 	}
+	channelcontrolmax.freq = ((float)((int)((channelcontrollist[OUTNUM - 1].freq + 0.05) * 10))) / 10;
 	for (i = 0; i < OUTNUM; i++)
 		for (j = 1; j < (OUTNUM - i); j++)
 		{
@@ -318,13 +329,74 @@ void RSSIScanscreen()
 		}
 	for (i = 0; i < OUTNUM; i++)
 	{
-		channelcontrollist[i].INT = floor(channelcontrollist[i].freq / 3);
+		channelcontrollist[i].freq = ((float)((int)((channelcontrollist[i].freq + 0.05) * 10))) / 10;
+		channelcontrollist[i].INT = channelcontrollist[i].freq / 3;
 		channelcontrollist[i].FRAC = (channelcontrollist[i].freq / 3 - channelcontrollist[i].INT) * 3000;
 		channelcontrollist[i].channel_no = i+1;
+		if (channelcontrollist[i].freq == channelcontrolmax.freq)
+			channelcontrolmax.channel_no = channelcontrollist[i].channel_no;
 	}
+	channelcontrolmax.INT = channelcontrolmax.freq / 3;
+	channelcontrolmax.FRAC = (channelcontrolmax.freq / 3 - channelcontrolmax.INT) * 3000;
 }
 
-int  Bubbling(int* rssi)
+void RSSIScanbyfilter()
+{
+	int temp;
+	int i,j;
+	int k = 0;
+	int sum[200];
+	int rssi[200];
+	ChannelControlType satisfied_channelcontrollist[200];
+	RSSIType satisfied_rssilist[200];
+	for (i = 5, j = 0; i < 1045; i = i+5, j++){
+		sum[j] = rssilist[i-4].RSSI+rssilist[i-3].RSSI+rssilist[i-2].RSSI+rssilist[i-1].RSSI+rssilist[i].RSSI+rssilist[i+1].RSSI+rssilist[i+2].RSSI+rssilist[i+3].RSSI+rssilist[i+4].RSSI;
+	}
+	for (j = 1; j < 199; j++){
+		if(( sum[j] > Thresh*9 ) && ( sum[j-1] < sum[j] ) && ( sum[j+1] < sum[j] )){
+			satisfied_rssilist[k].RSSI = rssilist[j*5+5].RSSI;
+			rssi[k] = rssilist[j*5+5].RSSI;
+			satisfied_rssilist[k].index = j*5 + 5;
+			k++;
+		}
+	}
+	for (k = 0; k < 200; k++){
+		satisfied_channelcontrollist[k].freq = ((float)((int)((87 + (satisfied_rssilist[k].index-1) * 0.02 + 0.05) * 10))) / 10 ;
+	}
+	for (i = 0; i < 200; i++)
+	{
+		for (j = 1; j < 199; j++)
+		{
+			if (rssi[j] < rssi[j - 1])
+			{
+				temp = rssi[j];
+				rssi[j] = rssi[j - 1];
+				rssi[j - 1] = temp;
+				temp = satisfied_channelcontrollist[j].freq;
+				satisfied_channelcontrollist[j].freq = satisfied_channelcontrollist[j - 1].freq;
+				satisfied_channelcontrollist[j - 1].freq = temp;
+			}
+		}
+	}
+	for (k = 0; k < 15 ; k++){
+		channelcontrollist[k].freq = satisfied_channelcontrollist[k].freq ;
+		channelcontrollist[k].INT = channelcontrollist[k].freq / 3;
+		channelcontrollist[k].FRAC = (channelcontrollist[k].freq / 3 - channelcontrollist[k].INT) * 3000;
+		channelcontrollist[k].channel_no = k+1;
+	}
+	for (i = 0; i < OUTNUM; i++)
+		for (j = 1; j < (OUTNUM - i); j++)
+		{
+			if (channelcontrollist[j].freq < channelcontrollist[j - 1].freq)
+			{
+				temp = channelcontrollist[j].freq;
+				channelcontrollist[j].freq = channelcontrollist[j - 1].freq;
+				channelcontrollist[j - 1].freq = temp;
+			}
+		}
+}
+
+int Bubbling(int* rssi)
 {
 	int i, j, k;
 	float temp;

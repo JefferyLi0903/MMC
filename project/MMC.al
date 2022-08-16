@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project Version="1" Path="D:/Documents/MMC/project">
-    <Project_Created_Time>2022-06-25 10:35:14</Project_Created_Time>
+    <Project_Created_Time>2022-07-11 21:44:56</Project_Created_Time>
     <TD_Version>5.0.43066</TD_Version>
-    <UCode>11111100</UCode>
+    <UCode>11100000</UCode>
     <Name>MMC</Name>
     <HardWare>
         <Family>EG4</Family>
@@ -223,7 +223,7 @@
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="29"/>
+                    <Attr Name="CompileOrder" Val="28"/>
                 </FileInfo>
             </File>
             <File Path="../rtl/peripherals/KeyScan.v">
@@ -231,7 +231,7 @@
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="30"/>
+                    <Attr Name="CompileOrder" Val="29"/>
                 </FileInfo>
             </File>
         </Verilog>
@@ -241,7 +241,7 @@
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="28"/>
+                    <Attr Name="CompileOrder" Val="27"/>
                 </FileInfo>
             </File>
         </Header>
@@ -255,16 +255,6 @@
                 </FileInfo>
             </File>
         </ADC_FILE>
-        <CWC_FILE>
-            <File Path="rssi.cwc">
-                <FileInfo>
-                    <Attr Name="UsedInSyn" Val="true"/>
-                    <Attr Name="UsedInP&R" Val="true"/>
-                    <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="27"/>
-                </FileInfo>
-            </File>
-        </CWC_FILE>
     </Source_Files>
     <FileSets>
         <FileSet Name="constrain_1" Type="ConstrainFiles">
@@ -299,7 +289,7 @@
     <Configurations>
     </Configurations>
     <Project_Settings>
-        <Step_Last_Change>2022-06-29 12:53:13.536</Step_Last_Change>
+        <Step_Last_Change>2022-07-22 13:39:39.195</Step_Last_Change>
         <Current_Step>60</Current_Step>
         <Step_Status>true</Step_Status>
     </Project_Settings>

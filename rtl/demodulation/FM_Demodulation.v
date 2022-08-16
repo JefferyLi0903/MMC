@@ -34,31 +34,6 @@ parameter fir_18 = 8'h39;
 parameter fir_19 = 8'h22;
 parameter fir_20 = 8'h11;
 
-/*
-parameter fir_1 = 8'h15;
-parameter fir_2 = 8'h27;
-parameter fir_3 = 8'h17;
-parameter fir_7 = 8'h17; 
-parameter fir_8 = 8'h94;
-parameter fir_9 = 9'h107;
-parameter fir_10 = 9'h136;
-parameter fir_11 = 9'h107;
-parameter fir_12= 8'h93;
-parameter fir_13 = 8'h17;
-parameter fir_17 = 8'h17;
-parameter fir_18 = 8'h27;
-parameter fir_19 = 8'h15;
-
-parameter fir_0 = 8'h09; // negtive
-parameter fir_4 = 8'h16; //negtive
-parameter fir_5 = 8'h3e; //negtive
-parameter fir_6 = 8'h36; //negtive
-parameter fir_14 = 8'h36;  //negtive
-parameter fir_15 = 8'h3e;  //negtive
-parameter fir_16 = 8'h16;  //negtive
-parameter fir_20 = 8'h9;  //negtive
-*/
-
 reg [7:0] IdataN_1=8'h0;
 reg [7:0] IdataN=8'h0;
 reg [7:0] QdataN_1=8'h0;

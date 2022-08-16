@@ -8,17 +8,17 @@ IO Statistics
   #inout                    1
 
 Utilization Statistics
-#lut                    16581   out of  19600   84.60%
-#reg                     2517   out of  19600   12.84%
-#le                     16834
-  #lut only             14317   out of  16834   85.05%
-  #reg only               253   out of  16834    1.50%
-  #lut&reg               2264   out of  16834   13.45%
+#lut                    16271   out of  19600   83.02%
+#reg                     2074   out of  19600   10.58%
+#le                     16397
+  #lut only             14323   out of  16397   87.35%
+  #reg only               126   out of  16397    0.77%
+  #lut&reg               1948   out of  16397   11.88%
 #dsp                       26   out of     29   89.66%
 #bram                      32   out of     64   50.00%
   #bram9k                  32
   #fifo9k                   0
-#bram32k                    6   out of     16   37.50%
+#bram32k                    0   out of     16    0.00%
 #adc                        1   out of      1  100.00%
 #pad                       39   out of    186   20.97%
   #ireg                     0
@@ -74,5 +74,5 @@ Report Hierarchy Area:
 +----------------------------------------------------------------------+
 |Instance |Module       |le    |lut    |ripple |seq    |bram   |dsp    |
 +----------------------------------------------------------------------+
-|top      |CortexM0_SoC |16834 |16108  |473    |2517   |38     |26     |
+|top      |CortexM0_SoC |16397 |15898  |373    |2074   |32     |26     |
 +----------------------------------------------------------------------+

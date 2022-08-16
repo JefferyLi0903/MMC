@@ -7,7 +7,6 @@
 
 int main()
 { 	
-	NVIC_CTRL_ADDR = 0xFFFFF;  //enable lowest 2 interrupts
 /*
 	char string[32] = {0};
 
@@ -46,9 +45,9 @@ int main()
 	Start_FM_command();
 	IQ_Dump_data();
 */
-
+	NVIC_CTRL_ADDR = 0xFFFFF;  //enable lowest 2 interrupts
+	initialize();
 	
-
 	
 while(1)
 {

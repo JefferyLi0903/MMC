@@ -1,6 +1,6 @@
 
 module clk_fm_demo_sample_pwm 
-	#( parameter BPS_PARA = 10 )    //200Khz/BPS_PARA = audio samping rate. BPS_PARA=10: 20kHz
+	#( parameter BPS_PARA = 10 )    //400Khz/BPS_PARA = audio samping rate. BPS_PARA=20: 20kHz
 	(
 	input FM_demod_en,
 	input EOC,

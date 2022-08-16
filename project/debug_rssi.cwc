@@ -1,0 +1,172 @@
+<chipwatcher project_name="MMC" bit_file="MMC.bit" bid_file="MMC_inst.bid" chip_name="EG4S20BG256">
+	<instance name="auto_chipwatcher_0" id="0" enabled="yes">
+		<clock clk_name="clk" polarity="posedge"/>
+		<config bram_name="auto_chipwatcher_0_logicbram" sample_depth="8192"/>
+		<signal_vec>
+			<trigger_nets>
+				<net name="FM_HW_state[1]"/>
+				<net name="FM_HW_state[2]"/>
+				<net name="FM_HW_state[3]"/>
+				<net name="SPI_TX/counter[0]"/>
+				<net name="SPI_TX/counter[10]"/>
+				<net name="SPI_TX/counter[11]"/>
+				<net name="SPI_TX/counter[12]"/>
+				<net name="SPI_TX/counter[13]"/>
+				<net name="SPI_TX/counter[1]"/>
+				<net name="SPI_TX/counter[2]"/>
+				<net name="SPI_TX/counter[3]"/>
+				<net name="SPI_TX/counter[4]"/>
+				<net name="SPI_TX/counter[5]"/>
+				<net name="SPI_TX/counter[6]"/>
+				<net name="SPI_TX/counter[7]"/>
+				<net name="SPI_TX/counter[8]"/>
+				<net name="SPI_TX/counter[9]"/>
+			</trigger_nets>
+			<data_nets>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[0]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[10]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[11]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[12]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[13]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[14]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[15]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[16]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[17]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[18]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[19]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[1]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[20]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[21]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[22]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[23]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[24]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[25]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[26]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[2]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[3]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[4]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[5]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[6]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[7]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[8]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[9]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/counter[0]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/counter[10]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/counter[11]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/counter[12]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/counter[1]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/counter[2]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/counter[3]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/counter[4]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/counter[5]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/counter[6]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/counter[7]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/counter[8]"/>
+				<net name="FM_HW/FM_RSSI_SCAN/counter[9]"/>
+				<net name="FM_HW_state[1]"/>
+				<net name="FM_HW_state[2]"/>
+				<net name="FM_HW_state[3]"/>
+				<net name="HSEL_P4"/>
+				<net name="HSEL_P5"/>
+				<net name="MSI_CS"/>
+				<net name="MSI_REFCLK"/>
+				<net name="MSI_SCLK"/>
+				<net name="MSI_SDATA"/>
+				<net name="SPI_TX/counter[0]"/>
+				<net name="SPI_TX/counter[10]"/>
+				<net name="SPI_TX/counter[11]"/>
+				<net name="SPI_TX/counter[12]"/>
+				<net name="SPI_TX/counter[13]"/>
+				<net name="SPI_TX/counter[1]"/>
+				<net name="SPI_TX/counter[2]"/>
+				<net name="SPI_TX/counter[3]"/>
+				<net name="SPI_TX/counter[4]"/>
+				<net name="SPI_TX/counter[5]"/>
+				<net name="SPI_TX/counter[6]"/>
+				<net name="SPI_TX/counter[7]"/>
+				<net name="SPI_TX/counter[8]"/>
+				<net name="SPI_TX/counter[9]"/>
+			</data_nets>
+			<watcher_nodes>
+				<net name="MSI_CS" op="equal"/>
+				<net name="MSI_REFCLK" op="equal"/>
+				<net name="MSI_SCLK" op="equal"/>
+				<net name="MSI_SDATA" op="equal"/>
+				<net name="HSEL_P4" op="equal"/>
+				<net name="HSEL_P5" op="equal"/>
+				<bus name="FM_HW_state" radix="bin" state="collapse" op="equal">
+					<net name="FM_HW_state[3]"/>
+					<net name="FM_HW_state[2]"/>
+					<net name="FM_HW_state[1]"/>
+				</bus>
+				<bus name="SPI_TX/counter" radix="hex" state="collapse" op="equal">
+					<net name="SPI_TX/counter[13]"/>
+					<net name="SPI_TX/counter[12]"/>
+					<net name="SPI_TX/counter[11]"/>
+					<net name="SPI_TX/counter[10]"/>
+					<net name="SPI_TX/counter[9]"/>
+					<net name="SPI_TX/counter[8]"/>
+					<net name="SPI_TX/counter[7]"/>
+					<net name="SPI_TX/counter[6]"/>
+					<net name="SPI_TX/counter[5]"/>
+					<net name="SPI_TX/counter[4]"/>
+					<net name="SPI_TX/counter[3]"/>
+					<net name="SPI_TX/counter[2]"/>
+					<net name="SPI_TX/counter[1]"/>
+					<net name="SPI_TX/counter[0]"/>
+				</bus>
+				<bus name="FM_HW/FM_RSSI_SCAN/RSSI_SUM" radix="bin" state="collapse" op="dont_care">
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[26]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[25]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[24]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[23]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[22]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[21]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[20]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[19]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[18]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[17]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[16]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[15]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[14]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[13]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[12]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[11]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[10]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[9]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[8]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[7]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[6]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[5]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[4]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[3]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[2]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[1]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/RSSI_SUM[0]"/>
+				</bus>
+				<bus name="FM_HW/FM_RSSI_SCAN/counter" radix="bin" state="collapse" op="dont_care">
+					<net name="FM_HW/FM_RSSI_SCAN/counter[12]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/counter[11]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/counter[10]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/counter[9]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/counter[8]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/counter[7]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/counter[6]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/counter[5]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/counter[4]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/counter[3]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/counter[2]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/counter[1]"/>
+					<net name="FM_HW/FM_RSSI_SCAN/counter[0]"/>
+				</bus>
+			</watcher_nodes>
+		</signal_vec>
+		<trigger name="auto_chipwatcher_0_trigger" position="pre">
+			<condition level="1" enabled="yes" type="basic_or">
+				FM_HW_state[1] == low && FM_HW_state[2] == high && FM_HW_state[3] == low && SPI_TX/counter[0] == high && SPI_TX/counter[10] == low && SPI_TX/counter[11] == low && SPI_TX/counter[12] == low && SPI_TX/counter[13] == low && SPI_TX/counter[1] == low && SPI_TX/counter[2] == low && SPI_TX/counter[3] == low && SPI_TX/counter[4] == low && SPI_TX/counter[5] == low && SPI_TX/counter[6] == low && SPI_TX/counter[7] == low && SPI_TX/counter[8] == low && SPI_TX/counter[9] == low
+			</condition>
+			<log>
+			</log>
+		</trigger>
+	</instance>
+</chipwatcher>

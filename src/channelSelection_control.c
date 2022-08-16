@@ -50,6 +50,17 @@ unsigned int REG1=0x0000e201;
 unsigned int REG2=0x0001f2bc2;
 unsigned int REG3=0x00000003;
 ChannelControlType ChannelControlDisplay;
+ChannelControlType Profile[10];
+
+void initialize()
+{
+	int ii;
+	float frequency[10] = {87.9,89.9,90.9,91.4,93.4,94.0,95.5,103.7,105.7,107.7};
+	for (ii=1;ii<=10;ii++){
+		Profile[ii-1].channel_no = ii; 
+		Profile[ii-1].freq = frequency[ii-1]; 
+	}
+}
 
 void ChannelSelection_control(unsigned int data)
 {
@@ -380,656 +391,54 @@ void ChannelSelection_control(unsigned int data)
 	
 else if(data=='1')   // formal FM receiver
 	{
-	MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-    SPI_RFD(MSI_SPI_Data);
-	REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
-		REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
-	REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
-		REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
-	REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
-		REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
-	REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
-		REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
-	REG2 = 0x210002;   //Reg2: INT=33,FRAC=0 99.0MHz in Shanghai 
-    SPI_RFD(REG2);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    REG3 = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(REG3);		
-		
-	FM_current_gain=20;
-    FM_current_INT=33;
-    FM_current_FRAC=1700;
-		
-	  ChannelControlDisplay.channel_no =1;
-	  ChannelControlDisplay.freq =99.0;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);
-
-		
-	  UARTString("  Channel: 99.0MHz  ");
-	  WriteUART('\n');
+		regWrite(Profile[0].freq);
+		Channel_control(Profile[0]);
 	}
 else if(data=='2')   // formal FM receiver
 	{
-	MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-    SPI_RFD(MSI_SPI_Data);
-	REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
-		REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
-	REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
-		REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
-	REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
-		REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
-	REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
-		REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
-	REG2 = 0x1e3842;   //Reg2: INT=30,FRAC=900 97.7MHz in Shanghai 
-    SPI_RFD(REG2);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    REG3 = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(REG3);		
-		
-	FM_current_gain=20;
-    FM_current_INT=30;
-    FM_current_FRAC=900;
-
-	ChannelControlDisplay.channel_no =2;
-	ChannelControlDisplay.freq =90.9;
-	ChannelControlDisplay.INT =FM_current_INT;
-	ChannelControlDisplay.FRAC =FM_current_FRAC;
-	Channel_control(ChannelControlDisplay);				
-	  Channel_control(ChannelControlDisplay);				
-	Channel_control(ChannelControlDisplay);				
-	  Channel_control(ChannelControlDisplay);				
-	Channel_control(ChannelControlDisplay);				
-	  Channel_control(ChannelControlDisplay);				
-	Channel_control(ChannelControlDisplay);				
-	  Channel_control(ChannelControlDisplay);				
-	Channel_control(ChannelControlDisplay);				
-		
-		
-	UARTString("  Channel: 90.9MHz  ");
-	WriteUART('\n');
+		regWrite(Profile[1].freq);
+		Channel_control(Profile[1]);
 	}
 else if(data=='3')   // formal FM receiver
 	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x1f3e822;   //Reg2: INT=31,FRAC=1000 96.8MHz in Shanghai 
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=31;
-    FM_current_FRAC=1000;
-		
-	  ChannelControlDisplay.channel_no =3;
-	  ChannelControlDisplay.freq =94.0;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);				
-		
-		UARTString("  Channel: 94.0MHz  ");
-	  WriteUART('\n');
+		regWrite(Profile[2].freq);
+		Channel_control(Profile[2]);
 	}
 else if(data=='4')   // formal FM receiver
 	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x1f6a42;   //Reg2: INT=31,FRAC=1700 94.7MHz in Shanghai 
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=31;
-    FM_current_FRAC=1700;
-	  ChannelControlDisplay.channel_no =4;
-	  ChannelControlDisplay.freq =94.7;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);		
-		UARTString("  Channel: 94.7MHz  ");
-	  WriteUART('\n');
+		regWrite(Profile[3].freq);
+		Channel_control(Profile[3]);
 	}
 else if(data=='5')   // formal FM receiver
 	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x1f1902;   //Reg2: INT=31,FRAC=400 93.4MHz in Shanghai 
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=31;
-    FM_current_FRAC=400;
-	  ChannelControlDisplay.channel_no =5;
-	  ChannelControlDisplay.freq =93.4;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);		
-		UARTString("  Channel: 93.4MHz Shanghai 990 ");
-	  WriteUART('\n');
+		regWrite(Profile[4].freq);
+		Channel_control(Profile[4]);
 	}
 else if(data=='6')   // formal FM receiver
 	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x1f9c42;   //Reg2: INT=30,FRAC=2400 92.4MHz in Shanghai 
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=30;
-    FM_current_FRAC=2400;
-
-	  ChannelControlDisplay.channel_no =6;
-	  ChannelControlDisplay.freq =95.5;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);				
-		
-		UARTString("  Channel: 95.5MHz  ");
-	  WriteUART('\n');
+		regWrite(Profile[5].freq);
+		Channel_control(Profile[5]);
 	}
 else if(data=='7')   // formal FM receiver
 	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x1e5782;   //Reg2: INT=30,FRAC=1400 91.4MHz in Shanghai 
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=30;
-    FM_current_FRAC=1400;
-
-	  ChannelControlDisplay.channel_no =7;
-	  ChannelControlDisplay.freq =91.4;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);				
-			
-		
-		UARTString("  Channel: CNR 91.4MHz Jingji ");
-	  WriteUART('\n');
+		regWrite(Profile[6].freq);
+		Channel_control(Profile[6]);
 	}
 else if(data=='8')   // formal FM receiver
 	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x1db542;   //Reg2: INT=29,FRAC=2900 89.9MHz in Shanghai 
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=29;
-    FM_current_FRAC=2900;
-
-	  ChannelControlDisplay.channel_no =8;
-	  ChannelControlDisplay.freq =89.9;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);				
-		
-		UARTString("  Channel: 89.9MHz Dushi 792 ");
-	  WriteUART('\n');
+		regWrite(Profile[7].freq);
+		Channel_control(Profile[7]);
 	}
 else if(data=='9')   // formal FM receiver
 	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x1d3842;   //Reg2: INT=29,FRAC=900 97.9MHz in Shanghai 
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=29;
-    FM_current_FRAC=900;
-
-	  ChannelControlDisplay.channel_no =9;
-	  ChannelControlDisplay.freq =87.9;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);				
-		
-		UARTString("  Channel: 87.9MHz   CNR 87.9 ");
-	  WriteUART('\n');
+		regWrite(Profile[8].freq);
+		Channel_control(Profile[8]);
 	}
-else if(data=='z')   // formal FM receiver
+else if(data=='0')   // formal FM receiver
 	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x232bc2;   //Reg2: INT=35,FRAC=700 105.7MHz in Shanghai 
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=35;
-    FM_current_FRAC=700;
-
-	  ChannelControlDisplay.channel_no =10;
-	  ChannelControlDisplay.freq =105.7;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);				
-
-		
-		UARTString("  Channel: 105.7MHz  ");
-	  WriteUART('\n');
+		regWrite(Profile[9].freq);
+		Channel_control(Profile[9]);
 	}
-else if(data=='y')   // formal FM receiver
-	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x204b02;   //Reg2: INT=32,FRAC=1200 97.2MHz in Shanghai 
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=34;
-    FM_current_FRAC=2500;
-
-	  ChannelControlDisplay.channel_no =11;
-	  ChannelControlDisplay.freq =97.2;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);				
-		
-		UARTString("  Channel: 97.2MHz  ");
-	  WriteUART('\n');
-	}			
-else if(data=='x')   // formal FM receiver
-	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-		
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x21a8c2;   //Reg2: INT=33,FRAC=2700 101.7MHz in Shanghai 
-
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=33;
-    FM_current_FRAC=2700;
-
-	  ChannelControlDisplay.channel_no =12;
-	  ChannelControlDisplay.freq =101.7;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);		
-
-
-		UARTString("  Channel: 101.7MHz  Donggan 101.7 ");
-	  WriteUART('\n');
-	}		
-else if(data=='v')   // formal FM receiver
-	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-		
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x208342;   //Reg2: INT=32,FRAC=2100 101.7MHz in Shanghai 
-
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=32;
-    FM_current_FRAC=2100;
-
-	  ChannelControlDisplay.channel_no =13;
-	  ChannelControlDisplay.freq =98.1;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);		
-
-
-		UARTString("  Channel: 98.1MHz ");
-	  WriteUART('\n');
-	}	
-else if(data=='w')   // formal FM receiver
-	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-		
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x2144c2;   //Reg2: INT=33,FRAC=1100 100.1MHz in Shanghai 
-
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=32;
-    FM_current_FRAC=2100;
-
-	  ChannelControlDisplay.channel_no =14;
-	  ChannelControlDisplay.freq =100.1;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);		
-
-
-		UARTString("  Channel: 100.1MHz ");
-	  WriteUART('\n');
-	}		
-else if(data=='a')   // formal FM receiver
-	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-		
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x2176c2;   //Reg2: INT=33,FRAC=1900 100.9MHz in Shanghai 
-
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=33;
-    FM_current_FRAC=1900;
-
-	  ChannelControlDisplay.channel_no =15;
-	  ChannelControlDisplay.freq =100.9;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);		
-
-
-		UARTString("  Channel: 100.9 MHz ");
-	  WriteUART('\n');	
-	}
-else if(data=='b')   // formal FM receiver
-	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-		
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x226a42;   //Reg2: INT=34,FRAC=1700 103.7MHz in Shanghai 
-
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=34;
-    FM_current_FRAC=1700;
-
-	  ChannelControlDisplay.channel_no =16;
-	  ChannelControlDisplay.freq =103.7;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);		
-
-
-		UARTString("  Channel: 103.7 MHz ");
-	  WriteUART('\n');	
-	}		
-else if(data=='c')   // formal FM receiver
-	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-		
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x222bc2;   //Reg2: INT=34,FRAC=700 102.7MHz in Shanghai 
-
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=34;
-    FM_current_FRAC=700;
-
-	  ChannelControlDisplay.channel_no =17;
-	  ChannelControlDisplay.freq =102.7;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);		
-
-
-		UARTString("  Channel: 102.7 MHz ");
-	  WriteUART('\n');	
-	}		
-else if(data=='d')   // formal FM receiver
-	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-		
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x235dc2;   //Reg2: INT=35,FRAC=1500 106.5MHz in Shanghai 
-
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=35;
-    FM_current_FRAC=1500;
-
-	  ChannelControlDisplay.channel_no =18;
-	  ChannelControlDisplay.freq =106.5;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);		
-
-
-		UARTString("  Channel: 106.5 MHz ");
-	  WriteUART('\n');	
-	}				
-else if(data=='e')   // formal FM receiver
-	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-		
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x238982;   //Reg2: INT=35,FRAC=2200 107.2MHz in Shanghai 
-
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=35;
-    FM_current_FRAC=1500;
-
-	  ChannelControlDisplay.channel_no =19;
-	  ChannelControlDisplay.freq =107.2;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);		
-
-
-		UARTString("  Channel: 107.2 MHz ");
-	  WriteUART('\n');	
-	}			
-else if(data=='h')   // formal FM receiver
-	{
-		MSI_SPI_Data = 0x00043420;  //reg 0: 24M clk
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0028bb85;  //reg5: THRESH=3000
-		
-    SPI_RFD(MSI_SPI_Data);
-		MSI_SPI_Data = 0x23a8c2;   //Reg2: INT=35,FRAC=2700 107.7MHz in Shanghai 
-
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x0000e141;   //Reg1: BB Gain decrease 20dB  LNA Gain redcution: 23dB
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00200016;   //Reg6: DC default value
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000004;   //Reg4: Aux features
-    SPI_RFD(MSI_SPI_Data);
-    MSI_SPI_Data = 0x00000003;   //Reg3:AFC = 0
-    SPI_RFD(MSI_SPI_Data);	
-		
-		FM_current_gain=20;
-    FM_current_INT=35;
-    FM_current_FRAC=1500;
-
-	  ChannelControlDisplay.channel_no =20;
-	  ChannelControlDisplay.freq =107.7;
-	  ChannelControlDisplay.INT =FM_current_INT;
-	  ChannelControlDisplay.FRAC =FM_current_FRAC;
-	  Channel_control(ChannelControlDisplay);		
-
-
-		UARTString("  Channel: 107.7 MHz ");
-	  WriteUART('\n');	
-	}		
-	
 else  
 	{	
 	UARTString("  Wrong command!   ");

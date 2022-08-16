@@ -73,6 +73,7 @@ void RSSI_scan_cmd(void);
 void RSSIScanscreen(void);
 int  Bubbling(int* rssi);
 void regWrite(float freq);
+void initialize(void);
 
 //Key interrupt handlers
 void KEY0(void);
