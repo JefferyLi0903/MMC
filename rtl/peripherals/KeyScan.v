@@ -41,12 +41,12 @@ module key_filter(clk,rstn,key_in,key_deb,en);
             cnt <= 0;
         else
             cnt <= cnt + 1'b1;
-     end
-     // Sampling
-     reg [15:0] key_reg0;
-     reg [15:0] key_reg1;
-     reg [15:0] key_reg2; 
-     always@(posedge clk or negedge rstn) begin
+    end
+    // Sampling
+    reg [15:0] key_reg0;
+    reg [15:0] key_reg1;
+    reg [15:0] key_reg2; 
+    always@(posedge clk or negedge rstn) begin
         if(~rstn) begin
             key_reg0 <= 16'hffff;
             key_reg1 <= 16'hffff;
