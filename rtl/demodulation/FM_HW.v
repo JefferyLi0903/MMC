@@ -85,7 +85,7 @@ PLL_Demodulation U1  //use final adc clk 200Khz
         .clk1_out(ADC_CLK), //ADC工作时钟,6.4M
         .clk2_out(clk_PWM1),           //20M
         .clk4_out(clk_PWM2)          //40M
-
+    );
 `endif
 
 //ADC通道4,6轮询
