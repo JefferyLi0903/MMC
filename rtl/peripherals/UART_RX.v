@@ -25,7 +25,7 @@ module UART_RX (
     always@(posedge clk or negedge RSTn) begin
         if(~RSTn) counter_en <= 1'b0;
         else if(re_start&&(~counter_en)) counter_en <= 1'b1;
-        else if(counter == 4'h9) counter_en <= 1'b0;ß
+        else if(counter == 4'h9) counter_en <= 1'b0;
     end
 
     always@(posedge clk or negedge RSTn) begin
