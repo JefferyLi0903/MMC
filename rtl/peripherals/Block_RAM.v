@@ -12,7 +12,7 @@ module Block_RAM #(
 (* ram_style="block" *)reg [31:0] mem [(2**(ADDR_WIDTH))-1:0];
 
 initial begin
-    $readmemh("D:/Documents/MMC/keil/MMC.hex",mem);end
+    $readmemh("../keil/MMC.hex",mem);end
 
 always@(posedge clka) begin
     if(wea[0]) mem[addra][7:0] <= dina[7:0];
