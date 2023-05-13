@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <All_Bram_Infos>
-    <Ucode>11100000</Ucode>
+    <Ucode>11011111</Ucode>
     <AL_PHY_BRAM>
         <INST_1>
             <rid>0X0004</rid>
@@ -994,5 +994,98 @@
                 </working_mode>
             </sub_bid_info>
         </INST_32>
+        <INST_33>
+            <rid>0X0024</rid>
+            <wid>0X0024</wid>
+            <is_debuggable>n</is_debuggable>
+            <is_initialize>n</is_initialize>
+            <model_type>AL_PHY_BRAM</model_type>
+            <name>ethernet_i0/mac_test0/mac_top0/icmp0/icmp_receive_ram/inst_256x8_sub_000000_000</name>
+            <width_a>9</width_a>
+            <width_b>9</width_b>
+            <logic_name>ethernet_i0/mac_test0/mac_top0/icmp0/icmp_receive_ram/inst</logic_name>
+            <logic_width>8</logic_width>
+            <logic_depth>256</logic_depth>
+            <sub_bid_info>
+                <address_offset>0</address_offset>
+                <data_offset>0</data_offset>
+                <depth>256</depth>
+                <width>8</width>
+                <num_section>1</num_section>
+                <section_size>8</section_size>
+                <width_per_section>8</width_per_section>
+                <bytes_in_per_section>1</bytes_in_per_section>
+                <working_mode>
+                    <address_step>1</address_step>
+                    <depth>1024</depth>
+                    <mode_type>110</mode_type>
+                    <width>9</width>
+                    <num_byte>1</num_byte>
+                    <ecc>0</ecc>
+                </working_mode>
+            </sub_bid_info>
+        </INST_33>
+        <INST_34>
+            <rid>0X0025</rid>
+            <wid>0X0025</wid>
+            <is_debuggable>n</is_debuggable>
+            <is_initialize>y</is_initialize>
+            <model_type>AL_PHY_BRAM</model_type>
+            <name>ethernet_i0/mac_test0/mac_top0/mac_tx0/udp0/udp_tx_checksum/fifo_bram_16x32_sub_000000_000</name>
+            <width_a>18</width_a>
+            <width_b>18</width_b>
+            <logic_name>N/A</logic_name>
+            <logic_width>-1</logic_width>
+            <logic_depth>-1</logic_depth>
+            <sub_bid_info>
+                <address_offset>-1</address_offset>
+                <data_offset>-1</data_offset>
+                <depth>-1</depth>
+                <width>-1</width>
+                <num_section>-1</num_section>
+                <section_size>-1</section_size>
+                <width_per_section>-1</width_per_section>
+                <bytes_in_per_section>1</bytes_in_per_section>
+                <working_mode>
+                    <address_step>-1</address_step>
+                    <depth>-1</depth>
+                    <mode_type>110</mode_type>
+                    <width>-1</width>
+                    <num_byte>-1</num_byte>
+                    <ecc>1</ecc>
+                </working_mode>
+            </sub_bid_info>
+        </INST_34>
+        <INST_35>
+            <rid>0X0026</rid>
+            <wid>0X0026</wid>
+            <is_debuggable>n</is_debuggable>
+            <is_initialize>y</is_initialize>
+            <model_type>AL_PHY_BRAM</model_type>
+            <name>ethernet_i0/mac_test0/mac_top0/mac_tx0/udp0/udp_tx_checksum/fifo_bram_16x32_sub_000000_018</name>
+            <width_a>18</width_a>
+            <width_b>18</width_b>
+            <logic_name>N/A</logic_name>
+            <logic_width>-1</logic_width>
+            <logic_depth>-1</logic_depth>
+            <sub_bid_info>
+                <address_offset>-1</address_offset>
+                <data_offset>-1</data_offset>
+                <depth>-1</depth>
+                <width>-1</width>
+                <num_section>-1</num_section>
+                <section_size>-1</section_size>
+                <width_per_section>-1</width_per_section>
+                <bytes_in_per_section>1</bytes_in_per_section>
+                <working_mode>
+                    <address_step>-1</address_step>
+                    <depth>-1</depth>
+                    <mode_type>110</mode_type>
+                    <width>-1</width>
+                    <num_byte>-1</num_byte>
+                    <ecc>1</ecc>
+                </working_mode>
+            </sub_bid_info>
+        </INST_35>
     </AL_PHY_BRAM>
 </All_Bram_Infos>

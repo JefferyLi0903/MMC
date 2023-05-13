@@ -37,3 +37,22 @@ set_pin_assignment	{ row[0] }	{ LOCATION = E10; IOSTANDARD = LVTTL33; }
 set_pin_assignment	{ row[1] }	{ LOCATION = C10; IOSTANDARD = LVTTL33; }
 set_pin_assignment	{ row[2] }	{ LOCATION = F9; IOSTANDARD = LVTTL33; }
 set_pin_assignment	{ row[3] }	{ LOCATION = D9; IOSTANDARD = LVTTL33; }
+
+set_pin_assignment	{ I2S_BCLK }	{ LOCATION = D14; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ I2S_LRCLK }	{ LOCATION = E15; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ I2S_SDATA }	{ LOCATION = F14; IOSTANDARD = LVCMOS33; }
+
+set_pin_assignment	{ e_mdc }	{ LOCATION = F4; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ e_mdio }	{ LOCATION = F3; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ rgmii_rxc }	{ LOCATION = K6; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ rgmii_rxctl }	{ LOCATION = L4; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ rgmii_rxd[0] }	{ LOCATION = L3; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ rgmii_rxd[1] }	{ LOCATION = J6; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ rgmii_rxd[2] }	{ LOCATION = K3; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ rgmii_rxd[3] }	{ LOCATION = K5; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ rgmii_txc }	{ LOCATION = H3; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ rgmii_txctl }	{ LOCATION = G3; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ rgmii_txd[0] }	{ LOCATION = H5; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ rgmii_txd[1] }	{ LOCATION = G6; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ rgmii_txd[2] }	{ LOCATION = H4; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ rgmii_txd[3] }	{ LOCATION = G5; IOSTANDARD = LVCMOS33; }

@@ -2,77 +2,94 @@ standard
 ***Report Model: CortexM0_SoC***
 
 IO Statistics
-#IO                        39
-  #input                    8
-  #output                  30
-  #inout                    1
+#IO                        56
+  #input                   14
+  #output                  40
+  #inout                    2
 
 Utilization Statistics
-#lut                    16271   out of  19600   83.02%
-#reg                     2074   out of  19600   10.58%
-#le                     16397
-  #lut only             14323   out of  16397   87.35%
-  #reg only               126   out of  16397    0.77%
-  #lut&reg               1948   out of  16397   11.88%
-#dsp                       26   out of     29   89.66%
-#bram                      32   out of     64   50.00%
-  #bram9k                  32
-  #fifo9k                   0
+#lut                    16033   out of  19600   81.80%
+#reg                    11125   out of  19600   56.76%
+#le                     17848
+  #lut only              6723   out of  17848   37.67%
+  #reg only              1815   out of  17848   10.17%
+  #lut&reg               9310   out of  17848   52.16%
+#dsp                       13   out of     29   44.83%
+#bram                      39   out of     64   60.94%
+  #bram9k                  35
+  #fifo9k                   4
 #bram32k                    0   out of     16    0.00%
 #adc                        1   out of      1  100.00%
-#pad                       39   out of    186   20.97%
-  #ireg                     0
-  #oreg                     0
+#pad                       56   out of    186   30.11%
+  #ireg                     5
+  #oreg                     6
   #treg                     0
-#pll                        2   out of      4   50.00%
+#pll                        3   out of      4   75.00%
 
 
 Detailed IO Report
 
-     Name       Direction    Location    IOStandard    DriveStrength    PullType    PackReg  
-     RSTn         INPUT        A14        LVCMOS33          N/A          PULLUP      NONE    
-     RXD          INPUT        F12        LVCMOS33          N/A          PULLUP      NONE    
-    SWCLK         INPUT         R2        LVCMOS33          N/A          PULLUP      NONE    
-     clk          INPUT         R7        LVCMOS33          N/A          PULLUP      NONE    
-    col[3]        INPUT        F10        LVTTL33           N/A          PULLUP      NONE    
-    col[2]        INPUT        C11        LVTTL33           N/A          PULLUP      NONE    
-    col[1]        INPUT        D11        LVTTL33           N/A          PULLUP      NONE    
-    col[0]        INPUT        E11        LVTTL33           N/A          PULLUP      NONE    
-    LED[7]       OUTPUT        F16        LVCMOS33           8            NONE       NONE    
-    LED[6]       OUTPUT        E16        LVCMOS33           8            NONE       NONE    
-    LED[5]       OUTPUT        E13        LVCMOS33           8            NONE       NONE    
-    LED[4]       OUTPUT        C16        LVCMOS33           8            NONE       NONE    
-    LED[3]       OUTPUT        C15        LVCMOS33           8            NONE       NONE    
-    LED[2]       OUTPUT        B16        LVCMOS33           8            NONE       NONE    
-    LED[1]       OUTPUT        B15        LVCMOS33           8            NONE       NONE    
-    LED[0]       OUTPUT        B14        LVCMOS33           8            NONE       NONE    
-    MSI_CS       OUTPUT         P9        LVCMOS33           8            NONE       NONE    
-  MSI_REFCLK     OUTPUT        R15        LVCMOS33           8            NONE       NONE    
-   MSI_SCLK      OUTPUT         M9        LVCMOS33           8            NONE       NONE    
-  MSI_SDATA      OUTPUT         N9        LVCMOS33           8            NONE       NONE    
-     TXD         OUTPUT        D12        LVCMOS33           8            NONE       NONE    
-  audio_pwm      OUTPUT         N8        LVCMOS33           8            NONE       NONE    
-    row[3]       OUTPUT         D9        LVTTL33            8            NONE       NONE    
-    row[2]       OUTPUT         F9        LVTTL33            8            NONE       NONE    
-    row[1]       OUTPUT        C10        LVTTL33            8            NONE       NONE    
-    row[0]       OUTPUT        E10        LVTTL33            8            NONE       NONE    
-    seg[7]       OUTPUT         C8        LVCMOS33           8            NONE       NONE    
-    seg[6]       OUTPUT         A8        LVCMOS33           8            NONE       NONE    
-    seg[5]       OUTPUT         B5        LVCMOS33           8            NONE       NONE    
-    seg[4]       OUTPUT         A7        LVCMOS33           8            NONE       NONE    
-    seg[3]       OUTPUT         E8        LVCMOS33           8            NONE       NONE    
-    seg[2]       OUTPUT         B8        LVCMOS33           8            NONE       NONE    
-    seg[1]       OUTPUT         A6        LVCMOS33           8            NONE       NONE    
-    seg[0]       OUTPUT         A4        LVCMOS33           8            NONE       NONE    
-    sel[3]       OUTPUT         A3        LVCMOS33           8            NONE       NONE    
-    sel[2]       OUTPUT         A5        LVCMOS33           8            NONE       NONE    
-    sel[1]       OUTPUT         B6        LVCMOS33           8            NONE       NONE    
-    sel[0]       OUTPUT         C9        LVCMOS33           8            NONE       NONE    
-    SWDIO         INOUT         P2        LVCMOS33           8           PULLUP      NONE    
+      Name        Direction    Location    IOStandard    DriveStrength    PullType    PackReg  
+      RSTn          INPUT        A14        LVCMOS33          N/A          PULLUP      NONE    
+      RXD           INPUT        F12        LVCMOS33          N/A          PULLUP      NONE    
+     SWCLK          INPUT         R2        LVCMOS33          N/A          PULLUP      NONE    
+      clk           INPUT         R7        LVCMOS33          N/A          PULLUP      NONE    
+     col[3]         INPUT        F10        LVTTL33           N/A          PULLUP      NONE    
+     col[2]         INPUT        C11        LVTTL33           N/A          PULLUP      NONE    
+     col[1]         INPUT        D11        LVTTL33           N/A          PULLUP      NONE    
+     col[0]         INPUT        E11        LVTTL33           N/A          PULLUP      NONE    
+   rgmii_rxc        INPUT         K6        LVCMOS33          N/A          PULLUP      NONE    
+  rgmii_rxctl       INPUT         L4        LVCMOS33          N/A          PULLUP     IDDRX1   
+  rgmii_rxd[3]      INPUT         K5        LVCMOS33          N/A          PULLUP     IDDRX1   
+  rgmii_rxd[2]      INPUT         K3        LVCMOS33          N/A          PULLUP     IDDRX1   
+  rgmii_rxd[1]      INPUT         J6        LVCMOS33          N/A          PULLUP     IDDRX1   
+  rgmii_rxd[0]      INPUT         L3        LVCMOS33          N/A          PULLUP     IDDRX1   
+    I2S_BCLK       OUTPUT        D14        LVCMOS33           8            NONE       NONE    
+   I2S_LRCLK       OUTPUT        E15        LVCMOS33           8            NONE       NONE    
+   I2S_SDATA       OUTPUT        F14        LVCMOS33           8            NONE       NONE    
+     LED[7]        OUTPUT        F16        LVCMOS33           8            NONE       NONE    
+     LED[6]        OUTPUT        E16        LVCMOS33           8            NONE       NONE    
+     LED[5]        OUTPUT        E13        LVCMOS33           8            NONE       NONE    
+     LED[4]        OUTPUT        C16        LVCMOS33           8            NONE       NONE    
+     LED[3]        OUTPUT        C15        LVCMOS33           8            NONE       NONE    
+     LED[2]        OUTPUT        B16        LVCMOS33           8            NONE       NONE    
+     LED[1]        OUTPUT        B15        LVCMOS33           8            NONE       NONE    
+     LED[0]        OUTPUT        B14        LVCMOS33           8            NONE       NONE    
+     MSI_CS        OUTPUT         P9        LVCMOS33           8            NONE       NONE    
+   MSI_REFCLK      OUTPUT        R15        LVCMOS33           8            NONE       NONE    
+    MSI_SCLK       OUTPUT         M9        LVCMOS33           8            NONE       NONE    
+   MSI_SDATA       OUTPUT         N9        LVCMOS33           8            NONE       NONE    
+      TXD          OUTPUT        D12        LVCMOS33           8            NONE       NONE    
+   audio_pwm       OUTPUT         N8        LVCMOS33           8            NONE       NONE    
+     e_mdc         OUTPUT         F4        LVCMOS33           8            NONE       NONE    
+   rgmii_txc       OUTPUT         H3        LVCMOS33           8            NONE      ODDRX1   
+  rgmii_txctl      OUTPUT         G3        LVCMOS33           8            NONE      ODDRX1   
+  rgmii_txd[3]     OUTPUT         G5        LVCMOS33           8            NONE      ODDRX1   
+  rgmii_txd[2]     OUTPUT         H4        LVCMOS33           8            NONE      ODDRX1   
+  rgmii_txd[1]     OUTPUT         G6        LVCMOS33           8            NONE      ODDRX1   
+  rgmii_txd[0]     OUTPUT         H5        LVCMOS33           8            NONE      ODDRX1   
+     row[3]        OUTPUT         D9        LVTTL33            8            NONE       NONE    
+     row[2]        OUTPUT         F9        LVTTL33            8            NONE       NONE    
+     row[1]        OUTPUT        C10        LVTTL33            8            NONE       NONE    
+     row[0]        OUTPUT        E10        LVTTL33            8            NONE       NONE    
+     seg[7]        OUTPUT         C8        LVCMOS33           8            NONE       NONE    
+     seg[6]        OUTPUT         A8        LVCMOS33           8            NONE       NONE    
+     seg[5]        OUTPUT         B5        LVCMOS33           8            NONE       NONE    
+     seg[4]        OUTPUT         A7        LVCMOS33           8            NONE       NONE    
+     seg[3]        OUTPUT         E8        LVCMOS33           8            NONE       NONE    
+     seg[2]        OUTPUT         B8        LVCMOS33           8            NONE       NONE    
+     seg[1]        OUTPUT         A6        LVCMOS33           8            NONE       NONE    
+     seg[0]        OUTPUT         A4        LVCMOS33           8            NONE       NONE    
+     sel[3]        OUTPUT         A3        LVCMOS33           8            NONE       NONE    
+     sel[2]        OUTPUT         A5        LVCMOS33           8            NONE       NONE    
+     sel[1]        OUTPUT         B6        LVCMOS33           8            NONE       NONE    
+     sel[0]        OUTPUT         C9        LVCMOS33           8            NONE       NONE    
+     SWDIO          INOUT         P2        LVCMOS33           8           PULLUP      NONE    
+     e_mdio         INOUT         F3        LVCMOS33           8           PULLUP      NONE    
 
 Report Hierarchy Area:
 +----------------------------------------------------------------------+
 |Instance |Module       |le    |lut    |ripple |seq    |bram   |dsp    |
 +----------------------------------------------------------------------+
-|top      |CortexM0_SoC |16397 |15898  |373    |2074   |32     |26     |
+|top      |CortexM0_SoC |17848 |14968  |1065   |11136  |39     |13     |
 +----------------------------------------------------------------------+

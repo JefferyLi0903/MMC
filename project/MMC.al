@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project Version="1" Path="/home/jefferyli/Desktop/MMC_Temp/project">
+<Project Version="1" Path="/home/jefferyli/Downloads/MMC/project">
     <Project_Created_Time></Project_Created_Time>
     <TD_Version>5.0.43066</TD_Version>
     <UCode>11011111</UCode>
@@ -82,7 +82,7 @@
                     <Attr Name="CompileOrder" Val="9"/>
                 </FileInfo>
             </File>
-            <File Path="al_ip/PLL_PWM.v">
+            <File Path="../../../Desktop/MMC_Temp/project/al_ip/PLL_PWM.v">
                 <FileInfo>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
@@ -597,7 +597,7 @@
     <Configurations>
     </Configurations>
     <Project_Settings>
-        <Step_Last_Change>2023-05-13 11:40:17.548</Step_Last_Change>
+        <Step_Last_Change>2023-05-13 12:09:22.435</Step_Last_Change>
         <Current_Step>60</Current_Step>
         <Step_Status>true</Step_Status>
     </Project_Settings>
