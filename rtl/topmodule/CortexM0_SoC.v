@@ -577,17 +577,6 @@ Block_RAM RAM_DATA(
         .wea            (RAMDATA_WRITE)
 );
 
-/*
-Block_RAM_FM_Data FM_DATA(
-        .clka           (clk),
-        .addra          (RAMDATA_WADDR),
-        .addrb          (RAMDATA_RADDR),
-        .dina           (RAMDATA_WDATA),
-        .doutb          (RAMDATA_RDATA),
-        .wea            (RAMDATA_WRITE)
-);
-*/
-
 wire [3:0] FM_HW_state;
 wire [31:0] fm_data_ethernet;
 FM_HW FM_HW(

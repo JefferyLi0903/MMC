@@ -65,17 +65,6 @@ module FM_RSSI_SCAN #(parameter FM_ADDR_WIDTH = 6) (
     wire        done_signal;
     assign done_signal = (FM_HW_state == FM_HW_STATE_RSSI) && (counter == (RSSI_sample_num+1));
 
-/*eg [16:0] RSSI_out;
-always@(posedge EOC_Count_Demodulate or negedge RSTn ) begin
-    if(~RSTn)
-    RSSI_out <= 17'h0;
-    else if(FM_HW_state == FM_HW_STATE_RSSI)
-    RSSI_out <=(IdataN*IdataN + QdataN*QdataN);
-    else if(FM_HW_state == FM_HW_STATE_RSSI_DONE)
-    RSSI_out <= 0;
-end
-*/
-
     reg [29:0] RSSI_SUM;
     always@(posedge EOC_Count_Demodulate or negedge RSTn) begin
         if (~RSTn) begin

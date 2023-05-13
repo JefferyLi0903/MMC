@@ -56,27 +56,13 @@ module FM_Dump_Data #(parameter FM_ADDR_WIDTH = 6) (
     reg                     dump_temp      = 1'b0;
     reg                     Dump_done      = 1'b0;
     reg [FM_ADDR_WIDTH-1:0] dump_data_addr       ;
-//reg [1:0] dump_data_addr_byte;
 
     always@(posedge dump_data_clk or negedge RSTn ) begin
         if (!RSTn) begin
             dump_data_addr <= 15'h100;
             dump_done_en   <= 1'b0;
-            //dump_data_addr_byte <= 2'b0;
         end
         else if((dump_data_addr < 15'h1FFF)&&(~Dump_done)&&(Data_dump_state == Dump_Data_STATE_Capture)) begin
-            /* 4 Bytes control
-            if(dump_data_addr_byte==2'b0) begin
-            dump_data_addr_byte = dump_data_addr_byte+1'b1;
-            end
-            else if(dump_data_addr_byte<2'b11)begin
-            dump_data_addr_byte = dump_data_addr_byte+1'b1;
-            end
-            else if(dump_data_addr_byte==2'b11)begin
-            dump_data_addr_byte = 2'b0;
-            dump_data_addr      <= dump_data_addr+1'b1;
-            end
-            */
             // 1 byte control
             dump_data_addr      <= dump_data_addr+1'b1;
         end
@@ -107,48 +93,10 @@ module FM_Dump_Data #(parameter FM_ADDR_WIDTH = 6) (
 
     always@(posedge dump_data_clk) begin
         if((~Dump_done)&&(FM_HW_state==FM_HW_STATE_RCEV)&&(Data_dump_state == Dump_Data_STATE_Capture)) begin //control to get data to Arm core
-            /* 4 Bytes control
-            if(dump_data_addr_byte==2'b01)
-            mem_IQ[dump_data_addr][7:0]   <= dump_data;
-            else if   (dump_data_addr_byte==2'b10)
-            mem_IQ[dump_data_addr][15:8]  <= dump_data;
-            else if   (dump_data_addr_byte==2'b11)
-            mem_IQ[dump_data_addr][23:16] <= dump_data;
-            else if   (dump_data_addr_byte==2'b00)
-            mem_IQ[dump_data_addr][31:24] <= dump_data;
-            */
             // 1 byte output
             mem_IQ[dump_data_addr]        <= dump_data;
         end
     end
-
-/*
-reg [31:0] addra;
-always@(*) begin
-    if(~Dump_done) addra=dump_data_addr;
-    else addra=rdaddr;
-end
-
-
-FM_Dump_Data_RAM mem_DUMP(
-    .doa(mem_IQ),
-    .dia(tmp),
-    .wea(dump_data_ea),
-    .addra(addra),
-    .clka(dump_data_clk),
-    .cea(1'b1),
-    .ocea(1'b1),
-    .rsta(RSTn)
-);
-*/
-/*
-always@(posedge clk ) begin
-    if ((rdaddr>=15'h100)&&((FM_HW_state==FM_HW_STATE_RCEV)&&(Data_dump_state == Dump_Data_STATE_Read))) begin   // read the demodulated data out
-    // rdata<= mem_IQ;
-    rdata<=32'b1;
-    end
-end
-*/
 
     always@(posedge clk ) begin
         if ((rdaddr>=15'h100)&&((FM_HW_state==FM_HW_STATE_RCEV)&&(Data_dump_state == Dump_Data_STATE_Read))) begin   // read the demodulated data out

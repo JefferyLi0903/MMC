@@ -1,4 +1,4 @@
-# Entity: Aduio_PWM 
+# Entity: Audio_PWM 
 
 - **File**: Audio_PWM.v
 ## Diagram

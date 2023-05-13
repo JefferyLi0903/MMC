@@ -1,5 +1,5 @@
 
-module Aduio_PWM 
+module Audio_PWM 
 (
 	input clk_fm_demo_sampling,
 	input clk,
