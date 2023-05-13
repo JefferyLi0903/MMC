@@ -1,7 +1,7 @@
 `timescale 1 ns/ 1 ps
 
 module FM_Display#(
-    parameter FM_ADDR_WIDTH = 13
+    parameter FM_ADDR_WIDTH = 6
 )(
    input clk,
    input RSTn,

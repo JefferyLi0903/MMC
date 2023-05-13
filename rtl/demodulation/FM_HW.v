@@ -1,6 +1,7 @@
 `include "../topmodule/header.vh"
+
 module FM_HW #(
-    parameter FM_ADDR_WIDTH = 13
+    parameter FM_ADDR_WIDTH = 6
 )(
     input clk,
     input ADC_start,
@@ -16,7 +17,12 @@ module FM_HW #(
     output wire RSSI_interrupt,
     output wire IQ_Write_Done_interrupt,
     output wire Demo_Dump_Done_Interrupt,
-    output wire audio_pwm
+   output wire audio_pwm, 
+   output I2S_SDATA,    // data 50bit
+   output wire I2S_BCLK,    //clk out
+   output wire I2S_LRCLK,       //L R channel enable 
+   output clk_fm_ethernet,
+   output [31:0] fm_data_ethernet
 );
 
 reg         adc_Power_down = 1'b1; //1: power down, 0?power on
@@ -88,6 +94,45 @@ PLL_Demodulation U1  //use final adc clk 200Khz
     );
 `endif
 
+wire clk_PWM_160; //synthesis keep;
+wire clk_PWM_256;
+wire clk_PWM_320;
+wire clk_PWM_80;
+wire CLK_Lock1;
+
+`ifndef SIM_PROFILE
+PLL_PWM PWM  //use final adc clk 200Khz
+(
+   .refclk(clk),
+   .reset(1'b0),
+   .stdby(1'b0),
+   .extlock(CLK_Lock1),
+   .clk0_out(clk_PWM_160), //160M
+   .clk1_out(clk_PWM_256),  //256M   
+   .clk2_out(clk_PWM_320), //320M
+   .clk3_out(clk_PWM_80)   //80M
+); 
+`endif
+
+
+`ifdef SIM_PROFILE
+// for Model Simulation ONLY
+
+reg [2:0] sim_PWM_clk ;
+reg       sim_clk_PWM1;
+always@(posedge clk or negedge RSTn ) begin
+    if (!RSTn) begin  sim_clk_PWM1 <= 1'b0; sim_PWM_clk <=3'b000; end
+    else if (sim_PWM_clk == 3'b101) begin
+        sim_clk_PWM1 <= 1'b1;
+        sim_PWM_clk  <= 3'b000;
+    end
+    else begin
+        sim_clk_PWM1 <= 1'b0;
+        sim_PWM_clk  = sim_PWM_clk+1'b1;
+    end
+end
+`endif
+
 //ADC通道4,6轮询
 reg[2:0] Channel;
 
@@ -125,26 +170,14 @@ ADC_Sample_debug ADC_Sample_debug (
     .channel(Channel )
 );
 
-reg [2:0] sim_PWM_clk ;
-reg       sim_clk_PWM1;
-always@(posedge clk or negedge RSTn ) begin
-    if (!RSTn) begin  sim_clk_PWM1 <= 1'b0; sim_PWM_clk <=3'b000; end
-    else if (sim_PWM_clk == 3'b101) begin
-        sim_clk_PWM1 <= 1'b1;
-        sim_PWM_clk  <= 3'b000;
-    end
-    else begin
-        sim_clk_PWM1 <= 1'b0;
-        sim_PWM_clk  = sim_PWM_clk+1'b1;
-    end
-end
 `endif
 
 
-
-
-wire [9:0] demodulated_signal_downsample;
-FM_Demodulation FM_Demodulation (
+//wire [9:0] demodulated_signal_downsample;
+wire [13:0] demodulated_signal_downsample;
+FM_Demodulation FM_Demodulation
+ (
+   .clk(clk),
     .EOC                      (EOC                          ),
     .Channel                  (Channel                      ),
     .FM_HW_state              (FM_HW_state                  ),
@@ -152,7 +185,12 @@ FM_Demodulation FM_Demodulation (
     .ADC_Data                 (ADC_Data                     ),
     .demod_en                 (adc_Power_down               ),
     .demodulated_signal_sample(demodulated_signal_downsample),
-    .clk_fm_demo_sampling     (clk_fm_demo_sampling         )
+   .clk_fm_demo_sampling(clk_fm_demo_sampling),
+   .I2S_SDATA(I2S_SDATA),    // data 50bit
+   .I2S_BCLK(I2S_BCLK),      //clk out
+   .I2S_LRCLK(I2S_LRCLK),      //L R channel enable 
+   .clk_fm_ethernet(clk_fm_ethernet),
+   .fm_data_ethernet(fm_data_ethernet)
 );
 
 
@@ -167,7 +205,7 @@ FM_RSSI_SCAN FM_RSSI_SCAN (
     .ADC_Data      (ADC_Data      ),
     .RSSI_interrupt(RSSI_interrupt)
 );
-
+/*
 // select FM_Dump_Data_IQ or FM_Dump_Data_Audio
 FM_Dump_Data FM_Dump_Data_IQ (
     .clk                (clk                ),
@@ -181,7 +219,8 @@ FM_Dump_Data FM_Dump_Data_IQ (
     .dump_data          (ADC_Data[11:4]     ),
     .rdata              (rd_DUMP            ),
     .Dump_Done_Interrupt(Dump_Done_Interrupt)
-);
+);    
+*/
 /*
 FM_Dump_Data  FM_Dump_Data_Audio
 (
@@ -208,7 +247,7 @@ FM_Dump_Data  FM_Dump_Data_Audio
 Aduio_PWM Audio_PWM (
     .clk_fm_demo_sampling         (clk_fm_demo_sampling         ),
     `ifndef SIM_PROFILE
-    .clk                          (clk_PWM1                     ), //simulating 20K or 40K * 200KHz ADC sampling clk
+    .clk                          (clk_PWM_256                     ), //simulating 20K or 40K * 200KHz ADC sampling clk
     `else
     .clk                          (sim_clk_PWM1                 ), // for Model Simulation ONLY
     `endif
@@ -221,8 +260,10 @@ Aduio_PWM Audio_PWM (
 
 assign LED_Out = {audio_pwm,audio_pwm,audio_pwm,audio_pwm,~audio_pwm,~audio_pwm,~audio_pwm,~audio_pwm};
 
-assign IQ_Write_Done_interrupt  = dumpIQ_or_audio? Dump_Done_Interrupt:1'b0;
-assign Demo_Dump_Done_Interrupt = (~dumpIQ_or_audio)? Dump_Done_Interrupt:1'b0;
-assign rdata                    = (FM_HW_state == FM_HW_STATE_RSSI) ? rd_SCAN:rd_DUMP;
-
+//assign IQ_Write_Done_interrupt  = dumpIQ_or_audio? Dump_Done_Interrupt:1'b0;
+//assign Demo_Dump_Done_Interrupt = (~dumpIQ_or_audio)? Dump_Done_Interrupt:1'b0;
+assign IQ_Write_Done_interrupt  = 1'b0;
+assign Demo_Dump_Done_Interrupt = 1'b0;
+//assign rdata                    = (FM_HW_state == FM_HW_STATE_RSSI) ? rd_SCAN:rd_DUMP;
+assign rdata                    = (FM_HW_state == FM_HW_STATE_RSSI) ? rd_SCAN:32'b0;
 endmodule

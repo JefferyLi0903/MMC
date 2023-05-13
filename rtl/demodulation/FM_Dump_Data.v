@@ -1,5 +1,5 @@
 
-module FM_Dump_Data #(parameter FM_ADDR_WIDTH = 13) (
+module FM_Dump_Data #(parameter FM_ADDR_WIDTH = 6) (
     input                           clk                ,
     input                           RSTn               ,
     input                           dump_data_clk      ,

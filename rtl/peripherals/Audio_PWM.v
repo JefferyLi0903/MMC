@@ -5,13 +5,14 @@ module Aduio_PWM
 	input clk,
 	input RSTn,		
     input demod_en,
-    input wire [9:0] demodulated_signal_downsample,	
-	output wire audio_pwm
+    //input wire [9:0] demodulated_signal_downsample,	    
+    input wire [13:0] demodulated_signal_downsample,	
+	output wire audio_pwm    
 );	
 
 
 //pwm generation simulate the DAC using 10bit range
-reg	[11:0] cnt = 0;
+reg	[15:0] cnt = 0;
 reg audio_pwm_reg;
 
 reg N_1=1'b0;

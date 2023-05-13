@@ -1,5 +1,5 @@
 module AHBlite_Block_RAM_FM_Data #(
-    parameter                       FM_ADDR_WIDTH = 13)(
+    parameter                       FM_ADDR_WIDTH = 6)(
     input  wire                     HCLK,    
     input  wire                     HRESETn, 
     input  wire                     HSEL,    

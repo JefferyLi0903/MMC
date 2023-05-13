@@ -1,6 +1,6 @@
-`include "header.vh"
+`include "./header.vh"
 module CortexM0_SoC #(
- parameter FM_ADDR_WIDTH = 13,    
+ parameter FM_ADDR_WIDTH = 6,    
  parameter ADDR_WIDTH = 12
 
 ) (
@@ -18,6 +18,19 @@ module CortexM0_SoC #(
         output wire  audio_pwm,         
         output wire  [3:0] sel,        
         output wire  [7:0] seg,
+        output wire I2S_SDATA,    // data 50bit
+        output wire I2S_BCLK,      //clk out
+        output wire I2S_LRCLK,      //L R channel enable   
+        output              e_mdc,                           //phy emdio clock
+        inout               e_mdio,                          //phy emdio data
+        output[3:0]         rgmii_txd,                       //phy data send
+        output              rgmii_txctl,                     //phy data send control
+        output              rgmii_txc,                       //Clock for sending data
+        input[3:0]          rgmii_rxd,                       //recieve data
+        input               rgmii_rxctl,                     //Control signal for receiving data
+        input               rgmii_rxc,    //Clock for recieving data
+
+
         input wire [3:0] col,
         output wire [3:0] row           
 );
@@ -576,7 +589,7 @@ Block_RAM_FM_Data FM_DATA(
 */
 
 wire [3:0] FM_HW_state;
-
+wire [31:0] fm_data_ethernet;
 FM_HW FM_HW(
    .clk                     (clk),
    .ADC_start               (1'b1),
@@ -591,7 +604,12 @@ FM_HW FM_HW(
    .IQ_Write_Done_interrupt (interrupt_IQ_done),
    .audio_pwm               (audio_pwm),
    .Demo_Dump_Done_Interrupt (Demo_Dump_Done_Interrupt),
-   .RSSI_interrupt           (RSSI_interrupt)
+   .RSSI_interrupt           (RSSI_interrupt),
+   .I2S_SDATA(I2S_SDATA),    // data 50bit
+   .I2S_BCLK(I2S_BCLK),      //clk out
+   .I2S_LRCLK(I2S_LRCLK),      //L R channel enable 
+   .clk_fm_ethernet(clk_fm_ethernet),
+   .fm_data_ethernet(fm_data_ethernet)
  );
 
 
@@ -675,4 +693,29 @@ RF_REF_24M MSI_REF_CLK(
 );
 `endif
 
+`ifdef SIM_Profile
+ethernet_test ethernet_i0(
+    .sys_clk(clk),
+    .rst_n(RSTn),
+    .rgmii_rxc(clk),
+    .clk_fm_ethernet(clk_fm_ethernet),
+    .fm_data_ethernet(fm_data_ethernet)
+);
+`else
+ethernet_test ethernet_i0(
+    .sys_clk(clk),
+    .rst_n(RSTn), 
+    .clk(clk),   
+    .e_mdc(e_mdc),                           //phy emdio clock
+    .e_mdio(e_mdio),                          //phy emdio data
+    .rgmii_txd(rgmii_txd),                       //phy data send
+    .rgmii_txctl(rgmii_txctl),                     //phy data send control
+    .rgmii_txc(rgmii_txc),                       //Clock for sending data
+    .rgmii_rxd(rgmii_rxd),                       //recieve data
+    .rgmii_rxctl(rgmii_rxctl),                     //Control signal for receiving data
+    .rgmii_rxc(rgmii_rxc), //Clock for recieving data
+    .clk_fm_ethernet(clk_fm_ethernet),
+    .fm_data_ethernet(fm_data_ethernet)
+);
+`endif
 endmodule

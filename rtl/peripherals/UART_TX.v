@@ -15,7 +15,7 @@ module UART_TX (
     wire [7:0] FIFOdata ;
     wire       FIFOempty;
     wire       FIFOfull ;
-    FIFO FIFO (
+    FIFO_UART FIFO_UART (
         .clock(clk      ),
         .sclr (RSTn     ),
         .rdreq(FIFOrd_en),

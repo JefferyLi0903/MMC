@@ -17,5 +17,5 @@ module clkADC_debug_pwm #(parameter BPS_PARA = 50) (
         else begin cnt <= cnt + 1'b1;clk_ADC_debug <= 1'b0; end
     end
 
-ß
+ 
 endmodule

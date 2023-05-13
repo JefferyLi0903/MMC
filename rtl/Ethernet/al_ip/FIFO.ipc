@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIFOConfig>
+    <GeneralConfig>
+        <Type>EG_LOGIC_FIFO</Type>
+        <Device>EG4S20BG256</Device>
+        <create_VHDL>false</create_VHDL>
+        <inst>FIFO</inst>
+    </GeneralConfig>
+    <DataPortOption>
+        <write_width>8</write_width>
+        <write_depth>4096</write_depth>
+        <read_width>8</read_width>
+        <read_depth>4096</read_depth>
+    </DataPortOption>
+    <FlagOption>
+        <aempty_flag>false</aempty_flag>
+        <afull_flag>true</afull_flag>
+        <aff_threshold>4095</aff_threshold>
+        <resetmode>SYNC</resetmode>
+        <reset_release>SYNC</reset_release>
+    </FlagOption>
+    <OutputOption>
+        <regmode_r>None</regmode_r>
+    </OutputOption>
+    <InputOption>
+        <regmode_w>None</regmode_w>
+    </InputOption>
+    <EndianOption>
+        <endian>Big</endian>
+    </EndianOption>
+    <SyncClockOption>
+        <sync_clk>true</sync_clk>
+        <SSROVERCE>false</SSROVERCE>
+    </SyncClockOption>
+    <ECC>
+        <ecc_is_enable>false</ecc_is_enable>
+        <ecc_is_de_enable>false</ecc_is_de_enable>
+    </ECC>
+</FIFOConfig>

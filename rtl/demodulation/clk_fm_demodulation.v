@@ -1,16 +1,16 @@
 
-module clk_fm_demo_sample_pwm #(
-    parameter BPS_PARA = 10 )  //400Khz/BPS_PARA = audio samping rate. BPS_PARA=20: 20kHz
-    (
-    input FM_demod_en,
-    input EOC,
-    input RSTn,
-    output reg clk_fm_demo_sampling
+module clk_fm_demo_sample_pwm 
+	#( parameter BPS_PARA = 25 )    //400Khz(EOC)/BPS_PARA = audio samping rate. BPS_PARA=20: 20kHz
+	(
+	input FM_demod_en,
+	input EOC,
+	input RSTn,
+	output reg clk_fm_demo_sampling
 );
 
-    reg [5:0] cnt = 0;
-    always @ (posedge EOC or negedge RSTn) begin
-        if(~RSTn) cnt <= 6'b0;
+reg	[5:0] cnt = 0;
+always @ (posedge EOC or negedge RSTn) begin
+	if(~RSTn) cnt <= 6'b0;
         else if (~FM_demod_en) begin
             if((cnt >= BPS_PARA-1)||(FM_demod_en)) begin
                 cnt                  <= 6'b0;

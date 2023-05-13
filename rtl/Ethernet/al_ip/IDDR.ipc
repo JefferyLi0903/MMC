@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IDDRConfig>
+    <GeneralConfig>
+        <Type>EG_LOGIC_IDDR</Type>
+        <Device>EG4S20BG256</Device>
+        <create_VHDL>false</create_VHDL>
+        <inst>IDDR</inst>
+        <ASYNCRST>ENABLE</ASYNCRST>
+        <PIPEMODE>PIPED</PIPEMODE>
+    </GeneralConfig>
+</IDDRConfig>

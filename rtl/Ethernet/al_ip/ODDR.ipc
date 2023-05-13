@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ODDRConfig>
+    <GeneralConfig>
+        <Type>EG_LOGIC_ODDR</Type>
+        <Device>EG4S20BG256</Device>
+        <create_VHDL>false</create_VHDL>
+        <inst>ODDR</inst>
+        <ASYNCRST>ENABLE</ASYNCRST>
+    </GeneralConfig>
+</ODDRConfig>

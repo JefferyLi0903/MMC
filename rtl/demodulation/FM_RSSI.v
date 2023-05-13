@@ -1,5 +1,5 @@
 
-module FM_RSSI_SCAN #(parameter FM_ADDR_WIDTH = 13) (
+module FM_RSSI_SCAN #(parameter FM_ADDR_WIDTH = 6) (
     input       [FM_ADDR_WIDTH-1:0] rdaddr        ,
     input                           clk           ,
     input                           EOC           ,
