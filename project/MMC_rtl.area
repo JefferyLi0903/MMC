@@ -8,25 +8,25 @@ IO Statistics
   #inout                    2
 
 Gate Statistics
-#Basic gates            32783
-  #and                  10581
+#Basic gates            25887
+  #and                  10081
   #nand                     0
   #or                    2244
   #nor                      0
   #xor                    537
   #xnor                     0
   #buf                      0
-  #not                   7499
+  #not                   7501
   #bufif1                   2
-  #MX21                   760
+  #MX21                   761
   #FADD                     0
-  #DFF                  11160
+  #DFF                   4761
   #LATCH                    0
 #MACRO_ADD                190
 #MACRO_EQ                 312
 #MACRO_MULT                16
-#MACRO_MUX               3181
-#MACRO_OTHERS              27
+#MACRO_MUX               3117
+#MACRO_OTHERS              29
 
 LUT Statistics
 #Total_luts                 5
@@ -40,13 +40,14 @@ Report Hierarchy Area:
 +--------------------------------------------------------------+
 |Instance            |Module           |gates  |seq    |macros |
 +--------------------------------------------------------------+
-|top                 |CortexM0_SoC     |21623  |11160  |545    |
+|top                 |CortexM0_SoC     |21126  |4761   |547    |
 |  FM_HW             |FM_HW            |576    |693    |101    |
 |    FM_Demodulation |FM_Demodulation  |498    |593    |73     |
-|  ethernet_i0       |ethernet_test    |2016   |8791   |312    |
-|    mac_test0       |mac_test         |2004   |8698   |285    |
-|      mac_top0      |mac_top          |1394   |2214   |267    |
+|  ethernet_i0       |ethernet_test    |1519   |2392   |314    |
+|    mac_test0       |mac_test         |1507   |2299   |287    |
+|      mac_top0      |mac_top          |1396   |2215   |267    |
 |        mac_rx0     |mac_rx_top       |509    |775    |103    |
-|        mac_tx0     |mac_tx_top       |666    |973    |113    |
+|        mac_tx0     |mac_tx_top       |668    |974    |113    |
+|          udp0      |udp_tx           |199    |385    |44     |
 |  u_logic           |cortexm0ds_logic |18669  |1317   |14     |
 +--------------------------------------------------------------+

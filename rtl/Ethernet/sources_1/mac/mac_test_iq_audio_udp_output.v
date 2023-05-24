@@ -296,20 +296,12 @@ always@(posedge gmii_tx_clk or negedge rst_n)
 
 assign trigger_pulse = (trigger_send>trigger_delay);
 
-always@(posedge clk_fm_demo_sampling  or negedge rst_n  ) begin
-       if(~rst_n) begin          
-         for(ii=0;ii<(Data_Length-1);ii=ii+1'b1) begin 
-              Buff_A[ii]<=32'b0;
-              Buff_B[ii]<=32'b0;
-         end
-       end     
-       else if(bufferA_B == 1'b0) begin                          
-          Buff_A[count_A] <= IQorAudioData;            
-       end
-       else if(bufferA_B == 1'b1) begin                          
-          Buff_B[count_B] <= IQorAudioData;               
-       end
-end 
+always@(posedge clk_fm_demo_sampling) begin
+  if(bufferA_B == 1'b0) 
+    Buff_A[count_A] <= IQorAudioData;
+  else if(bufferA_B == 1'b1)
+    Buff_B[count_B] <= IQorAudioData;
+end
 
 always@(posedge gmii_rx_clk or negedge rst_n)
   begin

@@ -8,23 +8,23 @@ IO Statistics
   #inout                    2
 
 LUT Statistics
-#Total_luts             15947
-  #lut4                 10679
-  #lut5                  2549
+#Total_luts             11759
+  #lut4                  7404
+  #lut5                  1636
   #lut6                     0
   #lut5_mx41                0
   #lut4_alu1b            2719
 
 Utilization Statistics
-#lut                    15947   out of  19600   81.36%
-#reg                    11134   out of  19600   56.81%
+#lut                    11759   out of  19600   59.99%
+#reg                     4733   out of  19600   24.15%
 #le                         0
 #dsp                       13   out of     29   44.83%
 #bram                      39   out of     64   60.94%
   #bram9k                  35
   #fifo9k                   4
 #bram32k                    0   out of     16    0.00%
-#dram                      16
+#dram                     144
 #adc                        1   out of      1  100.00%
 #pad                       56   out of    186   30.11%
   #ireg                     5
@@ -36,13 +36,14 @@ Report Hierarchy Area:
 +------------------------------------------------------------------------------+
 |Instance            |Module           |lut    |ripple |seq    |bram   |dsp    |
 +------------------------------------------------------------------------------+
-|top                 |CortexM0_SoC     |13228  |2719   |11145  |39     |13     |
+|top                 |CortexM0_SoC     |9040   |2719   |4744   |39     |13     |
 |  FM_HW             |FM_HW            |685    |1206   |693    |0      |10     |
 |    FM_Demodulation |FM_Demodulation  |568    |1069   |593    |0      |9      |
-|  ethernet_i0       |ethernet_test    |7140   |1152   |8777   |7      |0      |
-|    mac_test0       |mac_test         |7015   |1105   |8675   |7      |0      |
-|      mac_top0      |mac_top          |2377   |1066   |2192   |7      |0      |
+|  ethernet_i0       |ethernet_test    |2952   |1152   |2376   |7      |0      |
+|    mac_test0       |mac_test         |2827   |1105   |2274   |7      |0      |
+|      mac_top0      |mac_top          |2378   |1066   |2191   |7      |0      |
 |        mac_rx0     |mac_rx_top       |541    |143    |775    |0      |0      |
-|        mac_tx0     |mac_tx_top       |1251   |604    |951    |6      |0      |
+|        mac_tx0     |mac_tx_top       |1252   |604    |950    |6      |0      |
+|          udp0      |udp_tx           |382    |310    |369    |6      |0      |
 |  u_logic           |cortexm0ds_logic |4813   |173    |1316   |0      |3      |
 +------------------------------------------------------------------------------+

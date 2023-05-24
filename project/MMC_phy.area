@@ -8,12 +8,12 @@ IO Statistics
   #inout                    2
 
 Utilization Statistics
-#lut                    18023   out of  19600   91.95%
-#reg                    11125   out of  19600   56.76%
-#le                     19018
-  #lut only              7893   out of  19018   41.50%
-  #reg only               995   out of  19018    5.23%
-  #lut&reg              10130   out of  19018   53.27%
+#lut                    12745   out of  19600   65.03%
+#reg                     4723   out of  19600   24.10%
+#le                     13256
+  #lut only              8533   out of  13256   64.37%
+  #reg only               511   out of  13256    3.85%
+  #lut&reg               4212   out of  13256   31.77%
 #dsp                       13   out of     29   44.83%
 #bram                      39   out of     64   60.94%
   #bram9k                  35
@@ -92,20 +92,20 @@ Report Hierarchy Area:
 +----------------------------------------------------------------------+
 |Instance |Module       |le    |lut    |ripple |seq    |bram   |dsp    |
 +----------------------------------------------------------------------+
-|top      |CortexM0_SoC |19018 |16958  |1065   |11136  |39     |13     |
+|top      |CortexM0_SoC |13256 |11680  |1065   |4734   |39     |13     |
 +----------------------------------------------------------------------+
 
 
 DataNet Average Fanout:
 
-   Index     Fanout     Nets   
-    #1          1       18736  
-    #2          2       3732   
-    #3          3        972   
-    #4          4        741   
-    #5        5-10      1038   
-    #6        11-50      794   
-    #7       51-100      43    
-    #8       101-500     43    
-    #9        >500        5    
-  Average     3.00             
+   Index     Fanout     Nets  
+    #1          1       9456  
+    #2          2       4640  
+    #3          3       965   
+    #4          4       704   
+    #5        5-10      1008  
+    #6        11-50     604   
+    #7       51-100      47   
+    #8       101-500     5    
+    #9        >500       5    
+  Average     3.00            
